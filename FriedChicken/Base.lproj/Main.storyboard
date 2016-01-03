@@ -3,12 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FriedChicken" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="FriedChicken" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titile" translatesAutoresizingMaskIntoConstraints="NO" id="ICn-FE-1eq">
+                                <rect key="frame" x="213" y="40" width="173" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powered_by" translatesAutoresizingMaskIntoConstraints="NO" id="Q1x-tX-yjq">
+                                <rect key="frame" x="264" y="148" width="167" height="24"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fukidashi" translatesAutoresizingMaskIntoConstraints="NO" id="6Bf-ea-mRg">
+                                <rect key="frame" x="213" y="204" width="173" height="74"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piyokarakun" translatesAutoresizingMaskIntoConstraints="NO" id="xiP-Nz-v8q">
+                                <rect key="frame" x="187" y="274" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9MO-oa-CKM"/>
+                                    <constraint firstAttribute="height" constant="100" id="fnt-hl-yH2"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about" translatesAutoresizingMaskIntoConstraints="NO" id="SiH-go-zAt">
+                                <rect key="frame" x="200" y="381" width="200" height="138"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="DtK-gk-OC9"/>
+                                    <constraint firstAttribute="width" constant="200" id="wwE-0K-B7X"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07k-e9-VNc">
+                                <rect key="frame" x="311" y="309" width="75" height="30"/>
+                                <state key="normal" title="写真を選ぶ"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="07k-e9-VNc" firstAttribute="leading" secondItem="xiP-Nz-v8q" secondAttribute="trailing" constant="24" id="4hH-f2-zXi"/>
+                            <constraint firstItem="07k-e9-VNc" firstAttribute="centerY" secondItem="xiP-Nz-v8q" secondAttribute="centerY" id="5vJ-rD-pUo"/>
+                            <constraint firstItem="ICn-FE-1eq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CzR-xF-1Pq"/>
+                            <constraint firstItem="xiP-Nz-v8q" firstAttribute="top" secondItem="SiH-go-zAt" secondAttribute="bottom" constant="-245" id="FDi-Se-r0n"/>
+                            <constraint firstItem="xiP-Nz-v8q" firstAttribute="top" secondItem="6Bf-ea-mRg" secondAttribute="bottom" constant="-4" id="FPT-mM-HgG"/>
+                            <constraint firstItem="SiH-go-zAt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GKB-dU-LAQ"/>
+                            <constraint firstItem="SiH-go-zAt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GQ7-YY-OAc"/>
+                            <constraint firstItem="6Bf-ea-mRg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HB0-7s-skk"/>
+                            <constraint firstItem="Q1x-tX-yjq" firstAttribute="top" secondItem="ICn-FE-1eq" secondAttribute="bottom" constant="8" id="OwP-Ae-Ikc"/>
+                            <constraint firstItem="SiH-go-zAt" firstAttribute="top" secondItem="xiP-Nz-v8q" secondAttribute="bottom" constant="7" id="XTq-Eu-J8u"/>
+                            <constraint firstItem="6Bf-ea-mRg" firstAttribute="top" secondItem="ICn-FE-1eq" secondAttribute="bottom" constant="64" id="frF-xl-ZRm"/>
+                            <constraint firstItem="Q1x-tX-yjq" firstAttribute="leading" secondItem="ICn-FE-1eq" secondAttribute="trailing" constant="-122.5" id="nHz-Ik-Bpi"/>
+                            <constraint firstItem="ICn-FE-1eq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="s5m-nQ-ZNH"/>
+                            <constraint firstItem="SiH-go-zAt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sXM-8w-ljC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q1x-tX-yjq" secondAttribute="trailing" constant="10" id="sd4-mH-B3D"/>
+                            <constraint firstItem="6Bf-ea-mRg" firstAttribute="leading" secondItem="xiP-Nz-v8q" secondAttribute="trailing" constant="-74" id="usV-cV-Ep7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sd4-mH-B3D"/>
+                                <exclude reference="GKB-dU-LAQ"/>
+                                <exclude reference="GQ7-YY-OAc"/>
+                                <exclude reference="XTq-Eu-J8u"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="231" y="327"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="about" width="254" height="174"/>
+        <image name="fukidashi" width="173" height="74"/>
+        <image name="piyokarakun" width="151" height="141"/>
+        <image name="powered_by" width="167" height="24"/>
+        <image name="titile" width="173" height="100"/>
+    </resources>
 </document>
