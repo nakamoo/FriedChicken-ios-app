@@ -12,6 +12,7 @@
 		B324362D1C2AC2B50016B40D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B324362B1C2AC2B50016B40D /* Main.storyboard */; };
 		B324362F1C2AC2B50016B40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B324362E1C2AC2B50016B40D /* Assets.xcassets */; };
 		B32436321C2AC2B50016B40D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32436301C2AC2B50016B40D /* LaunchScreen.storyboard */; };
+		B39702781C39597200C32514 /* ChickenAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39702771C39597200C32514 /* ChickenAnalyzer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B324362E1C2AC2B50016B40D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32436311C2AC2B50016B40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32436331C2AC2B50016B40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B39702771C39597200C32514 /* ChickenAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChickenAnalyzer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B324362E1C2AC2B50016B40D /* Assets.xcassets */,
 				B32436301C2AC2B50016B40D /* LaunchScreen.storyboard */,
 				B32436331C2AC2B50016B40D /* Info.plist */,
+				B39702771C39597200C32514 /* ChickenAnalyzer.swift */,
 			);
 			path = FriedChicken;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39702781C39597200C32514 /* ChickenAnalyzer.swift in Sources */,
 				B324362A1C2AC2B50016B40D /* HomeViewController.swift in Sources */,
 				B32436281C2AC2B50016B40D /* AppDelegate.swift in Sources */,
 			);
