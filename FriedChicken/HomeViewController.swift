@@ -44,6 +44,7 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
             let img = didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] as? UIImage
             let score = ChickenAnalyzer(image: img!.CGImage!).analyze()
             NSLog("%d", score)
+            performSegueWithIdentifier("show_result", sender: nil)
         }
         //写真選択後にカメラロール表示ViewControllerを引っ込める動作
         picker.dismissViewControllerAnimated(true, completion: nil)
