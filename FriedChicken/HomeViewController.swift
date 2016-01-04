@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var analysisResult :ChickenAnalyzer.Result = ChickenAnalyzer.Result()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,9 +44,9 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
         if didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] != nil {
 
             let img = didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] as? UIImage
-            let score = ChickenAnalyzer(image: img!.CGImage!).analyze()
-            NSLog("%d", score)
-            performSegueWithIdentifier("show_result", sender: nil)
+            analysisResult = ChickenAnalyzer(image: img!).analyze()
+            NSLog("%d : %s", analysisResult.score, analysisResult.msg)
+            performSegueWithIdentifier("show_result", sender: self)
         }
         //写真選択後にカメラロール表示ViewControllerを引っ込める動作
         picker.dismissViewControllerAnimated(true, completion: nil)
@@ -52,6 +54,13 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
 
     @IBAction func onClickSelectImageBtn(sender: AnyObject) {
         pickImageFromLibrary()
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "show_result" {
+            let resultController = segue.destinationViewController as! ResultViewController
+            resultController.result = analysisResult
+        }
     }
 
 }

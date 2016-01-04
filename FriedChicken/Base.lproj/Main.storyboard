@@ -9,7 +9,6 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="FriedChicken" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -83,29 +82,27 @@
                         <segue destination="BYe-Xg-4w6" kind="show" identifier="show_result" id="Nb1-YV-O4h"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1043" y="327"/>
         </scene>
-        <!--Result View Controller-->
+        <!--採点結果-->
         <scene sceneID="G0b-KB-RDN">
             <objects>
-                <viewController id="BYe-Xg-4w6" customClass="ResultViewController" customModule="FriedChicken" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="採点結果" id="BYe-Xg-4w6" customClass="ResultViewController" customModule="FriedChicken" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BOi-Hh-1Rb"/>
                         <viewControllerLayoutGuide type="bottom" id="8HQ-ka-PXx"/>
                     </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="XP2-eM-Pwc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfU-ac-k27">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_title" translatesAutoresizingMaskIntoConstraints="NO" id="73q-84-HJ5">
-                                        <rect key="frame" x="211" y="10" width="177" height="42"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kil-nI-hH4">
-                                        <rect key="frame" x="200" y="255" width="200" height="200"/>
+                                        <rect key="frame" x="211" y="70" width="177" height="42"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxj-bb-frt">
                                         <rect key="frame" x="189" y="473" width="223" height="121"/>
@@ -116,20 +113,31 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="plate_with_text" translatesAutoresizingMaskIntoConstraints="NO" id="IMT-7d-x1D">
-                                        <rect key="frame" x="171" y="96" width="259.5" height="150.5"/>
+                                        <rect key="frame" x="171" y="120" width="259.5" height="150.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umx-7I-D9c">
+                                        <rect key="frame" x="279" y="154" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kil-nI-hH4">
+                                        <rect key="frame" x="200" y="278" width="200" height="200"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Mxj-bb-frt" firstAttribute="top" secondItem="kil-nI-hH4" secondAttribute="bottom" constant="18" id="0Op-ym-aD9"/>
-                                    <constraint firstItem="kil-nI-hH4" firstAttribute="top" secondItem="IMT-7d-x1D" secondAttribute="bottom" constant="-6.5" id="DM9-Im-UIB"/>
-                                    <constraint firstItem="73q-84-HJ5" firstAttribute="top" secondItem="vfU-ac-k27" secondAttribute="top" constant="10" id="G7A-13-dV8"/>
+                                    <constraint firstItem="IMT-7d-x1D" firstAttribute="top" secondItem="Umx-7I-D9c" secondAttribute="bottom" constant="-33" id="B7V-PV-jqC"/>
+                                    <constraint firstItem="kil-nI-hH4" firstAttribute="top" secondItem="IMT-7d-x1D" secondAttribute="bottom" constant="8.5" id="DM9-Im-UIB"/>
+                                    <constraint firstItem="73q-84-HJ5" firstAttribute="top" secondItem="vfU-ac-k27" secondAttribute="top" constant="70" id="G7A-13-dV8"/>
                                     <constraint firstAttribute="height" constant="65" id="Kps-u5-YUY"/>
                                     <constraint firstItem="73q-84-HJ5" firstAttribute="centerX" secondItem="vfU-ac-k27" secondAttribute="centerX" id="YIU-NP-BoN"/>
                                     <constraint firstItem="Mxj-bb-frt" firstAttribute="centerX" secondItem="vfU-ac-k27" secondAttribute="centerX" id="aZs-Aa-96c"/>
                                     <constraint firstItem="kil-nI-hH4" firstAttribute="centerX" secondItem="vfU-ac-k27" secondAttribute="centerX" id="gmg-EI-N27"/>
+                                    <constraint firstItem="Umx-7I-D9c" firstAttribute="centerX" secondItem="IMT-7d-x1D" secondAttribute="centerX" id="qPs-R4-O7W"/>
                                     <constraint firstItem="IMT-7d-x1D" firstAttribute="centerX" secondItem="vfU-ac-k27" secondAttribute="centerX" id="rKe-OH-AfE"/>
-                                    <constraint firstItem="IMT-7d-x1D" firstAttribute="top" secondItem="73q-84-HJ5" secondAttribute="bottom" constant="60" id="rrD-9B-LbY"/>
+                                    <constraint firstItem="IMT-7d-x1D" firstAttribute="top" secondItem="73q-84-HJ5" secondAttribute="bottom" constant="30" id="rrD-9B-LbY"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1200" id="zIe-xg-wOC"/>
                                 </constraints>
                                 <variation key="default">
@@ -146,8 +154,13 @@
                             <constraint firstItem="vfU-ac-k27" firstAttribute="leading" secondItem="XP2-eM-Pwc" secondAttribute="leading" id="chx-nZ-qO5"/>
                         </constraints>
                     </scrollView>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="1200"/>
+                    <connections>
+                        <outlet property="commentText" destination="Mxj-bb-frt" id="eO9-P1-Vws"/>
+                        <outlet property="contentView" destination="vfU-ac-k27" id="Ofb-kO-eCR"/>
+                        <outlet property="karaageImage" destination="kil-nI-hH4" id="TVI-W1-RiR"/>
+                        <outlet property="scoreText" destination="Umx-7I-D9c" id="0cK-FT-6tN"/>
+                        <outlet property="scrollView" destination="XP2-eM-Pwc" id="KfO-T2-njr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqk-IP-8bO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

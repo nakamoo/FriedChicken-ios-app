@@ -10,14 +10,34 @@ import Foundation
 import UIKit
 
 class ChickenAnalyzer {
-    let img :CGImage
+    let img :UIImage
 
-    init(image: CGImage) {
+    init(image: UIImage) {
         self.img = image
     }
 
-    func analyze() -> (Int) {
+    func analyze() -> (Result) {
         let score =  0
-        return score
+        let msg = "いい揚げっぷりですね！"
+        return Result(img: img, score: score, msg: msg)
+    }
+
+    class Result {
+        let img :UIImage
+        let score :Int
+        let msg :String
+
+        // Default value
+        init() {
+            img = UIImage()
+            score = 100
+            msg = "まぁまぁの揚げっぷりですね"
+        }
+
+        init(img :UIImage, score :Int, msg :String) {
+            self.img = img
+            self.score = score
+            self.msg = msg
+        }
     }
 }

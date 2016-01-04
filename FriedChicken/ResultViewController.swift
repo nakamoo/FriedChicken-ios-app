@@ -10,26 +10,48 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var commentText: UILabel!
+    @IBOutlet weak var karaageImage: UIImageView!
+    @IBOutlet weak var scoreText: UILabel!
+
+    var result :ChickenAnalyzer.Result = ChickenAnalyzer.Result()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setResult()
+    }
+
+    override func viewDidLayoutSubviews() {
+        // ScrollViewを有効にするための記述
+        self.scrollView.contentSize = self.contentView.bounds.size
+        self.scrollView.flashScrollIndicators()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
+    func setResult() {
+        karaageImage.image = fitToResultImageView(result.img)
+        scoreText.text = String(result.score)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        commentText.text = "この写真の唐揚げ力は\n"
+            + String(result.score) + "点です\n" + result.msg
     }
-    */
 
+    /**
+     結果の画像サイズを補正する
+     */
+    func fitToResultImageView(img :UIImage) -> (UIImage) {
+        let size = CGSize(width: 200, height: 200)
+        UIGraphicsBeginImageContext(size)
+        img.drawInRect(CGRectMake(0, 0, size.width, size.height))
+        let resized = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resized
+    }
 }
