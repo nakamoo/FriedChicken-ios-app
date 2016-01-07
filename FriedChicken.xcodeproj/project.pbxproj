@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B32436281C2AC2B50016B40D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32436271C2AC2B50016B40D /* AppDelegate.swift */; };
-		B324362A1C2AC2B50016B40D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32436291C2AC2B50016B40D /* ViewController.swift */; };
+		B324362A1C2AC2B50016B40D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32436291C2AC2B50016B40D /* HomeViewController.swift */; };
 		B324362D1C2AC2B50016B40D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B324362B1C2AC2B50016B40D /* Main.storyboard */; };
 		B324362F1C2AC2B50016B40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B324362E1C2AC2B50016B40D /* Assets.xcassets */; };
 		B32436321C2AC2B50016B40D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32436301C2AC2B50016B40D /* LaunchScreen.storyboard */; };
+		B39702781C39597200C32514 /* ChickenAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39702771C39597200C32514 /* ChickenAnalyzer.swift */; };
+		B397027A1C395F2600C32514 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39702791C395F2600C32514 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B32436241C2AC2B50016B40D /* FriedChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriedChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32436271C2AC2B50016B40D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B32436291C2AC2B50016B40D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B32436291C2AC2B50016B40D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B324362C1C2AC2B50016B40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B324362E1C2AC2B50016B40D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32436311C2AC2B50016B40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32436331C2AC2B50016B40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B39702771C39597200C32514 /* ChickenAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChickenAnalyzer.swift; sourceTree = "<group>"; };
+		B39702791C395F2600C32514 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				B32436271C2AC2B50016B40D /* AppDelegate.swift */,
-				B32436291C2AC2B50016B40D /* ViewController.swift */,
+				B32436291C2AC2B50016B40D /* HomeViewController.swift */,
 				B324362B1C2AC2B50016B40D /* Main.storyboard */,
 				B324362E1C2AC2B50016B40D /* Assets.xcassets */,
 				B32436301C2AC2B50016B40D /* LaunchScreen.storyboard */,
 				B32436331C2AC2B50016B40D /* Info.plist */,
+				B39702771C39597200C32514 /* ChickenAnalyzer.swift */,
+				B39702791C395F2600C32514 /* ResultViewController.swift */,
 			);
 			path = FriedChicken;
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B324362A1C2AC2B50016B40D /* ViewController.swift in Sources */,
+				B39702781C39597200C32514 /* ChickenAnalyzer.swift in Sources */,
+				B324362A1C2AC2B50016B40D /* HomeViewController.swift in Sources */,
 				B32436281C2AC2B50016B40D /* AppDelegate.swift in Sources */,
+				B397027A1C395F2600C32514 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +294,7 @@
 				B32436381C2AC2B50016B40D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
