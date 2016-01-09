@@ -15,6 +15,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var commentText: UILabel!
     @IBOutlet weak var karaageImage: UIImageView!
     @IBOutlet weak var scoreText: UILabel!
+    @IBOutlet weak var closeBtn: UIButton!
 
     var result :ChickenAnalyzer.Result = ChickenAnalyzer.Result()
 
@@ -53,5 +54,10 @@ class ResultViewController: UIViewController {
         let resized = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return resized
+    }
+
+
+    @IBAction func onClickCloseButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

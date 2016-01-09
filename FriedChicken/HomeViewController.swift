@@ -10,11 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var imageSelectBtn: UIButton!
+
     var analysisResult :ChickenAnalyzer.Result = ChickenAnalyzer.Result()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        imageSelectBtn.layer.cornerRadius = 3
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,15 +44,41 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
 
     // 写真選択後に呼ばれるCallback
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo: [String: AnyObject]) {
-        if didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] != nil {
-
-            let img = didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] as? UIImage
-            analysisResult = ChickenAnalyzer(image: img!).analyze()
-            NSLog("%d : %s", analysisResult.score, analysisResult.msg)
-            performSegueWithIdentifier("show_result", sender: self)
-        }
         //写真選択後にカメラロール表示ViewControllerを引っ込める動作
         picker.dismissViewControllerAnimated(true, completion: nil)
+
+        if didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] != nil {
+            let img = didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] as? UIImage
+            onSelectedImage(img!)
+        }
+    }
+
+    func onSelectedImage(img :UIImage) {
+        showProgress()
+
+        ChickenAnalyzer(image: img).asyncAnalyze()
+            .onComplete(callback: { _ in
+                self.hideProgress()
+            })
+            .onSuccess(callback: { result in
+                self.analysisResult = result
+                self.performSegueWithIdentifier("show_result", sender: self)
+            })
+            .onFailure(callback: { error in
+                self.showError()
+            })
+    }
+
+    func showProgress() {
+
+    }
+
+    func hideProgress() {
+
+    }
+
+    func showError() {
+
     }
 
     @IBAction func onClickSelectImageBtn(sender: AnyObject) {
@@ -62,6 +91,5 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
             resultController.result = analysisResult
         }
     }
-
 }
 
