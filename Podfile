@@ -6,5 +6,6 @@ use_frameworks!
 target 'FriedChicken' do
   pod 'BrightFutures'
   pod 'MRProgress'
+  pod 'SCLAlertView'
 end
 

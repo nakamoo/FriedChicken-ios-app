@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FriedChicken/BrightFutures.framework"
   install_framework "Pods-FriedChicken/MRProgress.framework"
   install_framework "Pods-FriedChicken/Result.framework"
+  install_framework "Pods-FriedChicken/SCLAlertView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FriedChicken/BrightFutures.framework"
   install_framework "Pods-FriedChicken/MRProgress.framework"
   install_framework "Pods-FriedChicken/Result.framework"
+  install_framework "Pods-FriedChicken/SCLAlertView.framework"
 fi
