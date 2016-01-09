@@ -1,0 +1,6 @@
+framework module Pods_FriedChicken {
+  umbrella header "Pods-FriedChicken-umbrella.h"
+
+  export *
+  module * { export * }
+}
