@@ -23,7 +23,7 @@ class ChickenAnalyzer {
     func asyncAnalyze() -> Future<Result, ChickenAnalyzeError> {
 
         let promise = Promise<Result, ChickenAnalyzeError>()
-        Queue.global.async {
+        Queue.global.async { () -> Void in
             let res = self.analyze()
 
             if (res.hasError()) {

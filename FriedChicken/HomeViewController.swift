@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  FriedChicken
 //
 //  Created by JunyaOgasawara on 2015/12/23.
@@ -7,17 +7,30 @@
 //
 
 import UIKit
+import MRProgress
 
 class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageSelectBtn: UIButton!
 
+    var progressView :MRProgressOverlayView?
+
+    var selectedImage :UIImage? = nil
     var analysisResult :ChickenAnalyzer.Result = ChickenAnalyzer.Result()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         imageSelectBtn.layer.cornerRadius = 3
+    }
+
+    override func viewDidAppear(animated: Bool) {
+
+        if selectedImage != nil {
+            // 画像選択後，画面遷移してきた場合
+            // ProgressDialogを出すために，ViewDidAppear以降で呼ぶ必要がある
+            onSelectedImage()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,33 +61,40 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
         picker.dismissViewControllerAnimated(true, completion: nil)
 
         if didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] != nil {
-            let img = didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] as? UIImage
-            onSelectedImage(img!)
+            // 選択された画像をセットする
+            selectedImage = didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] as? UIImage
         }
     }
 
-    func onSelectedImage(img :UIImage) {
+    // 画像選択後の処理
+    // ProgressDialogを表示するため，ViewDidAppear以降で呼ぶこと
+    func onSelectedImage() {
         showProgress()
 
-        ChickenAnalyzer(image: img).asyncAnalyze()
-            .onComplete(callback: { _ in
+        ChickenAnalyzer(image: selectedImage!).asyncAnalyze()
+            .onComplete { _ in
                 self.hideProgress()
-            })
-            .onSuccess(callback: { result in
+                // 画像解析後，選択済みの画像は解除
+                self.selectedImage = nil
+            }
+            .onSuccess { result in
                 self.analysisResult = result
                 self.performSegueWithIdentifier("show_result", sender: self)
-            })
-            .onFailure(callback: { error in
+            }
+            .onFailure { error in
                 self.showError()
-            })
+            }
     }
 
     func showProgress() {
-
+         MRProgressOverlayView.showOverlayAddedTo(self.view,
+            title: "解析中...",
+            mode: MRProgressOverlayViewMode.Indeterminate,
+            animated: true)
     }
 
     func hideProgress() {
-
+        MRProgressOverlayView.dismissOverlayForView(self.view, animated: true)
     }
 
     func showError() {
