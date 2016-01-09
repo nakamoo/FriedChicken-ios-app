@@ -26,7 +26,7 @@ class ChickenAnalyzer {
         Queue.global.async { () -> Void in
             let res = self.analyze()
 
-            if (res.hasError()) {
+            if res.hasError() {
                 promise.failure(ChickenAnalyzeError.UnknownError(res.msg))
             } else {
                 promise.success(self.analyze())
@@ -77,5 +77,12 @@ class ChickenAnalyzer {
 
     enum ChickenAnalyzeError: ErrorType {
         case UnknownError(String)
+
+        func getErrorMsg() -> String {
+            switch self {
+            case.UnknownError(let msg):
+                return msg
+            }
+        }
     }
 }

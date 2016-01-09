@@ -8,6 +8,7 @@
 
 import UIKit
 import MRProgress
+import SCLAlertView
 
 class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -82,7 +83,7 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
                 self.performSegueWithIdentifier("show_result", sender: self)
             }
             .onFailure { error in
-                self.showError()
+                self.showError(error.getErrorMsg())
             }
     }
 
@@ -97,8 +98,8 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
         MRProgressOverlayView.dismissOverlayForView(self.view, animated: true)
     }
 
-    func showError() {
-
+    func showError(errMsg :String) {
+        SCLAlertView().showError("解析失敗...", subTitle: errMsg, closeButtonTitle: "閉じる")
     }
 
     @IBAction func onClickSelectImageBtn(sender: AnyObject) {
