@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FB0920AADE0C841C7658DF8 /* Pods_FriedChicken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CE58BC1B316F6C77582902 /* Pods_FriedChicken.framework */; };
 		B32436281C2AC2B50016B40D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32436271C2AC2B50016B40D /* AppDelegate.swift */; };
 		B324362A1C2AC2B50016B40D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32436291C2AC2B50016B40D /* HomeViewController.swift */; };
 		B324362D1C2AC2B50016B40D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B324362B1C2AC2B50016B40D /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15CE58BC1B316F6C77582902 /* Pods_FriedChicken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FriedChicken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC07D8051DA7AE067EBD4D5 /* Pods-FriedChicken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriedChicken.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriedChicken/Pods-FriedChicken.release.xcconfig"; sourceTree = "<group>"; };
 		B32436241C2AC2B50016B40D /* FriedChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriedChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32436271C2AC2B50016B40D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32436291C2AC2B50016B40D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		B32436331C2AC2B50016B40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B39702771C39597200C32514 /* ChickenAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChickenAnalyzer.swift; sourceTree = "<group>"; };
 		B39702791C395F2600C32514 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		F34A965C7E5F5582E584D425 /* Pods-FriedChicken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriedChicken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriedChicken/Pods-FriedChicken.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FB0920AADE0C841C7658DF8 /* Pods_FriedChicken.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89FB5C368971BBCD5C270528 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F34A965C7E5F5582E584D425 /* Pods-FriedChicken.debug.xcconfig */,
+				8EC07D8051DA7AE067EBD4D5 /* Pods-FriedChicken.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B324361B1C2AC2B50016B40D = {
 			isa = PBXGroup;
 			children = (
 				B32436261C2AC2B50016B40D /* FriedChicken */,
 				B32436251C2AC2B50016B40D /* Products */,
+				89FB5C368971BBCD5C270528 /* Pods */,
+				E2E66ACFA31DA6C5E2BBF7E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +86,14 @@
 			path = FriedChicken;
 			sourceTree = "<group>";
 		};
+		E2E66ACFA31DA6C5E2BBF7E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15CE58BC1B316F6C77582902 /* Pods_FriedChicken.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B32436361C2AC2B50016B40D /* Build configuration list for PBXNativeTarget "FriedChicken" */;
 			buildPhases = (
+				7C1B68D24F440A9DC1470CAE /* Check Pods Manifest.lock */,
 				B32436201C2AC2B50016B40D /* Sources */,
 				B32436211C2AC2B50016B40D /* Frameworks */,
 				B32436221C2AC2B50016B40D /* Resources */,
+				3E7A5D7D1262758F0BC1BD6B /* Embed Pods Frameworks */,
+				D1B7086D636C20AE199E415A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E7A5D7D1262758F0BC1BD6B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriedChicken/Pods-FriedChicken-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C1B68D24F440A9DC1470CAE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1B7086D636C20AE199E415A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FriedChicken/Pods-FriedChicken-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B32436201C2AC2B50016B40D /* Sources */ = {
@@ -253,6 +328,7 @@
 		};
 		B32436371C2AC2B50016B40D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F34A965C7E5F5582E584D425 /* Pods-FriedChicken.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -265,6 +341,7 @@
 		};
 		B32436381C2AC2B50016B40D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EC07D8051DA7AE067EBD4D5 /* Pods-FriedChicken.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

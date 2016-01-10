@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  FriedChicken
 //
 //  Created by JunyaOgasawara on 2015/12/23.
@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import MRProgress
+import SCLAlertView
 
 class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var imageSelectBtn: UIButton!
+
+    var progressView :MRProgressOverlayView?
+
+    var selectedImage :UIImage? = nil
     var analysisResult :ChickenAnalyzer.Result = ChickenAnalyzer.Result()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        imageSelectBtn.layer.cornerRadius = 3
+    }
+
+    override func viewDidAppear(animated: Bool) {
+
+        if selectedImage != nil {
+            // 画像選択後，画面遷移してきた場合
+            // ProgressDialogを出すために，ViewDidAppear以降で呼ぶ必要がある
+            onSelectedImage()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,15 +58,48 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
 
     // 写真選択後に呼ばれるCallback
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo: [String: AnyObject]) {
-        if didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] != nil {
-
-            let img = didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] as? UIImage
-            analysisResult = ChickenAnalyzer(image: img!).analyze()
-            NSLog("%d : %s", analysisResult.score, analysisResult.msg)
-            performSegueWithIdentifier("show_result", sender: self)
-        }
         //写真選択後にカメラロール表示ViewControllerを引っ込める動作
         picker.dismissViewControllerAnimated(true, completion: nil)
+
+        if didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] != nil {
+            // 選択された画像をセットする
+            selectedImage = didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] as? UIImage
+        }
+    }
+
+    // 画像選択後の処理
+    // ProgressDialogを表示するため，ViewDidAppear以降で呼ぶこと
+    func onSelectedImage() {
+        showProgress()
+
+        ChickenAnalyzer(image: selectedImage!).asyncAnalyze()
+            .onComplete { _ in
+                self.hideProgress()
+                // 画像解析後，選択済みの画像は解除
+                self.selectedImage = nil
+            }
+            .onSuccess { result in
+                self.analysisResult = result
+                self.performSegueWithIdentifier("show_result", sender: self)
+            }
+            .onFailure { error in
+                self.showError(error.getErrorMsg())
+            }
+    }
+
+    func showProgress() {
+         MRProgressOverlayView.showOverlayAddedTo(self.view,
+            title: "解析中...",
+            mode: MRProgressOverlayViewMode.Indeterminate,
+            animated: true)
+    }
+
+    func hideProgress() {
+        MRProgressOverlayView.dismissOverlayForView(self.view, animated: true)
+    }
+
+    func showError(errMsg :String) {
+        SCLAlertView().showError("解析失敗...", subTitle: errMsg, closeButtonTitle: "閉じる")
     }
 
     @IBAction func onClickSelectImageBtn(sender: AnyObject) {
@@ -62,6 +112,5 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
             resultController.result = analysisResult
         }
     }
-
 }
 
