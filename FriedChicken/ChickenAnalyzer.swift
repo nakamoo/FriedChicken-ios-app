@@ -29,7 +29,7 @@ class ChickenAnalyzer {
             if res.hasError() {
                 promise.failure(ChickenAnalyzeError.UnknownError(res.msg))
             } else {
-                promise.success(self.analyze())
+                promise.success(res)
             }
         }
         return promise.future
@@ -56,7 +56,7 @@ class ChickenAnalyzer {
         var output:Double = 0.0
         
         // csvファイルに書かれた重みとバイアスを読み込む
-        // シュミレータだと少し重い(あまりにひどければ修正します)
+        // シュミレータだと少し重い(修正したい)
         let input_bias = readCsv("ib")
         let input_weight = readCsv("iw")
         let output_bias = readCsv("ob")
