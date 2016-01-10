@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0FB0920AADE0C841C7658DF8 /* Pods_FriedChicken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CE58BC1B316F6C77582902 /* Pods_FriedChicken.framework */; };
+		7FE544931C422CCB003A4E6A /* ib.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FE5448F1C422CCB003A4E6A /* ib.csv */; };
+		7FE544941C422CCB003A4E6A /* iw.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FE544901C422CCB003A4E6A /* iw.csv */; };
+		7FE544951C422CCB003A4E6A /* ob.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FE544911C422CCB003A4E6A /* ob.csv */; };
+		7FE544961C422CCB003A4E6A /* ow.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FE544921C422CCB003A4E6A /* ow.csv */; };
 		B32436281C2AC2B50016B40D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32436271C2AC2B50016B40D /* AppDelegate.swift */; };
 		B324362A1C2AC2B50016B40D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32436291C2AC2B50016B40D /* HomeViewController.swift */; };
 		B324362D1C2AC2B50016B40D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B324362B1C2AC2B50016B40D /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		15CE58BC1B316F6C77582902 /* Pods_FriedChicken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FriedChicken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FE5448F1C422CCB003A4E6A /* ib.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ib.csv; sourceTree = "<group>"; };
+		7FE544901C422CCB003A4E6A /* iw.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iw.csv; sourceTree = "<group>"; };
+		7FE544911C422CCB003A4E6A /* ob.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ob.csv; sourceTree = "<group>"; };
+		7FE544921C422CCB003A4E6A /* ow.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ow.csv; sourceTree = "<group>"; };
 		8EC07D8051DA7AE067EBD4D5 /* Pods-FriedChicken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriedChicken.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriedChicken/Pods-FriedChicken.release.xcconfig"; sourceTree = "<group>"; };
 		B32436241C2AC2B50016B40D /* FriedChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriedChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32436271C2AC2B50016B40D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +52,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FE5448E1C422CCB003A4E6A /* param */ = {
+			isa = PBXGroup;
+			children = (
+				7FE5448F1C422CCB003A4E6A /* ib.csv */,
+				7FE544901C422CCB003A4E6A /* iw.csv */,
+				7FE544911C422CCB003A4E6A /* ob.csv */,
+				7FE544921C422CCB003A4E6A /* ow.csv */,
+			);
+			path = param;
+			sourceTree = "<group>";
+		};
 		89FB5C368971BBCD5C270528 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +96,7 @@
 				B32436271C2AC2B50016B40D /* AppDelegate.swift */,
 				B32436291C2AC2B50016B40D /* HomeViewController.swift */,
 				B324362B1C2AC2B50016B40D /* Main.storyboard */,
+				7FE5448E1C422CCB003A4E6A /* param */,
 				B324362E1C2AC2B50016B40D /* Assets.xcassets */,
 				B32436301C2AC2B50016B40D /* LaunchScreen.storyboard */,
 				B32436331C2AC2B50016B40D /* Info.plist */,
@@ -155,9 +175,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE544941C422CCB003A4E6A /* iw.csv in Resources */,
 				B32436321C2AC2B50016B40D /* LaunchScreen.storyboard in Resources */,
 				B324362F1C2AC2B50016B40D /* Assets.xcassets in Resources */,
+				7FE544961C422CCB003A4E6A /* ow.csv in Resources */,
 				B324362D1C2AC2B50016B40D /* Main.storyboard in Resources */,
+				7FE544931C422CCB003A4E6A /* ib.csv in Resources */,
+				7FE544951C422CCB003A4E6A /* ob.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +357,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FriedChicken/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.karaage.FriedChicken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FriedChicken/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.karaage.FriedChicken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
