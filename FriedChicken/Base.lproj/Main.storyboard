@@ -144,7 +144,7 @@
                                         <rect key="frame" x="200" y="278" width="200" height="200"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4v-RW-y3Q">
-                                        <rect key="frame" x="245" y="582" width="108" height="36"/>
+                                        <rect key="frame" x="245" y="716" width="108" height="36"/>
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.1058823529" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="108" id="8ga-tb-SA6"/>
@@ -155,6 +155,11 @@
                                         <state key="normal" title="戻る">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onClickCloseButton:" destination="BYe-Xg-4w6" eventType="touchUpInside" id="Jmw-Cf-Zjh"/>
                                             <action selector="onClickSelectImageBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xvm-zv-dPZ"/>
@@ -209,17 +214,96 @@
                                             <constraint firstAttribute="width" constant="53" id="cqE-MY-fty"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccR-4Z-9Ug">
+                                        <rect key="frame" x="141" y="585" width="316" height="61"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhk-Ep-RhT">
+                                                <rect key="frame" x="0.0" y="12" width="151" height="38"/>
+                                                <color key="backgroundColor" red="0.16470588235294117" green="0.25490196078431371" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="151" id="5Od-Bu-nsg"/>
+                                                    <constraint firstAttribute="height" constant="38" id="rTG-kx-ThD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                                <state key="normal" title="Facebookでシェア"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="shareWithFB:" destination="BYe-Xg-4w6" eventType="touchUpInside" id="CmN-dT-afc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ko-sX-IxH">
+                                                <rect key="frame" x="165" y="12" width="151" height="38"/>
+                                                <color key="backgroundColor" red="0.074509803921568626" green="0.59999999999999998" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="LNy-N8-1ES"/>
+                                                    <constraint firstAttribute="width" constant="151" id="V8v-rG-ek6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                                <state key="normal" title="twitterでツイート"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="shareWithTwitter:" destination="BYe-Xg-4w6" eventType="touchUpInside" id="jg6-1O-KOb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="0Ko-sX-IxH" secondAttribute="trailing" id="2hs-sQ-IyX"/>
+                                            <constraint firstItem="vhk-Ep-RhT" firstAttribute="top" secondItem="ccR-4Z-9Ug" secondAttribute="top" constant="12" id="AY3-De-Qyn"/>
+                                            <constraint firstItem="vhk-Ep-RhT" firstAttribute="leading" secondItem="ccR-4Z-9Ug" secondAttribute="leading" id="Y24-lB-EpM"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Ko-sX-IxH" secondAttribute="bottom" constant="11" id="dfA-gp-EgK"/>
+                                            <constraint firstAttribute="bottom" secondItem="vhk-Ep-RhT" secondAttribute="bottom" constant="11" id="dzJ-oF-evL"/>
+                                            <constraint firstAttribute="width" constant="316" id="q5M-U8-Mfr"/>
+                                            <constraint firstItem="0Ko-sX-IxH" firstAttribute="top" secondItem="ccR-4Z-9Ug" secondAttribute="top" constant="12" id="x9j-yC-cLL"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Ko-sX-IxH" secondAttribute="trailing" constant="30" id="zc0-PA-2iR"/>
+                                            <constraint firstAttribute="height" constant="61" id="ziE-mC-YCr"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="zc0-PA-2iR"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cED-3X-KtU">
+                                        <rect key="frame" x="224" y="663" width="151" height="38"/>
+                                        <color key="backgroundColor" red="0.12156862745098039" green="0.69803921568627447" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="i3H-79-scv"/>
+                                            <constraint firstAttribute="width" constant="151" id="jgU-xj-deH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                        <state key="normal" title="LINEで送る"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="shareWithLINE:" destination="BYe-Xg-4w6" eventType="touchUpInside" id="lP4-Cq-BiW"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Mxj-bb-frt" firstAttribute="top" secondItem="kil-nI-hH4" secondAttribute="bottom" constant="18" id="0Op-ym-aD9"/>
+                                    <constraint firstItem="ccR-4Z-9Ug" firstAttribute="top" secondItem="Mxj-bb-frt" secondAttribute="bottom" constant="27" id="3pw-TD-sio"/>
                                     <constraint firstItem="Q4v-RW-y3Q" firstAttribute="top" secondItem="Mxj-bb-frt" secondAttribute="bottom" constant="10" id="5X8-Re-2ja"/>
                                     <constraint firstItem="AeH-k0-nki" firstAttribute="bottom" secondItem="4E0-In-LLn" secondAttribute="bottom" id="6b4-Q4-OMn"/>
+                                    <constraint firstItem="cED-3X-KtU" firstAttribute="centerX" secondItem="vfU-ac-k27" secondAttribute="centerX" id="AMM-YL-sxF"/>
                                     <constraint firstItem="EEB-cZ-76o" firstAttribute="leading" secondItem="UzB-UB-ebs" secondAttribute="trailing" constant="2" id="Aj2-1R-KJa"/>
+                                    <constraint firstItem="Q4v-RW-y3Q" firstAttribute="top" secondItem="cED-3X-KtU" secondAttribute="bottom" constant="15" id="B9g-Xc-nV4"/>
                                     <constraint firstItem="kil-nI-hH4" firstAttribute="top" secondItem="IMT-7d-x1D" secondAttribute="bottom" constant="8.5" id="DM9-Im-UIB"/>
                                     <constraint firstItem="TOh-db-WRL" firstAttribute="leading" secondItem="EEB-cZ-76o" secondAttribute="trailing" constant="3" id="ERb-ei-BRT"/>
                                     <constraint firstItem="73q-84-HJ5" firstAttribute="top" secondItem="vfU-ac-k27" secondAttribute="top" constant="70" id="G7A-13-dV8"/>
                                     <constraint firstItem="UzB-UB-ebs" firstAttribute="bottom" secondItem="n4J-tg-77s" secondAttribute="bottom" id="Hin-tD-XGt"/>
+                                    <constraint firstItem="cED-3X-KtU" firstAttribute="top" secondItem="ccR-4Z-9Ug" secondAttribute="bottom" constant="3" id="IQ6-4Q-oE2"/>
                                     <constraint firstItem="EEB-cZ-76o" firstAttribute="bottom" secondItem="UzB-UB-ebs" secondAttribute="bottom" id="IwL-Ni-A6o"/>
                                     <constraint firstItem="PTY-UW-fTY" firstAttribute="top" secondItem="vfU-ac-k27" secondAttribute="top" constant="10" id="JOo-Pk-mkB"/>
                                     <constraint firstAttribute="height" constant="65" id="Kps-u5-YUY"/>
@@ -232,6 +316,7 @@
                                     <constraint firstItem="73q-84-HJ5" firstAttribute="centerX" secondItem="vfU-ac-k27" secondAttribute="centerX" id="YIU-NP-BoN"/>
                                     <constraint firstItem="IMT-7d-x1D" firstAttribute="top" secondItem="4E0-In-LLn" secondAttribute="bottom" constant="-63" id="Yi5-ez-bfr"/>
                                     <constraint firstItem="Mxj-bb-frt" firstAttribute="centerX" secondItem="vfU-ac-k27" secondAttribute="centerX" id="aZs-Aa-96c"/>
+                                    <constraint firstItem="ccR-4Z-9Ug" firstAttribute="centerX" secondItem="vfU-ac-k27" secondAttribute="centerX" id="ah1-no-WvU"/>
                                     <constraint firstItem="kil-nI-hH4" firstAttribute="centerX" secondItem="vfU-ac-k27" secondAttribute="centerX" id="gmg-EI-N27"/>
                                     <constraint firstItem="PTY-UW-fTY" firstAttribute="leading" secondItem="vfU-ac-k27" secondAttribute="leading" constant="10" id="hS3-g2-ijB"/>
                                     <constraint firstItem="WnX-Dc-hgR" firstAttribute="bottom" secondItem="TOh-db-WRL" secondAttribute="bottom" id="p4V-0e-YhR"/>
@@ -245,6 +330,7 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Kps-u5-YUY"/>
+                                        <exclude reference="5X8-Re-2ja"/>
                                     </mask>
                                 </variation>
                             </view>

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Social
+import SCLAlertView
 
 class ResultViewController: UIViewController {
 
@@ -100,5 +102,43 @@ class ResultViewController: UIViewController {
 
     @IBAction func onClickCloseButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+
+    @IBAction func shareWithFB(sender: AnyObject) {
+        let text = "この唐揚げ力は" + String(result.score) + "点! "
+            + result.msg + "by 唐揚げアプリ"
+        shareWithSocial(SLServiceTypeFacebook, initialText: text)
+    }
+
+    @IBAction func shareWithTwitter(sender: AnyObject) {
+        let text = "この唐揚げ力は" + String(result.score) + "点! "
+            + result.msg + "#唐揚げアプリ"
+        shareWithSocial(SLServiceTypeTwitter, initialText: text)
+    }
+
+
+    @IBAction func shareWithLINE(sender: AnyObject) {
+        let text = "唐揚げ力" + String(result.score) + "点! "
+            + "写真の唐揚げ力を測れるアプリがオススメ！"
+
+        let urlScheme = "line://msg//text/"
+            + text.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!
+        let url = NSURL(string: urlScheme)!
+
+        if !UIApplication.sharedApplication().canOpenURL(url) {
+            SCLAlertView().showError("エラー", subTitle: "LINEがインストールされていません", closeButtonTitle: "閉じる")
+            return
+        }
+
+        UIApplication.sharedApplication().openURL(url)
+    }
+
+    func shareWithSocial(serviceType :String, initialText :String) {
+        let composeViewController :SLComposeViewController = SLComposeViewController(forServiceType: serviceType)!
+        composeViewController.setInitialText(initialText)
+        composeViewController.addImage(result.img)
+
+        self.presentViewController(composeViewController, animated: true, completion: nil)
     }
 }

@@ -89,7 +89,7 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
 
     func showProgress() {
          MRProgressOverlayView.showOverlayAddedTo(self.view,
-            title: "解析中...",
+            title: "人工知能が\n解析しています...",
             mode: MRProgressOverlayViewMode.Indeterminate,
             animated: true)
     }
