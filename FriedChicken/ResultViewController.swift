@@ -14,10 +14,10 @@ class ResultViewController: UIViewController {
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var commentText: UILabel!
     @IBOutlet weak var karaageImage: UIImageView!
     @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var commentText: UITextView!
 
     //Score Texts
     @IBOutlet weak var oneHundredThousandImg: UIImageView!
@@ -32,6 +32,12 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        commentText.layer.borderWidth = 1
+        commentText.layer.borderColor
+            = UIColor(colorLiteralRed: 218.0 / 255.0, green: 218.0 / 255.0, blue: 218 / 255.0, alpha: 1).CGColor
+        commentText.textContainerInset = UIEdgeInsetsMake(10, 10, 0, 0)
+        commentText.sizeToFit()
 
         setResult()
     }
