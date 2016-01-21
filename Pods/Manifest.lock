@@ -1,6 +1,9 @@
 PODS:
   - BrightFutures (3.2.2):
     - Result (~> 1.0)
+  - Crashlytics (3.6.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.4)
   - MRProgress (0.8.3):
     - MRProgress/ActivityIndicator (= 0.8.3)
     - MRProgress/Blur (= 0.8.3)
@@ -34,11 +37,15 @@ PODS:
 
 DEPENDENCIES:
   - BrightFutures
+  - Crashlytics
+  - Fabric
   - MRProgress
   - SCLAlertView
 
 SPEC CHECKSUMS:
   BrightFutures: 1722a83fa8415aef78d66319a6c6add6685a7a87
+  Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
+  Fabric: ed41fd62173c6bdea24ab02c9d7707161eabb750
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
   Result: caef80340451e1f07492fa1e89117f83613bce24
   SCLAlertView: a5c726a80a938fd3127edd7dbc19da33fb936ca3

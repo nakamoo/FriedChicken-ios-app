@@ -127,6 +127,7 @@
 				B32436221C2AC2B50016B40D /* Resources */,
 				3E7A5D7D1262758F0BC1BD6B /* Embed Pods Frameworks */,
 				D1B7086D636C20AE199E415A /* Copy Pods Resources */,
+				B38A0BE51C50B4F900DE8BBD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -149,6 +150,7 @@
 				TargetAttributes = {
 					B32436231C2AC2B50016B40D = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = X44C4JR5JV;
 					};
 				};
 			};
@@ -217,6 +219,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		B38A0BE51C50B4F900DE8BBD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 09f331b58bf638d3893751019e41fae0f4626df1 88e5977ce0489e272177de362e92c98447a8eaca3af950cf4e168aa585b6110f";
 		};
 		D1B7086D636C20AE199E415A /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -356,11 +371,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FriedChicken/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.karaage.FriedChicken;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.karaage.fried-chicken";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5d5d98c2-e2e9-4b57-b55f-b9e80959397d";
 			};
 			name = Debug;
 		};
@@ -369,12 +386,14 @@
 			baseConfigurationReference = 8EC07D8051DA7AE067EBD4D5 /* Pods-FriedChicken.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = FriedChicken/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.karaage.FriedChicken;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.karaage.fried-chicken";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6f80e91a-bae5-462b-bb52-04adfb7348f7";
 			};
 			name = Release;
 		};
