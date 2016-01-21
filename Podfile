@@ -4,10 +4,10 @@
 use_frameworks!
 
 target 'FriedChicken' do
-  pod 'BrightFutures'
-  pod 'MRProgress'
-  pod 'SCLAlertView'
-  pod 'Fabric'
-  pod 'Crashlytics'
+  pod 'BrightFutures' # 非同期処理のFuture
+  pod 'MRProgress' # プログレスダイアログ
+  pod 'SCLAlertView' # AlertView
+  pod 'Fabric' # Twitter Fabric
+  pod 'Crashlytics' # Crash収集サービス
 end
 
