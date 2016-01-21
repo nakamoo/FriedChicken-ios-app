@@ -7,5 +7,7 @@ target 'FriedChicken' do
   pod 'BrightFutures'
   pod 'MRProgress'
   pod 'SCLAlertView'
+  pod 'Fabric'
+  pod 'Crashlytics'
 end
 

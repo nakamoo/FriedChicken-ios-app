@@ -7,65 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09ECD41EED1BC892EE6FEFCEDB5E8947 /* BrightFutures-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80446265B58749BEBAD656F841F0DFA8 /* BrightFutures-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0B87AEED887108FF3FDA89B00E048E1B /* MRCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D04D2CCBD0FF888BEC73567A98C1347 /* MRCircularProgressView.m */; };
-		0DC94A1A1835128D76E4C96C37A97EE0 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = B5C722233CDB0B37CDCE44A896CA493E /* Info.plist */; };
-		0FB26C90146FEFF44BA116B1E35E09F4 /* Result-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62EEC88AB9DAAD6C6CB0B2EDD496D8AE /* Result-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19A44C55B25612B9721A27E7C49E03CF /* MRIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B70E4DAFDE568A27DEBCB76EB4E7E3 /* MRIconView.m */; };
-		23CC8C8F78A473355FFF1A3CBD017864 /* Result+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3282AD7379AC0561F40E9624697E50 /* Result+BrightFutures.swift */; };
-		28BFEF0F25609E5CF6D310771B92CD24 /* MRStopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC9A13948B53607C9E1DC16089ACE56 /* MRStopButton.m */; };
-		2B760213EE78830957A29FF2AEC63E40 /* MRProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4A399B25A7564BB19B9436352E5CEF /* MRProgress-dummy.m */; };
+		09ECD41EED1BC892EE6FEFCEDB5E8947 /* BrightFutures-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF6719E1505C06A0BBB24258A6AC1CAB /* BrightFutures-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B87AEED887108FF3FDA89B00E048E1B /* MRCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D780DAD38001DD66BA08D8DB22A138 /* MRCircularProgressView.m */; };
+		0DC94A1A1835128D76E4C96C37A97EE0 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 950C4ABDC5B85AD155CC1776D96679FA /* Info.plist */; };
+		0FB26C90146FEFF44BA116B1E35E09F4 /* Result-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95FB04C7C80FB5F33BB075EA924B2DD6 /* Result-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19A44C55B25612B9721A27E7C49E03CF /* MRIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = C160FE7FF24181A99363DD435D6BF2D3 /* MRIconView.m */; };
+		23CC8C8F78A473355FFF1A3CBD017864 /* Result+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77067432B4C30FC958CC7116B7452CA /* Result+BrightFutures.swift */; };
+		28BFEF0F25609E5CF6D310771B92CD24 /* MRStopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A78E47EA6FF9C2A70A10CEE112F67C9 /* MRStopButton.m */; };
+		2B760213EE78830957A29FF2AEC63E40 /* MRProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CF47991A1B7C94379FA1279108C980 /* MRProgress-dummy.m */; };
 		2C448A85F47127966D8F6703BFE65ED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57D900D32408E3A0AB0E1BB8B11CE82 /* UIKit.framework */; };
-		2D1BBEC547CEB5B2977F1AEA4C7A4E47 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149D896C029463C683ABE52DBEBBCC74 /* SCLAlertView.swift */; };
+		2D1BBEC547CEB5B2977F1AEA4C7A4E47 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12912A1D71C769C2481F389082A2893F /* SCLAlertView.swift */; };
 		2E75E787C2183E4851D056E03EB41535 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120A248BEE3280C44A39DFCC645EBBAA /* Result.framework */; };
-		3084B72EA21046D2E806C9661E8FF54E /* MRCircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C28F0C1194EEB9FB74B00A7F6F959E7 /* MRCircularProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D1780833527F5CAD846203B80B2190C /* Result-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC4E2EEB58C4DF82BDBA6BC78CE1EBA /* Result-dummy.m */; };
-		3E3645D4D611E9A212D9A21952F550EB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2D907F6B73B3CD407D9AC8D5EFEDB /* Errors.swift */; };
-		454E1EB4F7B62721B59982B1E983DCFA /* MRProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF87E512E353F8D319F2B14172BF09 /* MRProgressOverlayView.m */; };
+		3084B72EA21046D2E806C9661E8FF54E /* MRCircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F71DEB135C07E9A39546CFAEB29AEA /* MRCircularProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D1780833527F5CAD846203B80B2190C /* Result-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBC2BDF19A8CFC70323AB5E444172B6 /* Result-dummy.m */; };
+		3E3645D4D611E9A212D9A21952F550EB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BFB2DE3B4314CA9AB1864D1783DCC /* Errors.swift */; };
+		454E1EB4F7B62721B59982B1E983DCFA /* MRProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC922B598A5DE99946082A26F6DB98B /* MRProgressOverlayView.m */; };
 		462E04E1F70AABB99FC16A3B3344AAC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985A7B979FD17DF039CB729077729D2C /* CoreGraphics.framework */; };
-		471A38FC9AF9649E31CDC0341A7AF8B0 /* AsyncType+ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC09C7A59B46678C7829450F3AE1DEB /* AsyncType+ResultType.swift */; };
-		52A5E8263E7C91DDAB94F66A5364369B /* MRProgressOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFFAEA5DD88AA9B044DB036D75EF3B1 /* MRProgressOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F5938C6438438D40DB044F697835A4E /* InvalidationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B6E688686BE8FBF137B504501383F /* InvalidationToken.swift */; };
-		5F7F40B822116B9DABC6B73B8EBE338B /* MRBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 765DC53765E7A8227CA90DBD82F2CF0B /* MRBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		617E0A611B03C36C1DDFE620C0BAE39D /* BrightFutures-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53290C970F0A4F7223A50EC3ED8CBA88 /* BrightFutures-dummy.m */; };
-		6365EB94D63E3B73EC7FC13FFC2FC877 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F4D11E94C1787D3ABADDB0E8448D71 /* Future.swift */; };
-		661C5DD01E4441673B992342E098D47C /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C9002EA8FD79AD0127F3275B04892C /* Promise.swift */; };
-		68B64C52F85E1A0B8AC5410FDDE03D07 /* AsyncType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B814322BB9D097E8DFB1A5EB6966AF4 /* AsyncType.swift */; };
-		75C2EC4E91C632BA530B5B1E60DC4AEE /* MRNavigationBarProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 404E90C754927BDA0D87B454C2DA61B5 /* MRNavigationBarProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		788907A105CE1BC948CBF1DC3F0099CD /* MRProgressHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A26ACE2A9486BA1250769781B6393C /* MRProgressHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CFF3D11D2A80054659CB09F8D17A1A1 /* MRProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A86B003029BC388977A7DE40FC4F4E7 /* MRProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8071ECD543975CC1517AAC58B260D53F /* MutableAsyncType+ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4950CADACA7D180A6DF10CA6D01ABA /* MutableAsyncType+ResultType.swift */; };
-		80F843BA9002D7ACB25D605A5F5A5655 /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C43285995844CF7B13F56EDA6E433E0 /* Semaphore.swift */; };
-		811BF3A1EDF9B595901E2FC404641EE7 /* MRProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F06DC0463B069C2AC8C00A2141CA9EE /* MRProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81694B31763640FB3743C90CF3547673 /* MRStopableView.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEE759737D78F2FCF26F77FFC08EDAB /* MRStopableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83BC947C81CD6B24E1F1B4423A032DE5 /* MRNavigationBarProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BDE483B2E96AB5F350288E5A2CE2FC /* MRNavigationBarProgressView.m */; };
+		471A38FC9AF9649E31CDC0341A7AF8B0 /* AsyncType+ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B13391E9A38B31B59759B95A5957D /* AsyncType+ResultType.swift */; };
+		52A5E8263E7C91DDAB94F66A5364369B /* MRProgressOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 36F7DC34A1352898B279F6D924851287 /* MRProgressOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F5938C6438438D40DB044F697835A4E /* InvalidationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B8FF50BA3EB90B0D29D2B82BACAC0E /* InvalidationToken.swift */; };
+		5F7F40B822116B9DABC6B73B8EBE338B /* MRBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = E9C4B4322B57EDD848A580D00B20B59D /* MRBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		617E0A611B03C36C1DDFE620C0BAE39D /* BrightFutures-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 782308AEE65F8A1BB7F3F6999DC80C53 /* BrightFutures-dummy.m */; };
+		6365EB94D63E3B73EC7FC13FFC2FC877 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = A303C4DA484B2179364A0934E7385DD8 /* Future.swift */; };
+		661C5DD01E4441673B992342E098D47C /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EC5A8FD5AF11CC279CD8848EEC726 /* Promise.swift */; };
+		68B64C52F85E1A0B8AC5410FDDE03D07 /* AsyncType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC4E3AD5A0234BB386B3AF78DB539D /* AsyncType.swift */; };
+		75C2EC4E91C632BA530B5B1E60DC4AEE /* MRNavigationBarProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 47BEA8A7901A32F461E24144A9DB0E20 /* MRNavigationBarProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		788907A105CE1BC948CBF1DC3F0099CD /* MRProgressHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 985EFE07CA2F0DD2C61D28734C481EC6 /* MRProgressHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CFF3D11D2A80054659CB09F8D17A1A1 /* MRProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF2FA61AB18CFAC42913F0F8C0DD2B8 /* MRProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8071ECD543975CC1517AAC58B260D53F /* MutableAsyncType+ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18096B7BFF97E9A22F52F473DF44D220 /* MutableAsyncType+ResultType.swift */; };
+		80F843BA9002D7ACB25D605A5F5A5655 /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE9C5C10153DB67A6781A5687CE24C /* Semaphore.swift */; };
+		811BF3A1EDF9B595901E2FC404641EE7 /* MRProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B48FCBDADE60FA5253CA4E49A76A0BA /* MRProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81694B31763640FB3743C90CF3547673 /* MRStopableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 92164225BEC642B2120E7C0E129944C1 /* MRStopableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83BC947C81CD6B24E1F1B4423A032DE5 /* MRNavigationBarProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E91164BBE0394C5E818C4E87D6E1409B /* MRNavigationBarProgressView.m */; };
 		892030F132DF3C5C5679BE10C719411D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD105784E6D0392F9D4102F73FEE214 /* Foundation.framework */; };
-		89CE4E0D4BEDD88C4B05A9D54526CE7E /* MRIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0676CCA10DC422E05A4F8CE09D5082 /* MRIconView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95167CA6D4FE6CFA3762703F17002FC6 /* UIImage+MRImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3576630FD4320400D074F582CAB0C0 /* UIImage+MRImageEffects.m */; };
-		97A014155DCD78356F0E7E62B7A179E8 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179F6AAC1CA287B1EB5447C8513ED71 /* Async.swift */; };
+		89CE4E0D4BEDD88C4B05A9D54526CE7E /* MRIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EAC470DDE4FB0E7F804C8CC3627B375 /* MRIconView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95167CA6D4FE6CFA3762703F17002FC6 /* UIImage+MRImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C902909A9C832C73E0D0401715AD6118 /* UIImage+MRImageEffects.m */; };
+		97A014155DCD78356F0E7E62B7A179E8 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A02A5FE1D89A004E59A1E4A3B9DD206 /* Async.swift */; };
 		9FCB281FE084EE2DCE1DCD5C19E1261C /* Pods-FriedChicken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98EFE2C1716BDDC04E5737E42A83D9 /* Pods-FriedChicken-dummy.m */; };
-		A28930DA66986E8D161FF256CFA2E2E9 /* MRStopButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 52977CE86020BC6D6001C8A6316BC29E /* MRStopButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3C8626AC35DC46D1291E4B38362F4FB /* MRActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C090D073FA0003E4464D27323B93DB4 /* MRActivityIndicatorView.m */; };
-		AAE29103F95967AFEAFAAD5CB8D5F1CC /* NSOperationQueue+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2FADFD234D71B8AD9BC232E797FAE /* NSOperationQueue+BrightFutures.swift */; };
-		AF092F81C6F44FA8F065CF43D112A741 /* MutableAsyncType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2902C14061325F47602BA684A14E9E /* MutableAsyncType.swift */; };
+		A28930DA66986E8D161FF256CFA2E2E9 /* MRStopButton.h in Headers */ = {isa = PBXBuildFile; fileRef = D7462BA74A52181A2EB147FFA5E37AD6 /* MRStopButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3C8626AC35DC46D1291E4B38362F4FB /* MRActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD1EDAE269DBB1A4BAD46E78D8D3B86 /* MRActivityIndicatorView.m */; };
+		AAE29103F95967AFEAFAAD5CB8D5F1CC /* NSOperationQueue+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9881957FB94F7904DE41B41A1F204 /* NSOperationQueue+BrightFutures.swift */; };
+		AF092F81C6F44FA8F065CF43D112A741 /* MutableAsyncType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B787BFD2888001B34E57A98C23C0B50 /* MutableAsyncType.swift */; };
 		B13A4A7092D57C3F7A5AD9E5B596B905 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FCBC52C720AF91E1F9DDE3D865BEB8 /* Accelerate.framework */; };
 		B263D382B4BDF438F43224630578C66A /* Pods-FriedChicken-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFD7B5D7ED0B26F626703458AFCEC8F0 /* Pods-FriedChicken-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B865F620D2B4C174BD13212F5A202639 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD105784E6D0392F9D4102F73FEE214 /* Foundation.framework */; };
-		B945A34C95CBC41678D0B37EE95493B7 /* ExecutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FD8DA7C149AF7C43E68C2CDB921C49 /* ExecutionContext.swift */; };
-		BD9F0543F7B4F444CA4A0948C0F03070 /* MRProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 323C37F0C5CDA7C62EFE8913CCCF1044 /* MRProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDC0281540324E5A27D70A10BD529254 /* UIImage+MRImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A3D694BC54D8532A72B7D1D70880CEA /* UIImage+MRImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B945A34C95CBC41678D0B37EE95493B7 /* ExecutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E311C3D8527CA3B084D299C07B0E0E8 /* ExecutionContext.swift */; };
+		BD9F0543F7B4F444CA4A0948C0F03070 /* MRProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C86519A96B49C611B4D62B13349B888 /* MRProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC0281540324E5A27D70A10BD529254 /* UIImage+MRImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 48704FC9D405FBD22201939BBD582994 /* UIImage+MRImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF7101AB403A2906226CD5A721157510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD105784E6D0392F9D4102F73FEE214 /* Foundation.framework */; };
-		C190F19F2698E0DF6C4CA4C17F3DF3DE /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF279E77675913071FD6DBC525169ED3 /* SCLAlertView-dummy.m */; };
-		CD3C1E8D1BAFF179B13FDDDD6118D146 /* MRBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = D57B28F1800B49911A17183CF0AE6F52 /* MRBlurView.m */; };
+		C190F19F2698E0DF6C4CA4C17F3DF3DE /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3907D17C40B14D864CC16DF171940153 /* SCLAlertView-dummy.m */; };
+		CD3C1E8D1BAFF179B13FDDDD6118D146 /* MRBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B01E50701D8F42F160893A5E72F091 /* MRBlurView.m */; };
 		D0806B6B1256062682361E8A8F1F5429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD105784E6D0392F9D4102F73FEE214 /* Foundation.framework */; };
-		D2EB767179E57B557901172CF4984C24 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0CCBF86E5B79EAF8F8E711C8752CD7 /* ResultType.swift */; };
+		D2EB767179E57B557901172CF4984C24 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25615425A8429172FB3CC3AB262159D6 /* ResultType.swift */; };
 		DEB2CEF71EB587F7A1197B9284A8D687 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B31C25BC79B92B22C1AD2D97DE52A23 /* QuartzCore.framework */; };
-		E144557C782A57E2EC23FD35FB52121C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D01D7421A9A725107B90ACBAA862A /* Result.swift */; };
-		E200ED03F550223C9F6FFC17ED1EEC57 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0D53C62E2069DBABBCC2302B15F1C /* Queue.swift */; };
-		E78EDAA2618F5991F5A5E302955B3A05 /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8828A3B84DB1CD63FD7D078D30072D9F /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8E4C5EBCD831C8E5D0D0CA305F08CC8 /* SequenceType+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15410FF03CB430C3BDD028E32873382 /* SequenceType+BrightFutures.swift */; };
-		EE442E93E5BBC6AB805C3E1B2D3482CA /* MRActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C5CE29DD39379DB902E62B9C47F790 /* MRActivityIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0062A0D1BD5D56ED254B194BB3B7EB4 /* MRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7136BC0F09F2ECD6534005C98B73FA63 /* MRProgressView.m */; };
+		E144557C782A57E2EC23FD35FB52121C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B3176EA7BF61148683F87A9A62790 /* Result.swift */; };
+		E200ED03F550223C9F6FFC17ED1EEC57 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6E4D9ED3C08C9E81D174796D7AFA91 /* Queue.swift */; };
+		E78EDAA2618F5991F5A5E302955B3A05 /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A934C078B4EA5985EA2E10A8748F7DD /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8E4C5EBCD831C8E5D0D0CA305F08CC8 /* SequenceType+BrightFutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3257B617B5F09D8A28E51878B1B3AD71 /* SequenceType+BrightFutures.swift */; };
+		EE442E93E5BBC6AB805C3E1B2D3482CA /* MRActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 79FD603C6C4B1C55D61E7C529EB95AB5 /* MRActivityIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0062A0D1BD5D56ED254B194BB3B7EB4 /* MRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A77C948251CE8E98AE87F83A4232C /* MRProgressView.m */; };
 		FB4E16B23117578B3F241211A42A49D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD105784E6D0392F9D4102F73FEE214 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,91 +108,93 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01DB45411ED488801B0C34F2B0429752 /* MRProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MRProgress.modulemap; sourceTree = "<group>"; };
-		02A26ACE2A9486BA1250769781B6393C /* MRProgressHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressHelper.h; path = src/Utils/MRProgressHelper.h; sourceTree = "<group>"; };
-		032EEEBE337C7C3BA7EA35D7017DE50A /* MRProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRProgress.xcconfig; sourceTree = "<group>"; };
-		03C2FADFD234D71B8AD9BC232E797FAE /* NSOperationQueue+BrightFutures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSOperationQueue+BrightFutures.swift"; path = "BrightFutures/NSOperationQueue+BrightFutures.swift"; sourceTree = "<group>"; };
-		052B3D6D54D4C9B8C0845DDA92DF1B2C /* MRProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRProgress-prefix.pch"; sourceTree = "<group>"; };
-		09508ED95EB6BA2D6A57BBA6C8DEC7BC /* Result.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Result.xcconfig; sourceTree = "<group>"; };
-		0B8ACD55D195338BFB7E126255F7BAD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AAE9C5C10153DB67A6781A5687CE24C /* Semaphore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Semaphore.swift; path = BrightFutures/Semaphore.swift; sourceTree = "<group>"; };
+		0EAC470DDE4FB0E7F804C8CC3627B375 /* MRIconView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRIconView.h; path = src/Components/MRIconView.h; sourceTree = "<group>"; };
 		120A248BEE3280C44A39DFCC645EBBAA /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		149D896C029463C683ABE52DBEBBCC74 /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
-		1A3D694BC54D8532A72B7D1D70880CEA /* UIImage+MRImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MRImageEffects.h"; path = "src/Blur/UIImage+MRImageEffects.h"; sourceTree = "<group>"; };
-		1D04D2CCBD0FF888BEC73567A98C1347 /* MRCircularProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRCircularProgressView.m; path = src/Components/MRCircularProgressView.m; sourceTree = "<group>"; };
-		1E4950CADACA7D180A6DF10CA6D01ABA /* MutableAsyncType+ResultType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MutableAsyncType+ResultType.swift"; path = "BrightFutures/MutableAsyncType+ResultType.swift"; sourceTree = "<group>"; };
+		12912A1D71C769C2481F389082A2893F /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		18096B7BFF97E9A22F52F473DF44D220 /* MutableAsyncType+ResultType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MutableAsyncType+ResultType.swift"; path = "BrightFutures/MutableAsyncType+ResultType.swift"; sourceTree = "<group>"; };
+		189EC5A8FD5AF11CC279CD8848EEC726 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = BrightFutures/Promise.swift; sourceTree = "<group>"; };
+		1A6E4D9ED3C08C9E81D174796D7AFA91 /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = BrightFutures/Queue.swift; sourceTree = "<group>"; };
+		1A78E47EA6FF9C2A70A10CEE112F67C9 /* MRStopButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRStopButton.m; path = src/Components/MRStopButton.m; sourceTree = "<group>"; };
+		1C86519A96B49C611B4D62B13349B888 /* MRProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressView.h; path = src/Components/MRProgressView.h; sourceTree = "<group>"; };
+		25615425A8429172FB3CC3AB262159D6 /* ResultType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultType.swift; path = Result/ResultType.swift; sourceTree = "<group>"; };
+		25C1BEA5EB68395262820C62B8152A34 /* BrightFutures.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BrightFutures.modulemap; sourceTree = "<group>"; };
 		26BC849E3352ED9EE3D75459CF33659F /* Pods-FriedChicken.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FriedChicken.modulemap"; sourceTree = "<group>"; };
-		2A3B6E688686BE8FBF137B504501383F /* InvalidationToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvalidationToken.swift; path = BrightFutures/InvalidationToken.swift; sourceTree = "<group>"; };
+		27B8FF50BA3EB90B0D29D2B82BACAC0E /* InvalidationToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvalidationToken.swift; path = BrightFutures/InvalidationToken.swift; sourceTree = "<group>"; };
 		2AA70765A1B69BF6157F13ACCB41F100 /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BFFAEA5DD88AA9B044DB036D75EF3B1 /* MRProgressOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressOverlayView.h; path = src/Components/MRProgressOverlayView.h; sourceTree = "<group>"; };
-		2C090D073FA0003E4464D27323B93DB4 /* MRActivityIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRActivityIndicatorView.m; path = src/Components/MRActivityIndicatorView.m; sourceTree = "<group>"; };
-		2EA0D53C62E2069DBABBCC2302B15F1C /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = BrightFutures/Queue.swift; sourceTree = "<group>"; };
-		323C37F0C5CDA7C62EFE8913CCCF1044 /* MRProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressView.h; path = src/Components/MRProgressView.h; sourceTree = "<group>"; };
-		333D673934D64CA6DB198D3DD295CE4F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36BDE483B2E96AB5F350288E5A2CE2FC /* MRNavigationBarProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRNavigationBarProgressView.m; path = src/Components/MRNavigationBarProgressView.m; sourceTree = "<group>"; };
+		2B787BFD2888001B34E57A98C23C0B50 /* MutableAsyncType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MutableAsyncType.swift; path = BrightFutures/MutableAsyncType.swift; sourceTree = "<group>"; };
+		2FF8107AF468D4C6F2CE2907D9F38397 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3257B617B5F09D8A28E51878B1B3AD71 /* SequenceType+BrightFutures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SequenceType+BrightFutures.swift"; path = "BrightFutures/SequenceType+BrightFutures.swift"; sourceTree = "<group>"; };
+		36F7DC34A1352898B279F6D924851287 /* MRProgressOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressOverlayView.h; path = src/Components/MRProgressOverlayView.h; sourceTree = "<group>"; };
+		3907D17C40B14D864CC16DF171940153 /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
 		397645E80C54D4606CD9E3D4CFE92AD5 /* Pods-FriedChicken-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FriedChicken-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3B13445F9D4AA262BB4F69BD94D71E01 /* Result-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Result-prefix.pch"; sourceTree = "<group>"; };
-		3CBF87E512E353F8D319F2B14172BF09 /* MRProgressOverlayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRProgressOverlayView.m; path = src/Components/MRProgressOverlayView.m; sourceTree = "<group>"; };
-		3CC09C7A59B46678C7829450F3AE1DEB /* AsyncType+ResultType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AsyncType+ResultType.swift"; path = "BrightFutures/AsyncType+ResultType.swift"; sourceTree = "<group>"; };
 		3CD105784E6D0392F9D4102F73FEE214 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		404E90C754927BDA0D87B454C2DA61B5 /* MRNavigationBarProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRNavigationBarProgressView.h; path = src/Components/MRNavigationBarProgressView.h; sourceTree = "<group>"; };
-		49AE97B200A7506EBFF417A6D17EA81C /* BrightFutures.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BrightFutures.xcconfig; sourceTree = "<group>"; };
+		3DFC4E3AD5A0234BB386B3AF78DB539D /* AsyncType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncType.swift; path = BrightFutures/AsyncType.swift; sourceTree = "<group>"; };
+		47BEA8A7901A32F461E24144A9DB0E20 /* MRNavigationBarProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRNavigationBarProgressView.h; path = src/Components/MRNavigationBarProgressView.h; sourceTree = "<group>"; };
+		48704FC9D405FBD22201939BBD582994 /* UIImage+MRImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MRImageEffects.h"; path = "src/Blur/UIImage+MRImageEffects.h"; sourceTree = "<group>"; };
+		4B48FCBDADE60FA5253CA4E49A76A0BA /* MRProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRProgress-umbrella.h"; sourceTree = "<group>"; };
 		4C98EFE2C1716BDDC04E5737E42A83D9 /* Pods-FriedChicken-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FriedChicken-dummy.m"; sourceTree = "<group>"; };
+		4DC922B598A5DE99946082A26F6DB98B /* MRProgressOverlayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRProgressOverlayView.m; path = src/Components/MRProgressOverlayView.m; sourceTree = "<group>"; };
+		4E6B3AD05AD35BB61A07C802B79F69E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E6F881EBA5F79D95E0C24CD7A2FFF01 /* MRProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MRProgress.modulemap; sourceTree = "<group>"; };
 		4E9F97163B61DD1D502217FE5EA10E12 /* Pods-FriedChicken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FriedChicken.release.xcconfig"; sourceTree = "<group>"; };
-		50C5CE29DD39379DB902E62B9C47F790 /* MRActivityIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRActivityIndicatorView.h; path = src/Components/MRActivityIndicatorView.h; sourceTree = "<group>"; };
-		52977CE86020BC6D6001C8A6316BC29E /* MRStopButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRStopButton.h; path = src/Components/MRStopButton.h; sourceTree = "<group>"; };
-		53290C970F0A4F7223A50EC3ED8CBA88 /* BrightFutures-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BrightFutures-dummy.m"; sourceTree = "<group>"; };
-		546D4373BA6CCF7F96AEA5F241EB2DBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56F3C71114DCD6D68577B9D8285AAD1C /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
+		50B9881957FB94F7904DE41B41A1F204 /* NSOperationQueue+BrightFutures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSOperationQueue+BrightFutures.swift"; path = "BrightFutures/NSOperationQueue+BrightFutures.swift"; sourceTree = "<group>"; };
+		50CE6C00823B2C1097BA4D7699AA6E99 /* BrightFutures-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BrightFutures-prefix.pch"; sourceTree = "<group>"; };
+		52231F6464E30C2C772174CF7E8DD6EA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		577CD29D7449B65A12197013B651378C /* MRProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A5BFB2DE3B4314CA9AB1864D1783DCC /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = BrightFutures/Errors.swift; sourceTree = "<group>"; };
 		5B31C25BC79B92B22C1AD2D97DE52A23 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		5DEB2D220CA243698E8A1CD5B37D806E /* Pods-FriedChicken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FriedChicken.debug.xcconfig"; sourceTree = "<group>"; };
-		5F06DC0463B069C2AC8C00A2141CA9EE /* MRProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRProgress-umbrella.h"; sourceTree = "<group>"; };
-		62EEC88AB9DAAD6C6CB0B2EDD496D8AE /* Result-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Result-umbrella.h"; sourceTree = "<group>"; };
+		5E311C3D8527CA3B084D299C07B0E0E8 /* ExecutionContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExecutionContext.swift; path = BrightFutures/ExecutionContext.swift; sourceTree = "<group>"; };
+		612B3176EA7BF61148683F87A9A62790 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Result/Result.swift; sourceTree = "<group>"; };
 		664088ED948F4C2E18C08158A48DFD6E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69B70E4DAFDE568A27DEBCB76EB4E7E3 /* MRIconView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRIconView.m; path = src/Components/MRIconView.m; sourceTree = "<group>"; };
-		6A86B003029BC388977A7DE40FC4F4E7 /* MRProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgress.h; path = src/MRProgress.h; sourceTree = "<group>"; };
-		6BB67772A16694300A745AB62CE1DC90 /* BrightFutures.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BrightFutures.modulemap; sourceTree = "<group>"; };
-		6C0CCBF86E5B79EAF8F8E711C8752CD7 /* ResultType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultType.swift; path = Result/ResultType.swift; sourceTree = "<group>"; };
-		6FC9A13948B53607C9E1DC16089ACE56 /* MRStopButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRStopButton.m; path = src/Components/MRStopButton.m; sourceTree = "<group>"; };
-		7136BC0F09F2ECD6534005C98B73FA63 /* MRProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRProgressView.m; path = src/Components/MRProgressView.m; sourceTree = "<group>"; };
-		71C9002EA8FD79AD0127F3275B04892C /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = BrightFutures/Promise.swift; sourceTree = "<group>"; };
-		74AD1542817CC24976138D7122F1EC81 /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
-		765DC53765E7A8227CA90DBD82F2CF0B /* MRBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRBlurView.h; path = src/Blur/MRBlurView.h; sourceTree = "<group>"; };
-		7C28F0C1194EEB9FB74B00A7F6F959E7 /* MRCircularProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRCircularProgressView.h; path = src/Components/MRCircularProgressView.h; sourceTree = "<group>"; };
+		70F71DEB135C07E9A39546CFAEB29AEA /* MRCircularProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRCircularProgressView.h; path = src/Components/MRCircularProgressView.h; sourceTree = "<group>"; };
+		782308AEE65F8A1BB7F3F6999DC80C53 /* BrightFutures-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BrightFutures-dummy.m"; sourceTree = "<group>"; };
+		79FD603C6C4B1C55D61E7C529EB95AB5 /* MRActivityIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRActivityIndicatorView.h; path = src/Components/MRActivityIndicatorView.h; sourceTree = "<group>"; };
+		7A02A5FE1D89A004E59A1E4A3B9DD206 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = BrightFutures/Async.swift; sourceTree = "<group>"; };
+		7A934C078B4EA5985EA2E10A8748F7DD /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
 		7EA4D387B8C108EB6A060E8CCBD9FD02 /* Pods-FriedChicken-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FriedChicken-resources.sh"; sourceTree = "<group>"; };
-		7F3576630FD4320400D074F582CAB0C0 /* UIImage+MRImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MRImageEffects.m"; path = "src/Blur/UIImage+MRImageEffects.m"; sourceTree = "<group>"; };
-		80446265B58749BEBAD656F841F0DFA8 /* BrightFutures-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BrightFutures-umbrella.h"; sourceTree = "<group>"; };
-		8828A3B84DB1CD63FD7D078D30072D9F /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
-		8B0676CCA10DC422E05A4F8CE09D5082 /* MRIconView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRIconView.h; path = src/Components/MRIconView.h; sourceTree = "<group>"; };
-		8B814322BB9D097E8DFB1A5EB6966AF4 /* AsyncType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncType.swift; path = BrightFutures/AsyncType.swift; sourceTree = "<group>"; };
+		8948171671C035AFE6D696956AE53FBE /* Result-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Result-prefix.pch"; sourceTree = "<group>"; };
+		90C824FD3AD7E3BD6FC2FF62F6EFF47F /* MRProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRProgress-prefix.pch"; sourceTree = "<group>"; };
+		92164225BEC642B2120E7C0E129944C1 /* MRStopableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRStopableView.h; path = src/Components/MRStopableView.h; sourceTree = "<group>"; };
+		93CF47991A1B7C94379FA1279108C980 /* MRProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRProgress-dummy.m"; sourceTree = "<group>"; };
+		950C4ABDC5B85AD155CC1776D96679FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = SCLAlertView/Info.plist; sourceTree = "<group>"; };
+		95FB04C7C80FB5F33BB075EA924B2DD6 /* Result-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Result-umbrella.h"; sourceTree = "<group>"; };
 		985A7B979FD17DF039CB729077729D2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		985EFE07CA2F0DD2C61D28734C481EC6 /* MRProgressHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressHelper.h; path = src/Utils/MRProgressHelper.h; sourceTree = "<group>"; };
 		98BE78A5B982F1341F8157C368099BA1 /* Pods-FriedChicken-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FriedChicken-acknowledgements.plist"; sourceTree = "<group>"; };
-		9C43285995844CF7B13F56EDA6E433E0 /* Semaphore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Semaphore.swift; path = BrightFutures/Semaphore.swift; sourceTree = "<group>"; };
-		9EF2D907F6B73B3CD407D9AC8D5EFEDB /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = BrightFutures/Errors.swift; sourceTree = "<group>"; };
-		AA2902C14061325F47602BA684A14E9E /* MutableAsyncType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MutableAsyncType.swift; path = BrightFutures/MutableAsyncType.swift; sourceTree = "<group>"; };
-		AB3282AD7379AC0561F40E9624697E50 /* Result+BrightFutures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+BrightFutures.swift"; path = "BrightFutures/Result+BrightFutures.swift"; sourceTree = "<group>"; };
-		AC1D01D7421A9A725107B90ACBAA862A /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Result/Result.swift; sourceTree = "<group>"; };
+		99D780DAD38001DD66BA08D8DB22A138 /* MRCircularProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRCircularProgressView.m; path = src/Components/MRCircularProgressView.m; sourceTree = "<group>"; };
+		A1B01E50701D8F42F160893A5E72F091 /* MRBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRBlurView.m; path = src/Blur/MRBlurView.m; sourceTree = "<group>"; };
+		A303C4DA484B2179364A0934E7385DD8 /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = BrightFutures/Future.swift; sourceTree = "<group>"; };
+		A37B13391E9A38B31B59759B95A5957D /* AsyncType+ResultType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AsyncType+ResultType.swift"; path = "BrightFutures/AsyncType+ResultType.swift"; sourceTree = "<group>"; };
+		A77067432B4C30FC958CC7116B7452CA /* Result+BrightFutures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+BrightFutures.swift"; path = "BrightFutures/Result+BrightFutures.swift"; sourceTree = "<group>"; };
+		A87A2CCC6BA3294CBF122CCBD15CE692 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF6719E1505C06A0BBB24258A6AC1CAB /* BrightFutures-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BrightFutures-umbrella.h"; sourceTree = "<group>"; };
+		AFF8842279CE6F22E2F81C45FB8D557C /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
 		B5BF4C6835B3F989789BA0DAED0F5D07 /* BrightFutures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BrightFutures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5C722233CDB0B37CDCE44A896CA493E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = SCLAlertView/Info.plist; sourceTree = "<group>"; };
+		B680B833F9CEC7CD9D078491AEDA5F86 /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C179F6AAC1CA287B1EB5447C8513ED71 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = BrightFutures/Async.swift; sourceTree = "<group>"; };
-		C4FD8DA7C149AF7C43E68C2CDB921C49 /* ExecutionContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExecutionContext.swift; path = BrightFutures/ExecutionContext.swift; sourceTree = "<group>"; };
+		BDF2FA61AB18CFAC42913F0F8C0DD2B8 /* MRProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgress.h; path = src/MRProgress.h; sourceTree = "<group>"; };
+		BE3742C8A7C12B31821CBFB8C5D14788 /* BrightFutures.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BrightFutures.xcconfig; sourceTree = "<group>"; };
+		C160FE7FF24181A99363DD435D6BF2D3 /* MRIconView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRIconView.m; path = src/Components/MRIconView.m; sourceTree = "<group>"; };
 		C6A161F2FC906FB4A83FE514731AFFF2 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C874568062A8BB1D7BECF37D1E57FEDC /* Pods_FriedChicken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FriedChicken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCC4E2EEB58C4DF82BDBA6BC78CE1EBA /* Result-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Result-dummy.m"; sourceTree = "<group>"; };
-		CEEE759737D78F2FCF26F77FFC08EDAB /* MRStopableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRStopableView.h; path = src/Components/MRStopableView.h; sourceTree = "<group>"; };
-		D2A046259CB47B94827AB5B177093E02 /* Result.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Result.modulemap; sourceTree = "<group>"; };
-		D57B28F1800B49911A17183CF0AE6F52 /* MRBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRBlurView.m; path = src/Blur/MRBlurView.m; sourceTree = "<group>"; };
-		D6F4D11E94C1787D3ABADDB0E8448D71 /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = BrightFutures/Future.swift; sourceTree = "<group>"; };
-		DD708305B59B941B4E611FF4F33658AA /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
+		C902909A9C832C73E0D0401715AD6118 /* UIImage+MRImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MRImageEffects.m"; path = "src/Blur/UIImage+MRImageEffects.m"; sourceTree = "<group>"; };
+		C91227E0BA212681F340338CF1CF8C99 /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
+		D3D4EA9824D177FAB7975F3B1DB17DA8 /* Result.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Result.modulemap; sourceTree = "<group>"; };
+		D44A0511698729099A6C15A2C582E9C0 /* MRProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRProgress.xcconfig; sourceTree = "<group>"; };
+		D7462BA74A52181A2EB147FFA5E37AD6 /* MRStopButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRStopButton.h; path = src/Components/MRStopButton.h; sourceTree = "<group>"; };
+		DD65DD07C6E7BFC482B74421075D9791 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		DFEF0E76B1335C5A2B7486280D5FB8C2 /* Pods-FriedChicken-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FriedChicken-frameworks.sh"; sourceTree = "<group>"; };
-		E15410FF03CB430C3BDD028E32873382 /* SequenceType+BrightFutures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SequenceType+BrightFutures.swift"; path = "BrightFutures/SequenceType+BrightFutures.swift"; sourceTree = "<group>"; };
-		E2EBA7EE8CB0AE65B896DF75B8D6CFF7 /* BrightFutures-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BrightFutures-prefix.pch"; sourceTree = "<group>"; };
+		E1D156E16A928150C237F661D1F11E72 /* Result.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Result.xcconfig; sourceTree = "<group>"; };
 		E2FCBC52C720AF91E1F9DDE3D865BEB8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		E91164BBE0394C5E818C4E87D6E1409B /* MRNavigationBarProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRNavigationBarProgressView.m; path = src/Components/MRNavigationBarProgressView.m; sourceTree = "<group>"; };
+		E9C4B4322B57EDD848A580D00B20B59D /* MRBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRBlurView.h; path = src/Blur/MRBlurView.h; sourceTree = "<group>"; };
+		EEF96FA2F724135CFD1331C4215BDBBD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF6A77C948251CE8E98AE87F83A4232C /* MRProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRProgressView.m; path = src/Components/MRProgressView.m; sourceTree = "<group>"; };
+		EFBC2BDF19A8CFC70323AB5E444172B6 /* Result-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Result-dummy.m"; sourceTree = "<group>"; };
 		F57D900D32408E3A0AB0E1BB8B11CE82 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		FCBDBC06A6BB08F9C82D08143AB240FE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF279E77675913071FD6DBC525169ED3 /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
-		FF4A399B25A7564BB19B9436352E5CEF /* MRProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRProgress-dummy.m"; sourceTree = "<group>"; };
+		FBD1EDAE269DBB1A4BAD46E78D8D3B86 /* MRActivityIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRActivityIndicatorView.m; path = src/Components/MRActivityIndicatorView.m; sourceTree = "<group>"; };
 		FFD7B5D7ED0B26F626703458AFCEC8F0 /* Pods-FriedChicken-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FriedChicken-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,39 +247,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CB58897EC0CD4D686A0C8E7132E140A /* Result */ = {
+		00247E54BCAFD4F62CF8949A1544B650 /* SCLAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				AC1D01D7421A9A725107B90ACBAA862A /* Result.swift */,
-				6C0CCBF86E5B79EAF8F8E711C8752CD7 /* ResultType.swift */,
-				86CE617F250FB82E0ED851553CA89850 /* Support Files */,
+				950C4ABDC5B85AD155CC1776D96679FA /* Info.plist */,
+				12912A1D71C769C2481F389082A2893F /* SCLAlertView.swift */,
+				0250629D8A5E2E1BC5FB87EC629CAAE4 /* Support Files */,
 			);
-			path = Result;
+			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
-		10F918476836D7E4D5C96DBB756AE76F /* Pods */ = {
+		0250629D8A5E2E1BC5FB87EC629CAAE4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DD9FC14852C0601EFD757913F34A30E6 /* BrightFutures */,
-				8D51070CA7258F2D88286E0E70639562 /* MRProgress */,
-				0CB58897EC0CD4D686A0C8E7132E140A /* Result */,
-				E6F04D634D59C3430F205E7719E003DC /* SCLAlertView */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4189677F759DD4208E54FEEB3A2D9B57 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6BB67772A16694300A745AB62CE1DC90 /* BrightFutures.modulemap */,
-				49AE97B200A7506EBFF417A6D17EA81C /* BrightFutures.xcconfig */,
-				53290C970F0A4F7223A50EC3ED8CBA88 /* BrightFutures-dummy.m */,
-				E2EBA7EE8CB0AE65B896DF75B8D6CFF7 /* BrightFutures-prefix.pch */,
-				80446265B58749BEBAD656F841F0DFA8 /* BrightFutures-umbrella.h */,
-				0B8ACD55D195338BFB7E126255F7BAD6 /* Info.plist */,
+				EEF96FA2F724135CFD1331C4215BDBBD /* Info.plist */,
+				AFF8842279CE6F22E2F81C45FB8D557C /* SCLAlertView.modulemap */,
+				B680B833F9CEC7CD9D078491AEDA5F86 /* SCLAlertView.xcconfig */,
+				3907D17C40B14D864CC16DF171940153 /* SCLAlertView-dummy.m */,
+				C91227E0BA212681F340338CF1CF8C99 /* SCLAlertView-prefix.pch */,
+				7A934C078B4EA5985EA2E10A8748F7DD /* SCLAlertView-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/BrightFutures";
+			path = "../Target Support Files/SCLAlertView";
+			sourceTree = "<group>";
+		};
+		16ABE72DAFFCF3B4686673EBC2D1F19D /* ProgressBaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				1C86519A96B49C611B4D62B13349B888 /* MRProgressView.h */,
+				EF6A77C948251CE8E98AE87F83A4232C /* MRProgressView.m */,
+			);
+			name = ProgressBaseClass;
+			sourceTree = "<group>";
+		};
+		30E49F094863ED1998FBB77591CA1699 /* Stopable */ = {
+			isa = PBXGroup;
+			children = (
+				92164225BEC642B2120E7C0E129944C1 /* MRStopableView.h */,
+				D7462BA74A52181A2EB147FFA5E37AD6 /* MRStopButton.h */,
+				1A78E47EA6FF9C2A70A10CEE112F67C9 /* MRStopButton.m */,
+			);
+			name = Stopable;
+			sourceTree = "<group>";
+		};
+		3CBC1E454860BD40DF8FAA5BFFAE82E8 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				36F7DC34A1352898B279F6D924851287 /* MRProgressOverlayView.h */,
+				4DC922B598A5DE99946082A26F6DB98B /* MRProgressOverlayView.m */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
+		4288A77911071A5D7335A5E5BA43BEBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD65DD07C6E7BFC482B74421075D9791 /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4637B82E718FC73A6114AC366E7B6E3C /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				0EAC470DDE4FB0E7F804C8CC3627B375 /* MRIconView.h */,
+				C160FE7FF24181A99363DD435D6BF2D3 /* MRIconView.m */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 		4653866F58CD833183A39C85AF2F5AC3 /* Pods-FriedChicken */ = {
@@ -298,49 +334,18 @@
 			path = "Target Support Files/Pods-FriedChicken";
 			sourceTree = "<group>";
 		};
-		46F84ECC1DC90A91CDC75E310CB874D4 /* ActivityIndicator */ = {
+		5599B405CC1F1BEADBE53A3CFA02A20E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				50C5CE29DD39379DB902E62B9C47F790 /* MRActivityIndicatorView.h */,
-				2C090D073FA0003E4464D27323B93DB4 /* MRActivityIndicatorView.m */,
+				25C1BEA5EB68395262820C62B8152A34 /* BrightFutures.modulemap */,
+				BE3742C8A7C12B31821CBFB8C5D14788 /* BrightFutures.xcconfig */,
+				782308AEE65F8A1BB7F3F6999DC80C53 /* BrightFutures-dummy.m */,
+				50CE6C00823B2C1097BA4D7699AA6E99 /* BrightFutures-prefix.pch */,
+				AF6719E1505C06A0BBB24258A6AC1CAB /* BrightFutures-umbrella.h */,
+				A87A2CCC6BA3294CBF122CCBD15CE692 /* Info.plist */,
 			);
-			name = ActivityIndicator;
-			sourceTree = "<group>";
-		};
-		49DA514A7C83DE3D9C8B67D2B7B04AB5 /* Circular */ = {
-			isa = PBXGroup;
-			children = (
-				7C28F0C1194EEB9FB74B00A7F6F959E7 /* MRCircularProgressView.h */,
-				1D04D2CCBD0FF888BEC73567A98C1347 /* MRCircularProgressView.m */,
-			);
-			name = Circular;
-			sourceTree = "<group>";
-		};
-		69AA185D2FAAE58838119BD2334CC2E9 /* Overlay */ = {
-			isa = PBXGroup;
-			children = (
-				2BFFAEA5DD88AA9B044DB036D75EF3B1 /* MRProgressOverlayView.h */,
-				3CBF87E512E353F8D319F2B14172BF09 /* MRProgressOverlayView.m */,
-			);
-			name = Overlay;
-			sourceTree = "<group>";
-		};
-		6FC1F4DA7673F48FDD60E9FBC4243117 /* NavigationBarProgress */ = {
-			isa = PBXGroup;
-			children = (
-				404E90C754927BDA0D87B454C2DA61B5 /* MRNavigationBarProgressView.h */,
-				36BDE483B2E96AB5F350288E5A2CE2FC /* MRNavigationBarProgressView.m */,
-			);
-			name = NavigationBarProgress;
-			sourceTree = "<group>";
-		};
-		70DB07037C7196B8DE7B4211579BDD2A /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				8B0676CCA10DC422E05A4F8CE09D5082 /* MRIconView.h */,
-				69B70E4DAFDE568A27DEBCB76EB4E7E3 /* MRIconView.m */,
-			);
-			name = Icons;
+			name = "Support Files";
+			path = "../Target Support Files/BrightFutures";
 			sourceTree = "<group>";
 		};
 		7814E5AB3359FBB8FA9CC389D29F7B0B /* Products */ = {
@@ -360,94 +365,141 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				E7D4413B23A7A6175D31FE817D4ACED0 /* Frameworks */,
-				10F918476836D7E4D5C96DBB756AE76F /* Pods */,
+				A0DF141B9BACA64AA3262D921AA7E246 /* Pods */,
 				7814E5AB3359FBB8FA9CC389D29F7B0B /* Products */,
 				CF3B26995C9F8FFBDFCC72E856DC23EA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		86CE617F250FB82E0ED851553CA89850 /* Support Files */ = {
+		7FFE06B5B3442F7A6685459EE71FE271 /* MRProgress */ = {
 			isa = PBXGroup;
 			children = (
-				546D4373BA6CCF7F96AEA5F241EB2DBA /* Info.plist */,
-				D2A046259CB47B94827AB5B177093E02 /* Result.modulemap */,
-				09508ED95EB6BA2D6A57BBA6C8DEC7BC /* Result.xcconfig */,
-				CCC4E2EEB58C4DF82BDBA6BC78CE1EBA /* Result-dummy.m */,
-				3B13445F9D4AA262BB4F69BD94D71E01 /* Result-prefix.pch */,
-				62EEC88AB9DAAD6C6CB0B2EDD496D8AE /* Result-umbrella.h */,
+				BDF2FA61AB18CFAC42913F0F8C0DD2B8 /* MRProgress.h */,
+				F45FC2EBE67ED9885950A8AE3DC55514 /* ActivityIndicator */,
+				82E8A9C5FC1B15BC2975DA2C3BCE0159 /* Blur */,
+				8229030FE74E40A010EE073A00A31EB7 /* Circular */,
+				92D6BEDB025BD10BDF97C1C1CDB2C7CC /* Helper */,
+				4637B82E718FC73A6114AC366E7B6E3C /* Icons */,
+				B0D7A9C8D0E15CE04E2B6A7EACED4169 /* NavigationBarProgress */,
+				3CBC1E454860BD40DF8FAA5BFFAE82E8 /* Overlay */,
+				16ABE72DAFFCF3B4686673EBC2D1F19D /* ProgressBaseClass */,
+				30E49F094863ED1998FBB77591CA1699 /* Stopable */,
+				E6DD8D4686FED36F028521C9ED121C7A /* Support Files */,
+			);
+			path = MRProgress;
+			sourceTree = "<group>";
+		};
+		8229030FE74E40A010EE073A00A31EB7 /* Circular */ = {
+			isa = PBXGroup;
+			children = (
+				70F71DEB135C07E9A39546CFAEB29AEA /* MRCircularProgressView.h */,
+				99D780DAD38001DD66BA08D8DB22A138 /* MRCircularProgressView.m */,
+			);
+			name = Circular;
+			sourceTree = "<group>";
+		};
+		82E8A9C5FC1B15BC2975DA2C3BCE0159 /* Blur */ = {
+			isa = PBXGroup;
+			children = (
+				E9C4B4322B57EDD848A580D00B20B59D /* MRBlurView.h */,
+				A1B01E50701D8F42F160893A5E72F091 /* MRBlurView.m */,
+				48704FC9D405FBD22201939BBD582994 /* UIImage+MRImageEffects.h */,
+				C902909A9C832C73E0D0401715AD6118 /* UIImage+MRImageEffects.m */,
+			);
+			name = Blur;
+			sourceTree = "<group>";
+		};
+		92D6BEDB025BD10BDF97C1C1CDB2C7CC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				985EFE07CA2F0DD2C61D28734C481EC6 /* MRProgressHelper.h */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		94FD0E84EC668F15ECAC8379C2AD775A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FF8107AF468D4C6F2CE2907D9F38397 /* Info.plist */,
+				D3D4EA9824D177FAB7975F3B1DB17DA8 /* Result.modulemap */,
+				E1D156E16A928150C237F661D1F11E72 /* Result.xcconfig */,
+				EFBC2BDF19A8CFC70323AB5E444172B6 /* Result-dummy.m */,
+				8948171671C035AFE6D696956AE53FBE /* Result-prefix.pch */,
+				95FB04C7C80FB5F33BB075EA924B2DD6 /* Result-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Result";
 			sourceTree = "<group>";
 		};
-		8D51070CA7258F2D88286E0E70639562 /* MRProgress */ = {
+		9EFC23BAF300453022D27C9C648A7BD2 /* BrightFutures */ = {
 			isa = PBXGroup;
 			children = (
-				6A86B003029BC388977A7DE40FC4F4E7 /* MRProgress.h */,
-				46F84ECC1DC90A91CDC75E310CB874D4 /* ActivityIndicator */,
-				902D5DAD6C0716589DD845662C3AB900 /* Blur */,
-				49DA514A7C83DE3D9C8B67D2B7B04AB5 /* Circular */,
-				B217B837BAA632684389EE0627BB4A19 /* Helper */,
-				70DB07037C7196B8DE7B4211579BDD2A /* Icons */,
-				6FC1F4DA7673F48FDD60E9FBC4243117 /* NavigationBarProgress */,
-				69AA185D2FAAE58838119BD2334CC2E9 /* Overlay */,
-				BEBECF555338B4E6688507204E3D7844 /* ProgressBaseClass */,
-				8FAF66DCD3893FC4D297C20205013217 /* Stopable */,
-				D3C73FFD7C5544F4BAD67126FDCBD298 /* Support Files */,
+				7A02A5FE1D89A004E59A1E4A3B9DD206 /* Async.swift */,
+				3DFC4E3AD5A0234BB386B3AF78DB539D /* AsyncType.swift */,
+				A37B13391E9A38B31B59759B95A5957D /* AsyncType+ResultType.swift */,
+				5A5BFB2DE3B4314CA9AB1864D1783DCC /* Errors.swift */,
+				5E311C3D8527CA3B084D299C07B0E0E8 /* ExecutionContext.swift */,
+				A303C4DA484B2179364A0934E7385DD8 /* Future.swift */,
+				27B8FF50BA3EB90B0D29D2B82BACAC0E /* InvalidationToken.swift */,
+				2B787BFD2888001B34E57A98C23C0B50 /* MutableAsyncType.swift */,
+				18096B7BFF97E9A22F52F473DF44D220 /* MutableAsyncType+ResultType.swift */,
+				50B9881957FB94F7904DE41B41A1F204 /* NSOperationQueue+BrightFutures.swift */,
+				189EC5A8FD5AF11CC279CD8848EEC726 /* Promise.swift */,
+				1A6E4D9ED3C08C9E81D174796D7AFA91 /* Queue.swift */,
+				A77067432B4C30FC958CC7116B7452CA /* Result+BrightFutures.swift */,
+				0AAE9C5C10153DB67A6781A5687CE24C /* Semaphore.swift */,
+				3257B617B5F09D8A28E51878B1B3AD71 /* SequenceType+BrightFutures.swift */,
+				5599B405CC1F1BEADBE53A3CFA02A20E /* Support Files */,
 			);
-			path = MRProgress;
+			path = BrightFutures;
 			sourceTree = "<group>";
 		};
-		8FAF66DCD3893FC4D297C20205013217 /* Stopable */ = {
+		A0DF141B9BACA64AA3262D921AA7E246 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CEEE759737D78F2FCF26F77FFC08EDAB /* MRStopableView.h */,
-				52977CE86020BC6D6001C8A6316BC29E /* MRStopButton.h */,
-				6FC9A13948B53607C9E1DC16089ACE56 /* MRStopButton.m */,
+				9EFC23BAF300453022D27C9C648A7BD2 /* BrightFutures */,
+				C8E308A01B941D137FD1728865CEC956 /* Crashlytics */,
+				C83C4929B7993106FD5D906E8A5AE1FD /* Fabric */,
+				7FFE06B5B3442F7A6685459EE71FE271 /* MRProgress */,
+				A68B780495E670E76B3F331479952F88 /* Result */,
+				00247E54BCAFD4F62CF8949A1544B650 /* SCLAlertView */,
 			);
-			name = Stopable;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		902D5DAD6C0716589DD845662C3AB900 /* Blur */ = {
+		A68B780495E670E76B3F331479952F88 /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				765DC53765E7A8227CA90DBD82F2CF0B /* MRBlurView.h */,
-				D57B28F1800B49911A17183CF0AE6F52 /* MRBlurView.m */,
-				1A3D694BC54D8532A72B7D1D70880CEA /* UIImage+MRImageEffects.h */,
-				7F3576630FD4320400D074F582CAB0C0 /* UIImage+MRImageEffects.m */,
+				612B3176EA7BF61148683F87A9A62790 /* Result.swift */,
+				25615425A8429172FB3CC3AB262159D6 /* ResultType.swift */,
+				94FD0E84EC668F15ECAC8379C2AD775A /* Support Files */,
 			);
-			name = Blur;
+			path = Result;
 			sourceTree = "<group>";
 		};
-		9D6B9606044C8F345A9E127BE99C7F01 /* Support Files */ = {
+		B0D7A9C8D0E15CE04E2B6A7EACED4169 /* NavigationBarProgress */ = {
 			isa = PBXGroup;
 			children = (
-				FCBDBC06A6BB08F9C82D08143AB240FE /* Info.plist */,
-				56F3C71114DCD6D68577B9D8285AAD1C /* SCLAlertView.modulemap */,
-				DD708305B59B941B4E611FF4F33658AA /* SCLAlertView.xcconfig */,
-				FF279E77675913071FD6DBC525169ED3 /* SCLAlertView-dummy.m */,
-				74AD1542817CC24976138D7122F1EC81 /* SCLAlertView-prefix.pch */,
-				8828A3B84DB1CD63FD7D078D30072D9F /* SCLAlertView-umbrella.h */,
+				47BEA8A7901A32F461E24144A9DB0E20 /* MRNavigationBarProgressView.h */,
+				E91164BBE0394C5E818C4E87D6E1409B /* MRNavigationBarProgressView.m */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SCLAlertView";
+			name = NavigationBarProgress;
 			sourceTree = "<group>";
 		};
-		B217B837BAA632684389EE0627BB4A19 /* Helper */ = {
+		C83C4929B7993106FD5D906E8A5AE1FD /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				02A26ACE2A9486BA1250769781B6393C /* MRProgressHelper.h */,
+				E901476574BEF993B1AC302B8C2C7253 /* Frameworks */,
 			);
-			name = Helper;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
-		BEBECF555338B4E6688507204E3D7844 /* ProgressBaseClass */ = {
+		C8E308A01B941D137FD1728865CEC956 /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				323C37F0C5CDA7C62EFE8913CCCF1044 /* MRProgressView.h */,
-				7136BC0F09F2ECD6534005C98B73FA63 /* MRProgressView.m */,
+				4288A77911071A5D7335A5E5BA43BEBE /* Frameworks */,
 			);
-			name = ProgressBaseClass;
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 		CA56B8D9F9218F67B7687B49920ED275 /* iOS */ = {
@@ -470,51 +522,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D3C73FFD7C5544F4BAD67126FDCBD298 /* Support Files */ = {
+		E6DD8D4686FED36F028521C9ED121C7A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				333D673934D64CA6DB198D3DD295CE4F /* Info.plist */,
-				01DB45411ED488801B0C34F2B0429752 /* MRProgress.modulemap */,
-				032EEEBE337C7C3BA7EA35D7017DE50A /* MRProgress.xcconfig */,
-				FF4A399B25A7564BB19B9436352E5CEF /* MRProgress-dummy.m */,
-				052B3D6D54D4C9B8C0845DDA92DF1B2C /* MRProgress-prefix.pch */,
-				5F06DC0463B069C2AC8C00A2141CA9EE /* MRProgress-umbrella.h */,
+				4E6B3AD05AD35BB61A07C802B79F69E2 /* Info.plist */,
+				4E6F881EBA5F79D95E0C24CD7A2FFF01 /* MRProgress.modulemap */,
+				D44A0511698729099A6C15A2C582E9C0 /* MRProgress.xcconfig */,
+				93CF47991A1B7C94379FA1279108C980 /* MRProgress-dummy.m */,
+				90C824FD3AD7E3BD6FC2FF62F6EFF47F /* MRProgress-prefix.pch */,
+				4B48FCBDADE60FA5253CA4E49A76A0BA /* MRProgress-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MRProgress";
-			sourceTree = "<group>";
-		};
-		DD9FC14852C0601EFD757913F34A30E6 /* BrightFutures */ = {
-			isa = PBXGroup;
-			children = (
-				C179F6AAC1CA287B1EB5447C8513ED71 /* Async.swift */,
-				8B814322BB9D097E8DFB1A5EB6966AF4 /* AsyncType.swift */,
-				3CC09C7A59B46678C7829450F3AE1DEB /* AsyncType+ResultType.swift */,
-				9EF2D907F6B73B3CD407D9AC8D5EFEDB /* Errors.swift */,
-				C4FD8DA7C149AF7C43E68C2CDB921C49 /* ExecutionContext.swift */,
-				D6F4D11E94C1787D3ABADDB0E8448D71 /* Future.swift */,
-				2A3B6E688686BE8FBF137B504501383F /* InvalidationToken.swift */,
-				AA2902C14061325F47602BA684A14E9E /* MutableAsyncType.swift */,
-				1E4950CADACA7D180A6DF10CA6D01ABA /* MutableAsyncType+ResultType.swift */,
-				03C2FADFD234D71B8AD9BC232E797FAE /* NSOperationQueue+BrightFutures.swift */,
-				71C9002EA8FD79AD0127F3275B04892C /* Promise.swift */,
-				2EA0D53C62E2069DBABBCC2302B15F1C /* Queue.swift */,
-				AB3282AD7379AC0561F40E9624697E50 /* Result+BrightFutures.swift */,
-				9C43285995844CF7B13F56EDA6E433E0 /* Semaphore.swift */,
-				E15410FF03CB430C3BDD028E32873382 /* SequenceType+BrightFutures.swift */,
-				4189677F759DD4208E54FEEB3A2D9B57 /* Support Files */,
-			);
-			path = BrightFutures;
-			sourceTree = "<group>";
-		};
-		E6F04D634D59C3430F205E7719E003DC /* SCLAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				B5C722233CDB0B37CDCE44A896CA493E /* Info.plist */,
-				149D896C029463C683ABE52DBEBBCC74 /* SCLAlertView.swift */,
-				9D6B9606044C8F345A9E127BE99C7F01 /* Support Files */,
-			);
-			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
 		E7D4413B23A7A6175D31FE817D4ACED0 /* Frameworks */ = {
@@ -524,6 +543,23 @@
 				CA56B8D9F9218F67B7687B49920ED275 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E901476574BEF993B1AC302B8C2C7253 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52231F6464E30C2C772174CF7E8DD6EA /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F45FC2EBE67ED9885950A8AE3DC55514 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				79FD603C6C4B1C55D61E7C529EB95AB5 /* MRActivityIndicatorView.h */,
+				FBD1EDAE269DBB1A4BAD46E78D8D3B86 /* MRActivityIndicatorView.m */,
+			);
+			name = ActivityIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -811,7 +847,7 @@
 /* Begin XCBuildConfiguration section */
 		18E92B516A87C2B4449F4F559C04B4CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09508ED95EB6BA2D6A57BBA6C8DEC7BC /* Result.xcconfig */;
+			baseConfigurationReference = E1D156E16A928150C237F661D1F11E72 /* Result.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -839,7 +875,7 @@
 		};
 		2F6AB239DA132F0CEBE7C7DE64785D6B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 032EEEBE337C7C3BA7EA35D7017DE50A /* MRProgress.xcconfig */;
+			baseConfigurationReference = D44A0511698729099A6C15A2C582E9C0 /* MRProgress.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -896,7 +932,7 @@
 		};
 		4F0867266503C8B9E306E1EA922133F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD708305B59B941B4E611FF4F33658AA /* SCLAlertView.xcconfig */;
+			baseConfigurationReference = B680B833F9CEC7CD9D078491AEDA5F86 /* SCLAlertView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -924,7 +960,7 @@
 		};
 		6B7B15EC46CCB300546E9DC838DFD02B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 032EEEBE337C7C3BA7EA35D7017DE50A /* MRProgress.xcconfig */;
+			baseConfigurationReference = D44A0511698729099A6C15A2C582E9C0 /* MRProgress.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -951,7 +987,7 @@
 		};
 		7EC677729ED4A6AE4767DD6B705B64C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49AE97B200A7506EBFF417A6D17EA81C /* BrightFutures.xcconfig */;
+			baseConfigurationReference = BE3742C8A7C12B31821CBFB8C5D14788 /* BrightFutures.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -979,7 +1015,7 @@
 		};
 		8139B780E807072074D58E3EC7F023EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09508ED95EB6BA2D6A57BBA6C8DEC7BC /* Result.xcconfig */;
+			baseConfigurationReference = E1D156E16A928150C237F661D1F11E72 /* Result.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1076,7 +1112,7 @@
 		};
 		AFE068C69B4E30851EF9846B2626D80D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD708305B59B941B4E611FF4F33658AA /* SCLAlertView.xcconfig */;
+			baseConfigurationReference = B680B833F9CEC7CD9D078491AEDA5F86 /* SCLAlertView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1137,7 +1173,7 @@
 		};
 		C5B909C8B275B63970FEC03460175841 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49AE97B200A7506EBFF417A6D17EA81C /* BrightFutures.xcconfig */;
+			baseConfigurationReference = BE3742C8A7C12B31821CBFB8C5D14788 /* BrightFutures.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
