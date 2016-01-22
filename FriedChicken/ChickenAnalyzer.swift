@@ -91,7 +91,8 @@ class ChickenAnalyzer {
         
         var msg = "いい揚げっぷりですね！"
         
-        if score < 2000 {msg = "ほ、ほんとにこれは唐揚げなのかな？"}
+        if score < 1000 {msg = "ほ、ほんとにこれは唐揚げなのかな？"}
+        else if score < 2000 {msg = "もっと油の声に耳を傾けてみましょう。"}
         else if score < 3000 {msg = "いまいち唐揚げだなー。。。"}
         else if score < 4000 {msg = "まぁまぁの唐揚げですね！"}
         else if score < 5000 {msg = "いい揚げっぷりですね！"}
