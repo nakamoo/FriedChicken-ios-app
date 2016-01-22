@@ -86,12 +86,16 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FriedChicken/BrightFutures.framework"
   install_framework "Pods-FriedChicken/MRProgress.framework"
+  install_framework "Pods-FriedChicken/Realm.framework"
+  install_framework "Pods-FriedChicken/RealmSwift.framework"
   install_framework "Pods-FriedChicken/Result.framework"
   install_framework "Pods-FriedChicken/SCLAlertView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FriedChicken/BrightFutures.framework"
   install_framework "Pods-FriedChicken/MRProgress.framework"
+  install_framework "Pods-FriedChicken/Realm.framework"
+  install_framework "Pods-FriedChicken/RealmSwift.framework"
   install_framework "Pods-FriedChicken/Result.framework"
   install_framework "Pods-FriedChicken/SCLAlertView.framework"
 fi
