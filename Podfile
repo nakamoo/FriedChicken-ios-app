@@ -9,5 +9,6 @@ target 'FriedChicken' do
   pod 'SCLAlertView' # AlertView
   pod 'Fabric' # Twitter Fabric
   pod 'Crashlytics' # Crash収集サービス
+  pod 'RealmSwift' # Modileデータベース
 end
 
