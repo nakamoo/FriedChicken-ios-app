@@ -21,8 +21,6 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imageSelectBtn.layer.cornerRadius = 3
     }
 
     override func viewDidAppear(animated: Bool) {
