@@ -12,20 +12,20 @@ import BrightFutures
 
 class ChickenAnalyzer {
     let img :UIImage
-
+    
     init(image: UIImage) {
         self.img = image
     }
-
+    
     /**
      非同期に解析するメソッド．Futureを返却する
      */
     func asyncAnalyze() -> Future<Result, ChickenAnalyzeError> {
-
+        
         let promise = Promise<Result, ChickenAnalyzeError>()
         Queue.global.async { () -> Void in
             let res = self.analyze()
-
+            
             if res.hasError() {
                 promise.failure(ChickenAnalyzeError.UnknownError(res.msg))
             } else {
@@ -34,10 +34,10 @@ class ChickenAnalyzer {
         }
         return promise.future
     }
-
+    
     /**
      同期で解析するメソッド
-    */
+     */
     func analyze() -> (Result) {
         // 画像を正方形にクロップし、30×30にリサイズする
         let sq_img = cropImageToSquare(img)
@@ -80,14 +80,30 @@ class ChickenAnalyzer {
             m =  1 / (1 + pow(M_E, m))
             middle.append(m)
         }
-
+        
         // 出力層を計算
         output = calInnerProduct(middle, b: output_weight[0]) + output_bias[0][0]
         output = 1 / (1 + pow(M_E, output))
         
         
-        let score = Int(output * 10000)
-        let msg = "いい揚げっぷりですね！"
+        var score = Int(output * 10000)
+        
+        
+        var msg = "いい揚げっぷりですね！"
+        
+        if score < 2000 {msg = "ほ、ほんとにこれは唐揚げなのかな？"}
+        else if score < 3000 {msg = "いまいち唐揚げだなー。。。"}
+        else if score < 4000 {msg = "まぁまぁの唐揚げですね！"}
+        else if score < 5000 {msg = "いい揚げっぷりですね！"}
+        else if score < 6000 {msg = "よ、よだれが止まらない。。。"}
+        else if score < 7000 {msg = "美味しそうだなあ。。。"}
+        else if score < 8000 {msg = "こんな美味しそうな唐揚げは見たこと無い！"}
+        else if score < 9000 {msg = "至極の逸品。。。"}
+        else {
+            msg = "この唐揚げの唐揚げ力は530000です。"
+            score = 530000
+        }
+        
         return Result(img: img, score: score, msg: msg)
     }
     
@@ -143,53 +159,59 @@ class ChickenAnalyzer {
     func cropImageToSquare(image: UIImage) -> UIImage? {
         if image.size.width > image.size.height {
             // 横長
-            let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(image.size.width/2 - image.size.height/2, 0, image.size.height, image.size.height))
+            let margin = image.size.height/6
+            let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(image.size.width/2 - image.size.height/2 + margin,
+                margin,
+                image.size.height - margin * 2, image.size.height - margin * 2))
             
             return UIImage(CGImage: cropCGImageRef!)
         } else if image.size.width < image.size.height {
             // 縦長
-            let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, 0, image.size.width, image.size.width))
+            let margin = image.size.width/6
+            let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(margin,
+                image.size.height/2 - image.size.width/2 + margin,
+                image.size.width - margin * 2, image.size.width - margin * 2))
             
             return UIImage(CGImage: cropCGImageRef!)
         } else {
             return image
         }
     }
-
+    
     /// 解析結果を格納するオブジェクト
     class Result {
         let img :UIImage
         let score :Int
         let msg :String
-
+        
         // Default value
         init() {
             img = UIImage()
             score = 100
             msg = "まぁまぁの揚げっぷりですね"
         }
-
+        
         init(errorMessage :String) {
             self.score = -1
             self.msg = errorMessage
             self.img = UIImage()
         }
-
+        
         init(img :UIImage, score :Int, msg :String) {
             self.img = img
             self.score = score
             self.msg = msg
         }
-
+        
         /// エラーかどうかを返す
         func hasError() -> Bool {
             return self.score < 0
         }
     }
-
+    
     enum ChickenAnalyzeError: ErrorType {
         case UnknownError(String)
-
+        
         func getErrorMsg() -> String {
             switch self {
             case.UnknownError(let msg):
