@@ -17,7 +17,7 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
     var progressView :MRProgressOverlayView?
 
     var selectedImage :UIImage? = nil
-    var analysisResult :ChickenAnalyzer.Result = ChickenAnalyzer.Result()
+    var analysisResult :ChickenAnalysisResult = ChickenAnalysisResult()
 
     override func viewDidLoad() {
         super.viewDidLoad()

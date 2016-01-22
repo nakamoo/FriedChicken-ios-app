@@ -20,9 +20,9 @@ class ChickenAnalyzer {
     /**
      非同期に解析するメソッド．Futureを返却する
      */
-    func asyncAnalyze() -> Future<Result, ChickenAnalyzeError> {
+    func asyncAnalyze() -> Future<ChickenAnalysisResult, ChickenAnalyzeError> {
         
-        let promise = Promise<Result, ChickenAnalyzeError>()
+        let promise = Promise<ChickenAnalysisResult, ChickenAnalyzeError>()
         Queue.global.async { () -> Void in
             let res = self.analyze()
             
@@ -38,7 +38,7 @@ class ChickenAnalyzer {
     /**
      同期で解析するメソッド
      */
-    func analyze() -> (Result) {
+    func analyze() -> (ChickenAnalysisResult) {
         // 画像を正方形にクロップし、30×30にリサイズする
         let sq_img = cropImageToSquare(img)
         let size = CGSize(width: 30, height: 30)
@@ -104,7 +104,7 @@ class ChickenAnalyzer {
             score = 530000
         }
         
-        return Result(img: img, score: score, msg: msg)
+        return ChickenAnalysisResult(img: img, score: score, msg: msg)
     }
     
     /**
@@ -175,37 +175,6 @@ class ChickenAnalyzer {
             return UIImage(CGImage: cropCGImageRef!)
         } else {
             return image
-        }
-    }
-    
-    /// 解析結果を格納するオブジェクト
-    class Result {
-        let img :UIImage
-        let score :Int
-        let msg :String
-        
-        // Default value
-        init() {
-            img = UIImage()
-            score = 100
-            msg = "まぁまぁの揚げっぷりですね"
-        }
-        
-        init(errorMessage :String) {
-            self.score = -1
-            self.msg = errorMessage
-            self.img = UIImage()
-        }
-        
-        init(img :UIImage, score :Int, msg :String) {
-            self.img = img
-            self.score = score
-            self.msg = msg
-        }
-        
-        /// エラーかどうかを返す
-        func hasError() -> Bool {
-            return self.score < 0
         }
     }
     
