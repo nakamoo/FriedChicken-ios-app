@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import BrightFutures
+import RealmSwift
 
 class ChickenAnalyzer {
     let img :UIImage
@@ -19,17 +20,18 @@ class ChickenAnalyzer {
     
     /**
      非同期に解析するメソッド．Futureを返却する
+     Realmオブジェクトはスレッド間の受け渡しが出来ないため，objectIdを返す
      */
-    func asyncAnalyze() -> Future<ChickenAnalysisResult, ChickenAnalyzeError> {
+    func asyncAnalyze() -> Future<String, ChickenAnalyzeError> {
         
-        let promise = Promise<ChickenAnalysisResult, ChickenAnalyzeError>()
+        let promise = Promise<String, ChickenAnalyzeError>()
         Queue.global.async { () -> Void in
             let res = self.analyze()
             
             if res.hasError() {
                 promise.failure(ChickenAnalyzeError.UnknownError(res.msg))
             } else {
-                promise.success(res)
+                promise.success(res.objectId)
             }
         }
         return promise.future
@@ -103,8 +105,11 @@ class ChickenAnalyzer {
             msg = "この唐揚げの唐揚げ力は530000です。"
             score = 530000
         }
+
+        let result = ChickenAnalysisResult(img: img, score: score, msg: msg)
+        saveResult(result)
         
-        return ChickenAnalysisResult(img: img, score: score, msg: msg)
+        return result
     }
     
     /**
@@ -175,6 +180,16 @@ class ChickenAnalyzer {
             return UIImage(CGImage: cropCGImageRef!)
         } else {
             return image
+        }
+    }
+
+    /**
+     解析結果を保存する
+     */
+    func saveResult(result: ChickenAnalysisResult) -> Void {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(result)
         }
     }
     

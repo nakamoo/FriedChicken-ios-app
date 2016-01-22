@@ -10,33 +10,34 @@ import Foundation
 import RealmSwift
 
 class ChickenAnalysisResult: Object {
+    dynamic var objectId: String = ""
     dynamic var imgData :NSData?
-    dynamic var score :Int
-    dynamic var msg :String
-    dynamic var generatedImg :UIImage? // 変換済みのUIImageを保存(Not saved properties
+    dynamic var score :Int = 100
+    dynamic var msg :String = "まぁまぁの揚げっぷりですね"
+    var generatedImg :UIImage? // 変換済みのUIImageを保存(Not saved properties
 
     override static func ignoredProperties() -> [String] {
         return ["generatedImg"]
     }
 
-    // Default value
-    required init() {
-        self.score = 100
-        self.msg = "まぁまぁの揚げっぷりですね"
-        super.init()
+    override static func primaryKey() -> String? {
+        return "objectId"
     }
-    
-    init(errorMessage :String) {
-        self.score = -1
-        self.msg = errorMessage
-        super.init()
+
+    convenience init(errorMessage :String) {
+        self.init(imgData: NSData(), score: -1, msg: errorMessage)
     }
-    
-    init(img :UIImage, score :Int, msg :String) {
-        self.imgData = UIImagePNGRepresentation(img)
+
+    convenience init(img :UIImage, score :Int, msg :String) {
+        self.init(imgData: UIImagePNGRepresentation(img)!, score: score, msg: msg)
+    }
+
+    convenience init(imgData :NSData, score :Int, msg :String) {
+        self.init()
+        self.objectId = NSUUID().UUIDString
+        self.imgData = imgData
         self.score = score
         self.msg = msg
-        super.init()
     }
 
     func img() -> UIImage {
@@ -46,10 +47,12 @@ class ChickenAnalysisResult: Object {
         }
 
         if let data = imgData {
-            return UIImage(data: data)!
-        } else {
-            return UIImage()
+            if let img = UIImage(data: data) {
+                return img
+            }
         }
+
+        return UIImage()
     }
     
     /// エラーかどうかを返す
