@@ -15,6 +15,7 @@ class AnalysisHistoryViewController: UIViewController, UITableViewDataSource, UI
     @IBOutlet weak var tableView: UITableView!
 
     var listEntries: Array<DataHolder> = []
+    var selectedResult: ChickenAnalysisResult?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +56,13 @@ class AnalysisHistoryViewController: UIViewController, UITableViewDataSource, UI
     }
 
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
-        print(listEntries[indexPath.row].objectId)
+
+        let realm = try! Realm()
+        if let result = realm.objectForPrimaryKey(ChickenAnalysisResult.self,
+            key: listEntries[indexPath.row].objectId) {
+            selectedResult = result
+            self.performSegueWithIdentifier("show_history_result", sender: self)
+        }
     }
 
     class DataHolder {
@@ -77,5 +84,17 @@ class AnalysisHistoryViewController: UIViewController, UITableViewDataSource, UI
         dateFormatter.locale = NSLocale(localeIdentifier: "ja")
         dateFormatter.dateFormat = "yyyy/MM/dd H:mm:ss"
         return dateFormatter.stringFromDate(date)
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier! {
+        case "show_history_result":
+            if let result = selectedResult {
+                let resultController = segue.destinationViewController as! ResultViewController
+                resultController.result = result
+            }
+            break
+        default: break
+        }
     }
 }

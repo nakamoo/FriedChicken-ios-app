@@ -194,11 +194,12 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="V1c-ZN-E0o" id="rj5-ZT-ryV"/>
+                        <segue destination="BYe-Xg-4w6" kind="presentation" identifier="show_history_result" id="WhH-BQ-leq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnV-y2-ZHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855" y="1166"/>
+            <point key="canvasLocation" x="1855" y="1230"/>
         </scene>
         <!--採点結果-->
         <scene sceneID="G0b-KB-RDN">
@@ -507,4 +508,7 @@
         <image name="ten" width="101" height="55"/>
         <image name="titile" width="173" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WhH-BQ-leq"/>
+    </inferredMetricsTieBreakers>
 </document>
