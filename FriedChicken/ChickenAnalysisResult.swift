@@ -11,10 +11,11 @@ import RealmSwift
 
 class ChickenAnalysisResult: Object {
     dynamic var objectId: String = ""
-    dynamic var imgData :NSData?
-    dynamic var score :Int = 100
-    dynamic var msg :String = "まぁまぁの揚げっぷりですね"
-    var generatedImg :UIImage? // 変換済みのUIImageを保存(Not saved properties
+    dynamic var imgData: NSData?
+    dynamic var score: Int = 100
+    dynamic var msg: String = "まぁまぁの揚げっぷりですね"
+    dynamic var createdAt: NSDate = NSDate()
+    var generatedImg: UIImage? // 変換済みのUIImageを保存(Not saved properties
 
     override static func ignoredProperties() -> [String] {
         return ["generatedImg"]
@@ -29,7 +30,8 @@ class ChickenAnalysisResult: Object {
     }
 
     convenience init(img :UIImage, score :Int, msg :String) {
-        self.init(imgData: UIImagePNGRepresentation(img)!, score: score, msg: msg)
+        let resizedImg = ImageUtil.resizeImage(img, size: CGSize(width: 1000.0, height: 1000.0))
+        self.init(imgData: UIImagePNGRepresentation(resizedImg)!, score: score, msg: msg)
     }
 
     convenience init(imgData :NSData, score :Int, msg :String) {
