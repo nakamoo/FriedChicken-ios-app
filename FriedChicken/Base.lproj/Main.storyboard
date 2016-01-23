@@ -126,7 +126,7 @@
         <!--AnalysisHistory-->
         <scene sceneID="3Yd-2M-ytt">
             <objects>
-                <viewController title="今までの唐揚げ力！" id="qe2-Gp-pyn" userLabel="AnalysisHistory" customClass="AnalysisHistoryViewController" customModule="FriedChicken" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="今までの唐揚力！" id="qe2-Gp-pyn" userLabel="AnalysisHistory" customClass="AnalysisHistoryViewController" customModule="FriedChicken" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RzL-SW-qmp"/>
                         <viewControllerLayoutGuide type="bottom" id="QCH-Tq-vsy"/>
