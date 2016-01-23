@@ -126,7 +126,7 @@
         <!--AnalysisHistory-->
         <scene sceneID="3Yd-2M-ytt">
             <objects>
-                <viewController title="今までの唐揚力！" id="qe2-Gp-pyn" userLabel="AnalysisHistory" customClass="AnalysisHistoryViewController" customModule="FriedChicken" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="あなたの唐揚力の歴史" id="qe2-Gp-pyn" userLabel="AnalysisHistory" customClass="AnalysisHistoryViewController" customModule="FriedChicken" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RzL-SW-qmp"/>
                         <viewControllerLayoutGuide type="bottom" id="QCH-Tq-vsy"/>
@@ -136,31 +136,31 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V1c-ZN-E0o">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="analysis_result_table_view_cell" rowHeight="100" id="JbB-wa-fPY" customClass="AnalysisResultTableViewCell" customModule="FriedChicken" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="analysis_result_table_view_cell" rowHeight="125" id="JbB-wa-fPY" customClass="AnalysisResultTableViewCell" customModule="FriedChicken" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JbB-wa-fPY" id="AyW-y9-7Gz">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="124.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="erf-Jb-pPv">
-                                                    <rect key="frame" x="8" y="10" width="80" height="80"/>
+                                                    <rect key="frame" x="8" y="22.5" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="Bs1-N2-396"/>
                                                         <constraint firstAttribute="height" constant="80" id="tjs-dh-uVE"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2015 / 1 / 1 12: 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pd-Pq-IXw">
-                                                    <rect key="frame" x="453" y="77" width="98.5" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015 / 1 / 1 12: 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pd-Pq-IXw">
+                                                    <rect key="frame" x="493.5" y="102.5" width="98.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000点の唐揚げ！！！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APP-xi-vcB">
-                                                    <rect key="frame" x="108" y="39" width="213" height="20"/>
+                                                    <rect key="frame" x="108" y="52.5" width="213" height="20"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -187,11 +187,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="V1c-ZN-E0o" firstAttribute="leading" secondItem="xnw-nz-Yhr" secondAttribute="leadingMargin" constant="-20" id="QEs-DT-pHR"/>
-                            <constraint firstItem="V1c-ZN-E0o" firstAttribute="top" secondItem="RzL-SW-qmp" secondAttribute="bottom" constant="-20" id="QTw-Sq-fz2"/>
+                            <constraint firstItem="V1c-ZN-E0o" firstAttribute="top" secondItem="RzL-SW-qmp" secondAttribute="bottom" id="QTw-Sq-fz2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="V1c-ZN-E0o" secondAttribute="trailing" constant="-20" id="S84-lH-PA1"/>
+                            <constraint firstItem="V1c-ZN-E0o" firstAttribute="top" secondItem="xnw-nz-Yhr" secondAttribute="topMargin" constant="20" id="l1s-VR-0TB"/>
                             <constraint firstItem="QCH-Tq-vsy" firstAttribute="top" secondItem="V1c-ZN-E0o" secondAttribute="bottom" id="reZ-rx-a9i"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="l1s-VR-0TB"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="tableView" destination="V1c-ZN-E0o" id="rj5-ZT-ryV"/>
                         <segue destination="BYe-Xg-4w6" kind="presentation" identifier="show_history_result" id="WhH-BQ-leq"/>
