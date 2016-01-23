@@ -19,9 +19,14 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
 
     var selectedImage :UIImage? = nil
     var analysisResult :ChickenAnalysisResult = ChickenAnalysisResult()
+    var analyzer: ChickenAnalyzer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if analyzer == nil {
+            analyzer = ChickenAnalyzer()
+        }
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -82,7 +87,7 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
     func onSelectedImage() {
         showProgress()
 
-        ChickenAnalyzer(image: selectedImage!).asyncAnalyze()
+        analyzer!.asyncAnalyze(selectedImage!)
             .onComplete { _ in
                 self.hideProgress()
                 // 画像解析後，選択済みの画像は解除

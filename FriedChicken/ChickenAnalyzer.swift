@@ -12,35 +12,60 @@ import BrightFutures
 import RealmSwift
 
 class ChickenAnalyzer {
-    let img :UIImage
-    
-    init(image: UIImage) {
-        self.img = image
+    let loadCsvPromise: Promise<Void, ChickenAnalyzeError>
+
+    var inputBias: [[Double]]?
+    var inputWeight: [[Double]]?
+    var outputBias: [[Double]]?
+    var outputWeight: [[Double]]?
+
+    init() {
+        loadCsvPromise = Promise<Void, ChickenAnalyzeError>()
+        Queue.global.async { () -> Void in
+            self.loadCsvs()
+            self.loadCsvPromise.success()
+        }
     }
     
     /**
      非同期に解析するメソッド．Futureを返却する
      Realmオブジェクトはスレッド間の受け渡しが出来ないため，objectIdを返す
      */
-    func asyncAnalyze() -> Future<String, ChickenAnalyzeError> {
-
+    func asyncAnalyze(img: UIImage) -> Future<String, ChickenAnalyzeError> {
         let promise = Promise<String, ChickenAnalyzeError>()
-        Queue.global.async { () -> Void in
-            let res = self.analyze()
-            
-            if res.hasError() {
-                promise.failure(ChickenAnalyzeError.UnknownError(res.msg))
-            } else {
-                promise.success(res.objectId)
+
+        loadCsvPromise.future.onSuccess { () -> Void in
+            Queue.global.async { () -> Void in
+                let res = self.analyze(img)
+
+                // 人工知能が解析してる感を出すためスリープ
+                sleep(1)
+
+                if res.hasError() {
+                    promise.failure(ChickenAnalyzeError.UnknownError(res.msg))
+                } else {
+                    promise.success(res.objectId)
+                }
             }
         }
+
         return promise.future
+    }
+
+    /**
+     csvファイルに書かれた重みとバイアスを読み込む
+     */
+    func loadCsvs() -> Void {
+        inputBias = readCsv("ib")
+        inputWeight = readCsv("iw")
+        outputBias = readCsv("ob")
+        outputWeight = readCsv("ow")
     }
 
     /**
      同期で解析するメソッド
      */
-    func analyze() -> (ChickenAnalysisResult) {
+    func analyze(img: UIImage) -> (ChickenAnalysisResult) {
         // 画像を正方形にクロップし、30×30にリサイズする
         let sq_img = cropImageToSquare(img)
         let size = CGSize(width: 30, height: 30)
@@ -57,14 +82,7 @@ class ChickenAnalyzer {
         var input:[Double] = []
         var middle:[Double] = []
         var output:Double = 0.0
-        
-        // csvファイルに書かれた重みとバイアスを読み込む
-        // シュミレータだと少し重い(修正したい)
-        let input_bias = readCsv("ib")
-        let input_weight = readCsv("iw")
-        let output_bias = readCsv("ob")
-        let output_weight = readCsv("ow")
-        
+
         // RGBAからBGRの順に配列を並べ替えて入力層に値を格納する
         for i in 0...899{
             let b:Int = numericCast(imageData[4*i])
@@ -77,15 +95,15 @@ class ChickenAnalyzer {
         }
         
         //　中間層を計算
-        for (var i = 0; i < input_weight.count; i++) {
-            var m = calInnerProduct(input, b:input_weight[i])
-            m += input_bias[0][i]
+        for (var i = 0; i < inputWeight!.count; i++) {
+            var m = calInnerProduct(input, b:inputWeight![i])
+            m += inputBias![0][i]
             m =  1 / (1 + pow(M_E, m))
             middle.append(m)
         }
         
         // 出力層を計算
-        output = calInnerProduct(middle, b: output_weight[0]) + output_bias[0][0]
+        output = calInnerProduct(middle, b: outputWeight![0]) + outputBias![0][0]
         output = 1 / (1 + pow(M_E, output))
         
         
