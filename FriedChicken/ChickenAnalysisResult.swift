@@ -10,6 +10,8 @@ import Foundation
 import RealmSwift
 
 class ChickenAnalysisResult: Object {
+    static let MAX_PERSISTENT_SIZE = 20
+
     dynamic var objectId: String = ""
     dynamic var imgData: NSData?
     dynamic var score: Int = 100

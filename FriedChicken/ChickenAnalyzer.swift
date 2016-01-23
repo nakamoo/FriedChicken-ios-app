@@ -191,6 +191,17 @@ class ChickenAnalyzer {
         try! realm.write {
             realm.add(result)
         }
+
+        let results = realm
+            .objects(ChickenAnalysisResult)
+            .sorted("createdAt", ascending: true)
+            .map { $0 }
+        if results.count > ChickenAnalysisResult.MAX_PERSISTENT_SIZE {
+            try! realm.write {
+                realm.delete(results[0..<(results.count - ChickenAnalysisResult.MAX_PERSISTENT_SIZE)])
+            }
+        }
+
     }
     
     enum ChickenAnalyzeError: ErrorType {
