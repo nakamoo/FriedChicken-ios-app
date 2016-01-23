@@ -75,4 +75,24 @@ class AnalysisHistoryViewController: UIViewController, UITableViewDataSource, UI
         default: break
         }
     }
+
+    @IBAction func onClickToggleOrderBtn(sender: UIBarButtonItem) {
+        switch sender.title! {
+        case "得点順":
+            sender.title = "日付順"
+            analysisResults.sortInPlace {
+                (a: ChickenAnalysisResult, b: ChickenAnalysisResult) -> Bool in
+                return a.score > b.score
+            }
+        case "日付順":
+            sender.title = "得点順"
+            analysisResults.sortInPlace {
+                (a: ChickenAnalysisResult, b: ChickenAnalysisResult) -> Bool in
+                return a.createdAt.timeIntervalSince1970 > b.createdAt.timeIntervalSince1970
+            }
+        default: break
+        }
+        tableView.reloadData()
+    }
+
 }
