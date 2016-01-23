@@ -51,6 +51,7 @@ class ChickenAnalyzer {
         // 画像を配列に変換
         let imageRef = resizeImage.CGImage!
         let imageData = getByteArrayFromImage(imageRef)
+        UIGraphicsEndImageContext()
         
         // ニューラルネットワークの各層を定義
         var input:[Double] = []
