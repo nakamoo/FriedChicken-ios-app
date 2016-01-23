@@ -28,7 +28,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var oneImg: UIImageView!
 
 
-    var result :ChickenAnalyzer.Result = ChickenAnalyzer.Result()
+    var result :ChickenAnalysisResult = ChickenAnalysisResult()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,7 @@ class ResultViewController: UIViewController {
     }
 
     func setResult() {
-        karaageImage.image = fitToResultImageView(result.img)
+        karaageImage.image = fitToResultImageView(result.img())
 
         setScoreImages()
 
@@ -143,7 +143,7 @@ class ResultViewController: UIViewController {
     func shareWithSocial(serviceType :String, initialText :String) {
         let composeViewController :SLComposeViewController = SLComposeViewController(forServiceType: serviceType)!
         composeViewController.setInitialText(initialText)
-        composeViewController.addImage(result.img)
+        composeViewController.addImage(result.img())
 
         self.presentViewController(composeViewController, animated: true, completion: nil)
     }

@@ -9,6 +9,7 @@
 import UIKit
 import MRProgress
 import SCLAlertView
+import RealmSwift
 
 class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -17,7 +18,7 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
     var progressView :MRProgressOverlayView?
 
     var selectedImage :UIImage? = nil
-    var analysisResult :ChickenAnalyzer.Result = ChickenAnalyzer.Result()
+    var analysisResult :ChickenAnalysisResult = ChickenAnalysisResult()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,8 +79,9 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
                 // 画像解析後，選択済みの画像は解除
                 self.selectedImage = nil
             }
-            .onSuccess { result in
-                self.analysisResult = result
+            .onSuccess { objectId in
+                let realm = try! Realm()
+                self.analysisResult = realm.objectForPrimaryKey(ChickenAnalysisResult.self, key: objectId)!
                 self.performSegueWithIdentifier("show_result", sender: self)
             }
             .onFailure { error in

@@ -19,6 +19,7 @@
 		B32436321C2AC2B50016B40D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32436301C2AC2B50016B40D /* LaunchScreen.storyboard */; };
 		B39702781C39597200C32514 /* ChickenAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39702771C39597200C32514 /* ChickenAnalyzer.swift */; };
 		B397027A1C395F2600C32514 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39702791C395F2600C32514 /* ResultViewController.swift */; };
+		B3AB15231C51F00F00333EBD /* ChickenAnalysisResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AB15221C51F00F00333EBD /* ChickenAnalysisResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B32436331C2AC2B50016B40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B39702771C39597200C32514 /* ChickenAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChickenAnalyzer.swift; sourceTree = "<group>"; };
 		B39702791C395F2600C32514 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B3AB15221C51F00F00333EBD /* ChickenAnalysisResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChickenAnalysisResult.swift; sourceTree = "<group>"; };
 		F34A965C7E5F5582E584D425 /* Pods-FriedChicken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriedChicken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriedChicken/Pods-FriedChicken.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 		B32436261C2AC2B50016B40D /* FriedChicken */ = {
 			isa = PBXGroup;
 			children = (
+				B3AB15211C51EFD600333EBD /* model */,
 				B32436271C2AC2B50016B40D /* AppDelegate.swift */,
 				B32436291C2AC2B50016B40D /* HomeViewController.swift */,
 				B324362B1C2AC2B50016B40D /* Main.storyboard */,
@@ -104,6 +107,14 @@
 				B39702791C395F2600C32514 /* ResultViewController.swift */,
 			);
 			path = FriedChicken;
+			sourceTree = "<group>";
+		};
+		B3AB15211C51EFD600333EBD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B3AB15221C51F00F00333EBD /* ChickenAnalysisResult.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		E2E66ACFA31DA6C5E2BBF7E1 /* Frameworks */ = {
@@ -256,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B39702781C39597200C32514 /* ChickenAnalyzer.swift in Sources */,
+				B3AB15231C51F00F00333EBD /* ChickenAnalysisResult.swift in Sources */,
 				B324362A1C2AC2B50016B40D /* HomeViewController.swift in Sources */,
 				B32436281C2AC2B50016B40D /* AppDelegate.swift in Sources */,
 				B397027A1C395F2600C32514 /* ResultViewController.swift in Sources */,
