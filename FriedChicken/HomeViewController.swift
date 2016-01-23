@@ -29,7 +29,18 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
         }
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
 
         if selectedImage != nil {
             // 画像選択後，画面遷移してきた場合
