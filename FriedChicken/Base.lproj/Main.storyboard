@@ -46,6 +46,11 @@
                                 <state key="normal" title="写真を選ぶ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onClickSelectImageBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BeV-ih-3gh"/>
                                 </connections>
@@ -57,20 +62,37 @@
                                     <constraint firstAttribute="height" constant="100" id="fnt-hl-yH2"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WX-g3-NHW">
+                                <rect key="frame" x="311" y="356" width="108" height="30"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.1058823529" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="記録を見る">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="07k-e9-VNc" firstAttribute="leading" secondItem="xiP-Nz-v8q" secondAttribute="trailing" constant="15" id="4hH-f2-zXi"/>
                             <constraint firstItem="07k-e9-VNc" firstAttribute="centerY" secondItem="xiP-Nz-v8q" secondAttribute="centerY" id="5vJ-rD-pUo"/>
                             <constraint firstItem="ICn-FE-1eq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CzR-xF-1Pq"/>
-                            <constraint firstItem="xiP-Nz-v8q" firstAttribute="top" secondItem="SiH-go-zAt" secondAttribute="bottom" constant="-245" id="FDi-Se-r0n"/>
+                            <constraint firstItem="xiP-Nz-v8q" firstAttribute="top" secondItem="SiH-go-zAt" secondAttribute="bottom" constant="-260" id="FDi-Se-r0n"/>
                             <constraint firstItem="xiP-Nz-v8q" firstAttribute="top" secondItem="6Bf-ea-mRg" secondAttribute="bottom" constant="-4" id="FPT-mM-HgG"/>
                             <constraint firstItem="SiH-go-zAt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GKB-dU-LAQ"/>
                             <constraint firstItem="SiH-go-zAt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GQ7-YY-OAc"/>
                             <constraint firstItem="6Bf-ea-mRg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HB0-7s-skk"/>
                             <constraint firstItem="Q1x-tX-yjq" firstAttribute="top" secondItem="ICn-FE-1eq" secondAttribute="bottom" constant="8" id="OwP-Ae-Ikc"/>
+                            <constraint firstItem="2WX-g3-NHW" firstAttribute="centerX" secondItem="07k-e9-VNc" secondAttribute="centerX" id="P3S-YP-5Zc"/>
                             <constraint firstItem="SiH-go-zAt" firstAttribute="top" secondItem="xiP-Nz-v8q" secondAttribute="bottom" constant="7" id="XTq-Eu-J8u"/>
+                            <constraint firstItem="2WX-g3-NHW" firstAttribute="top" secondItem="xiP-Nz-v8q" secondAttribute="bottom" constant="-45" id="Xxz-kb-Mvt"/>
                             <constraint firstItem="6Bf-ea-mRg" firstAttribute="top" secondItem="ICn-FE-1eq" secondAttribute="bottom" constant="64" id="frF-xl-ZRm"/>
+                            <constraint firstItem="2WX-g3-NHW" firstAttribute="top" secondItem="07k-e9-VNc" secondAttribute="bottom" constant="10" id="fwm-G9-6Js"/>
                             <constraint firstItem="Q1x-tX-yjq" firstAttribute="leading" secondItem="ICn-FE-1eq" secondAttribute="trailing" constant="-122.5" id="nHz-Ik-Bpi"/>
                             <constraint firstItem="ICn-FE-1eq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="s5m-nQ-ZNH"/>
                             <constraint firstItem="SiH-go-zAt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sXM-8w-ljC"/>
@@ -80,6 +102,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="sd4-mH-B3D"/>
+                                <exclude reference="5vJ-rD-pUo"/>
                                 <exclude reference="GKB-dU-LAQ"/>
                                 <exclude reference="GQ7-YY-OAc"/>
                                 <exclude reference="XTq-Eu-J8u"/>
@@ -105,11 +128,11 @@
                         <viewControllerLayoutGuide type="bottom" id="8HQ-ka-PXx"/>
                     </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="XP2-eM-Pwc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfU-ac-k27">
-                                <rect key="frame" x="-69" y="8" width="600" height="1200"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfU-ac-k27">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rjW-wZ-Qrx">
                                         <rect key="frame" x="179" y="486" width="240" height="100"/>
@@ -331,7 +354,7 @@
                                     <constraint firstItem="IMT-7d-x1D" firstAttribute="top" secondItem="73q-84-HJ5" secondAttribute="bottom" constant="30" id="rrD-9B-LbY"/>
                                     <constraint firstItem="AeH-k0-nki" firstAttribute="leading" secondItem="4E0-In-LLn" secondAttribute="trailing" constant="1" id="u3t-2Z-Qlx"/>
                                     <constraint firstItem="n4J-tg-77s" firstAttribute="bottom" secondItem="AeH-k0-nki" secondAttribute="bottom" id="wNV-zP-dHJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1200" id="zIe-xg-wOC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="800" id="zIe-xg-wOC"/>
                                     <constraint firstItem="n4J-tg-77s" firstAttribute="leading" secondItem="AeH-k0-nki" secondAttribute="trailing" constant="3" id="zqd-3B-RAW"/>
                                 </constraints>
                                 <variation key="default">
@@ -352,7 +375,7 @@
                     <navigationItem key="navigationItem" id="o55-x1-Se3"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="1200"/>
+                    <size key="freeformSize" width="600" height="800"/>
                     <connections>
                         <outlet property="backButton" destination="Q4v-RW-y3Q" id="hjg-mo-5i8"/>
                         <outlet property="closeBtn" destination="PTY-UW-fTY" id="bNw-Ft-7aR"/>
