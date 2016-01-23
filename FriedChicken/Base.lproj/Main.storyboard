@@ -210,18 +210,18 @@
                         <viewControllerLayoutGuide type="bottom" id="8HQ-ka-PXx"/>
                     </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="XP2-eM-Pwc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="850"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfU-ac-k27">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="850"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rjW-wZ-Qrx">
-                                        <rect key="frame" x="179" y="486" width="240" height="100"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rjW-wZ-Qrx">
+                                        <rect key="frame" x="162" y="318" width="275" height="120"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="aD5-8K-E3E"/>
-                                            <constraint firstAttribute="height" constant="100" id="fug-4H-0oo"/>
+                                            <constraint firstAttribute="width" constant="275" id="aD5-8K-E3E"/>
+                                            <constraint firstAttribute="height" constant="120" id="fug-4H-0oo"/>
                                         </constraints>
                                         <string key="text">この写真の唐揚げ力は
 ５００００点です いい揚げっぷりですね！</string>
@@ -244,18 +244,18 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_title" translatesAutoresizingMaskIntoConstraints="NO" id="73q-84-HJ5">
                                         <rect key="frame" x="211" y="70" width="177" height="42"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="plate" translatesAutoresizingMaskIntoConstraints="NO" id="IMT-7d-x1D">
-                                        <rect key="frame" x="171" y="120" width="259.5" height="150.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plate" translatesAutoresizingMaskIntoConstraints="NO" id="IMT-7d-x1D">
+                                        <rect key="frame" x="171" y="142" width="259.5" height="150.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150.5" id="ACM-hT-Zgz"/>
                                             <constraint firstAttribute="width" constant="259.5" id="j1y-2b-rfJ"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kil-nI-hH4">
-                                        <rect key="frame" x="200" y="278" width="200" height="200"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kil-nI-hH4">
+                                        <rect key="frame" x="300" y="300" width="0.0" height="0.0"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4v-RW-y3Q">
-                                        <rect key="frame" x="245" y="716" width="108" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4v-RW-y3Q">
+                                        <rect key="frame" x="246" y="565" width="108" height="36"/>
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.1058823529" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="108" id="8ga-tb-SA6"/>
@@ -276,57 +276,57 @@
                                             <action selector="onClickSelectImageBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xvm-zv-dPZ"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="UzB-UB-ebs">
-                                        <rect key="frame" x="279" y="146" width="30" height="37"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="UzB-UB-ebs">
+                                        <rect key="frame" x="279" y="168" width="30" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Nit-C2-FuI"/>
                                             <constraint firstAttribute="height" constant="37" id="mkN-V9-dJc"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="EEB-cZ-76o">
-                                        <rect key="frame" x="311" y="146" width="30" height="37"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="EEB-cZ-76o">
+                                        <rect key="frame" x="311" y="168" width="30" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="SLH-WG-FHJ"/>
                                             <constraint firstAttribute="width" constant="30" id="bjs-VH-gAa"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="TOh-db-WRL">
-                                        <rect key="frame" x="344" y="146" width="30" height="37"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="TOh-db-WRL">
+                                        <rect key="frame" x="344" y="168" width="30" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="LBT-lX-yYl"/>
                                             <constraint firstAttribute="width" constant="30" id="kn5-g2-bBH"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="n4J-tg-77s">
-                                        <rect key="frame" x="248" y="146" width="30" height="37"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="n4J-tg-77s">
+                                        <rect key="frame" x="248" y="168" width="30" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="bww-WO-6vV"/>
                                             <constraint firstAttribute="height" constant="37" id="qDt-75-vhj"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="AeH-k0-nki">
-                                        <rect key="frame" x="215" y="146" width="30" height="37"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="AeH-k0-nki">
+                                        <rect key="frame" x="215" y="168" width="30" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="MFe-EW-kaA"/>
                                             <constraint firstAttribute="height" constant="37" id="Np3-QH-TaW"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="4E0-In-LLn">
-                                        <rect key="frame" x="184" y="146" width="30" height="37"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="4E0-In-LLn">
+                                        <rect key="frame" x="184" y="168" width="30" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="1jU-oM-nLQ"/>
                                             <constraint firstAttribute="height" constant="37" id="Yee-Pl-r21"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ten" translatesAutoresizingMaskIntoConstraints="NO" id="WnX-Dc-hgR">
-                                        <rect key="frame" x="373" y="155" width="53" height="28"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ten" translatesAutoresizingMaskIntoConstraints="NO" id="WnX-Dc-hgR">
+                                        <rect key="frame" x="373" y="177" width="53" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="8wW-qG-xkN"/>
                                             <constraint firstAttribute="width" constant="53" id="cqE-MY-fty"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccR-4Z-9Ug">
-                                        <rect key="frame" x="141" y="585" width="316" height="61"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccR-4Z-9Ug">
+                                        <rect key="frame" x="142" y="448" width="316" height="61"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhk-Ep-RhT">
                                                 <rect key="frame" x="0.0" y="12" width="151" height="38"/>
@@ -382,8 +382,8 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cED-3X-KtU">
-                                        <rect key="frame" x="224" y="663" width="151" height="38"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cED-3X-KtU">
+                                        <rect key="frame" x="224" y="512" width="151" height="38"/>
                                         <color key="backgroundColor" red="0.12156862745098039" green="0.69803921568627447" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="i3H-79-scv"/>
@@ -404,7 +404,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="rjW-wZ-Qrx" firstAttribute="top" secondItem="kil-nI-hH4" secondAttribute="bottom" constant="18" id="0Op-ym-aD9"/>
-                                    <constraint firstItem="ccR-4Z-9Ug" firstAttribute="top" secondItem="rjW-wZ-Qrx" secondAttribute="bottom" constant="27" id="3pw-TD-sio"/>
+                                    <constraint firstItem="ccR-4Z-9Ug" firstAttribute="top" secondItem="rjW-wZ-Qrx" secondAttribute="bottom" constant="10" id="3pw-TD-sio"/>
                                     <constraint firstItem="Q4v-RW-y3Q" firstAttribute="top" secondItem="rjW-wZ-Qrx" secondAttribute="bottom" constant="10" id="5X8-Re-2ja"/>
                                     <constraint firstItem="AeH-k0-nki" firstAttribute="bottom" secondItem="4E0-In-LLn" secondAttribute="bottom" id="6b4-Q4-OMn"/>
                                     <constraint firstItem="cED-3X-KtU" firstAttribute="centerX" secondItem="vfU-ac-k27" secondAttribute="centerX" id="AMM-YL-sxF"/>
@@ -436,7 +436,7 @@
                                     <constraint firstItem="IMT-7d-x1D" firstAttribute="top" secondItem="73q-84-HJ5" secondAttribute="bottom" constant="30" id="rrD-9B-LbY"/>
                                     <constraint firstItem="AeH-k0-nki" firstAttribute="leading" secondItem="4E0-In-LLn" secondAttribute="trailing" constant="1" id="u3t-2Z-Qlx"/>
                                     <constraint firstItem="n4J-tg-77s" firstAttribute="bottom" secondItem="AeH-k0-nki" secondAttribute="bottom" id="wNV-zP-dHJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="800" id="zIe-xg-wOC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="850" id="zIe-xg-wOC"/>
                                     <constraint firstItem="n4J-tg-77s" firstAttribute="leading" secondItem="AeH-k0-nki" secondAttribute="trailing" constant="3" id="zqd-3B-RAW"/>
                                 </constraints>
                                 <variation key="default">
@@ -457,7 +457,7 @@
                     <navigationItem key="navigationItem" id="o55-x1-Se3"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="800"/>
+                    <size key="freeformSize" width="600" height="850"/>
                     <connections>
                         <outlet property="backButton" destination="Q4v-RW-y3Q" id="hjg-mo-5i8"/>
                         <outlet property="closeBtn" destination="PTY-UW-fTY" id="bNw-Ft-7aR"/>
