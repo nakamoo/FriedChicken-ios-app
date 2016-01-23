@@ -103,7 +103,7 @@ class ChickenAnalyzer {
         else if score < 8000 {msg = "こんな美味しそうな唐揚げは見たこと無い！"}
         else if score < 9000 {msg = "至極の逸品。。。"}
         else {
-            msg = "この唐揚げの唐揚げ力は530000です。"
+            msg = "この唐揚げの唐揚力は530000です。"
             score = 530000
         }
 
@@ -192,6 +192,17 @@ class ChickenAnalyzer {
         try! realm.write {
             realm.add(result)
         }
+
+        let results = realm
+            .objects(ChickenAnalysisResult)
+            .sorted("createdAt", ascending: true)
+            .map { $0 }
+        if results.count > ChickenAnalysisResult.MAX_PERSISTENT_SIZE {
+            try! realm.write {
+                realm.delete(results[0..<(results.count - ChickenAnalysisResult.MAX_PERSISTENT_SIZE)])
+            }
+        }
+
     }
     
     enum ChickenAnalyzeError: ErrorType {
