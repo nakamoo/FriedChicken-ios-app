@@ -113,16 +113,15 @@ class ResultViewController: UIViewController {
 
     @IBAction func shareWithFB(sender: AnyObject) {
         let text = "この唐揚力は" + String(result.score) + "点! "
-            + result.msg + "by 唐揚げアプリ"
+            + result.msg + "by日本唐揚協会「唐揚力診断」"
         shareWithSocial(SLServiceTypeFacebook, initialText: text)
     }
 
     @IBAction func shareWithTwitter(sender: AnyObject) {
         let text = "この唐揚力は" + String(result.score) + "点! "
-            + result.msg + "#唐揚げアプリ"
+            + result.msg + "#日本唐揚協会 #唐揚力診断"
         shareWithSocial(SLServiceTypeTwitter, initialText: text)
     }
-
 
     @IBAction func shareWithLINE(sender: AnyObject) {
         let text = "唐揚力" + String(result.score) + "点! "
