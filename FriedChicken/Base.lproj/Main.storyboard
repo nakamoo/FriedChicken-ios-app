@@ -513,7 +513,6 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="24G-Ux-HMa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xho-Zq-ZwY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -540,6 +539,6 @@
         <image name="titile" width="173" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WhH-BQ-leq"/>
+        <segue reference="Nb1-YV-O4h"/>
     </inferredMetricsTieBreakers>
 </document>

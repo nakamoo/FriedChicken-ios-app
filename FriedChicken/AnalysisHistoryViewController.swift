@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class AnalysisHistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    let MAX_ROW_COUNT_OF_ENTRIES = 10
+    let MAX_ROW_COUNT_OF_ENTRIES = 20
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -56,6 +56,15 @@ class AnalysisHistoryViewController: UIViewController, UITableViewDataSource, UI
         selectedResult = analysisResults[indexPath.row]
         self.performSegueWithIdentifier("show_history_result", sender: self)
     }
+
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UILabel(frame: CGRectMake(0, 0, tableView.frame.size.width, 40))
+        footerView.backgroundColor = UIColor.whiteColor()
+        footerView.textAlignment = NSTextAlignment.Center
+        footerView.text = "最新20件まで表示します"
+        return footerView
+    }
+
 
     func dateToString(date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
