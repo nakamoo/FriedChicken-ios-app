@@ -58,7 +58,7 @@ class ResultViewController: UIViewController {
 
         setScoreImages()
 
-        commentText.text = "この写真の唐揚げ力は\n"
+        commentText.text = "この写真の唐揚力は\n"
             + String(result.score) + "点です\n" + result.msg
     }
 
@@ -112,21 +112,21 @@ class ResultViewController: UIViewController {
 
 
     @IBAction func shareWithFB(sender: AnyObject) {
-        let text = "この唐揚げ力は" + String(result.score) + "点! "
+        let text = "この唐揚力は" + String(result.score) + "点! "
             + result.msg + "by 唐揚げアプリ"
         shareWithSocial(SLServiceTypeFacebook, initialText: text)
     }
 
     @IBAction func shareWithTwitter(sender: AnyObject) {
-        let text = "この唐揚げ力は" + String(result.score) + "点! "
+        let text = "この唐揚力は" + String(result.score) + "点! "
             + result.msg + "#唐揚げアプリ"
         shareWithSocial(SLServiceTypeTwitter, initialText: text)
     }
 
 
     @IBAction func shareWithLINE(sender: AnyObject) {
-        let text = "唐揚げ力" + String(result.score) + "点! "
-            + "写真の唐揚げ力を測れるアプリがオススメ！"
+        let text = "唐揚力" + String(result.score) + "点! "
+            + "写真の唐揚力を測れるアプリがオススメ！"
 
         let urlScheme = "line://msg//text/"
             + text.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!
