@@ -64,8 +64,9 @@ class ChickenAnalyzer {
 
     /**
      同期で解析するメソッド
+     FIXME: これを単に呼ぶと，loadCsvPromiseが終わっていない場合，クラッシュする．そのため現在private.直さなきゃ(´；ω；｀)ｳｯ…
      */
-    func analyze(img: UIImage) -> (ChickenAnalysisResult) {
+    private func analyze(img: UIImage) -> (ChickenAnalysisResult) {
         // 画像を正方形にクロップし、30×30にリサイズする
         let sq_img = cropImageToSquare(img)
         let size = CGSize(width: 30, height: 30)
