@@ -44,13 +44,24 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
     func pickImageFromLibrary() {
 
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
-
             let controller = UIImagePickerController()
             controller.delegate = self
-
             controller.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
 
             //新たに追加したカメラロール表示ViewControllerをpresentViewControllerにする
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+    }
+
+    /**
+     写真を撮影する
+     */
+    func pickImageFromCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.sourceType = UIImagePickerControllerSourceType.Camera
+
             self.presentViewController(controller, animated: true, completion: nil)
         }
     }
@@ -106,6 +117,10 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
         pickImageFromLibrary()
     }
 
+    @IBAction func onClickCameraBtn(sender: AnyObject) {
+        pickImageFromCamera()
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "show_result" {
             let resultController = segue.destinationViewController as! ResultViewController
@@ -113,4 +128,3 @@ class HomeViewController: UIViewController ,UIImagePickerControllerDelegate, UIN
         }
     }
 }
-

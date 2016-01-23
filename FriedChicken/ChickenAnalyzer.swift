@@ -23,7 +23,7 @@ class ChickenAnalyzer {
      Realmオブジェクトはスレッド間の受け渡しが出来ないため，objectIdを返す
      */
     func asyncAnalyze() -> Future<String, ChickenAnalyzeError> {
-        
+
         let promise = Promise<String, ChickenAnalyzeError>()
         Queue.global.async { () -> Void in
             let res = self.analyze()
@@ -36,7 +36,7 @@ class ChickenAnalyzer {
         }
         return promise.future
     }
-    
+
     /**
      同期で解析するメソッド
      */
@@ -198,6 +198,7 @@ class ChickenAnalyzer {
             .objects(ChickenAnalysisResult)
             .sorted("createdAt", ascending: true)
             .map { $0 }
+
         if results.count > ChickenAnalysisResult.MAX_PERSISTENT_SIZE {
             try! realm.write {
                 realm.delete(results[0..<(results.count - ChickenAnalysisResult.MAX_PERSISTENT_SIZE)])

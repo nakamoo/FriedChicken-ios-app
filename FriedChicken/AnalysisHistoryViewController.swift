@@ -44,8 +44,10 @@ class AnalysisHistoryViewController: UIViewController, UITableViewDataSource, UI
             forIndexPath: indexPath) as! AnalysisResultTableViewCell
         let result = analysisResults[indexPath.row]
 
-        cell.titleLabel.text = "\(String(result.score))点の唐揚げ"
+        cell.titleLabel.text = "唐揚力 \(String(result.score))点"
+        cell.imgView.contentMode = UIViewContentMode.ScaleToFill
         cell.imgView.image = result.img()
+
         cell.dateLabel.text = dateToString(result.createdAt)
         return cell
     }
