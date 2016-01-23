@@ -120,11 +120,13 @@ class ChickenAnalyzer {
         else if score < 5000 {msg = "いい揚げっぷりですね！"}
         else if score < 6000 {msg = "よ、よだれが止まらない。。。"}
         else if score < 7000 {msg = "美味しそうだなあ。。。"}
-        else if score < 8000 {msg = "こんな美味しそうな唐揚げは見たこと無い！"}
-        else if score < 9000 {msg = "至極の逸品。。。"}
+        else if score < 8000 {
+            msg = "こんな美味しそうな唐揚げは見たこと無い！"
+            score = score * 10 + 6
+        }
         else {
-            msg = "この唐揚げの唐揚力は530000です。"
-            score = 530000
+            msg = "至極の逸品。。。"
+            score = score * 100 + 97
         }
 
         let result = ChickenAnalysisResult(img: img, score: score, msg: msg)
