@@ -9,8 +9,11 @@
 import UIKit
 import Social
 import SCLAlertView
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FBSDKShareKit
 
-class ResultViewController: UIViewController {
+class ResultViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     let MAX_NUMEBR_OF_DIGITS = 6
     let DIGIT_ORDER_ONES_PLACE = 0
     let DIGIT_ORDER_TENS_PLACE = 1
@@ -188,11 +191,17 @@ class ResultViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    
 
     @IBAction func shareWithFB(sender: AnyObject) {
-        let text = "この唐揚力は" + String(result.score) + "点! "
-            + result.msg + "by日本唐揚協会「唐揚力診断」"
-        shareWithSocial(SLServiceTypeFacebook, initialText: text)
+//        let text = "この唐揚力は" + String(result.score) + "点! "
+//            + result.msg + "by日本唐揚協会「唐揚力診断」"
+//        shareWithSocial(SLServiceTypeFacebook, initialText: text)
+        let photo : FBSDKSharePhoto = FBSDKSharePhoto()
+        photo.image = result.img()
+        photo.userGenerated = true
+        let content : FBSDKSharePhotoContent = FBSDKSharePhotoContent()
+        content.photos = [photo]
     }
 
     @IBAction func shareWithTwitter(sender: AnyObject) {
