@@ -68,7 +68,8 @@ class ChickenAnalyzer {
      */
     private func analyze(img: UIImage) -> (ChickenAnalysisResult) {
         // 画像を正方形にクロップし、30×30にリサイズする
-        let sq_img = cropImageToSquare(img)
+        let show_img = cropImageToSquare(img)
+        let sq_img = cropImageBG(show_img!)
         let size = CGSize(width: 30, height: 30)
         UIGraphicsBeginImageContext(size)
         sq_img!.drawInRect(CGRectMake(0, 0, size.width, size.height))
@@ -129,7 +130,7 @@ class ChickenAnalyzer {
             score = score * 100 + 97
         }
 
-        let result = ChickenAnalysisResult(img: img, score: score, msg: msg)
+        let result = ChickenAnalysisResult(img: show_img!, score: score, msg: msg)
         saveResult(result)
         
         return result
@@ -187,23 +188,22 @@ class ChickenAnalyzer {
     func cropImageToSquare(image: UIImage) -> UIImage? {
         if image.size.width > image.size.height {
             // 横長
-            let margin = image.size.height/6
-            let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(image.size.width/2 - image.size.height/2 + margin,
-                margin,
-                image.size.height - margin * 2, image.size.height - margin * 2))
-            
-            return UIImage(CGImage: cropCGImageRef!)
-        } else if image.size.width < image.size.height {
-            // 縦長
-            let margin = image.size.width/6
-            let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(margin,
-                image.size.height/2 - image.size.width/2 + margin,
-                image.size.width - margin * 2, image.size.width - margin * 2))
+            let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(image.size.width/2 - image.size.height/2, 0, image.size.height, image.size.height))
             
             return UIImage(CGImage: cropCGImageRef!)
         } else {
-            return image
+            // 縦長
+            let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0,image.size.height/2 - image.size.width/2, image.size.width, image.size.width))
+            
+            return UIImage(CGImage: cropCGImageRef!)
         }
+    }
+    
+    func cropImageBG(image: UIImage) -> UIImage? {
+        let margin = image.size.height/6
+        let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(margin, margin, image.size.height - margin * 2, image.size.width - margin * 2))
+
+        return UIImage(CGImage: cropCGImageRef!)
     }
 
     /**
