@@ -12,3 +12,8 @@ target 'FriedChicken' do
   pod 'RealmSwift' # Modileデータベース
 end
 
+
+post_install do | installer |
+  require 'fileutils'
+  FileUtils.cp_r('Pods/Target Support Files/Pods-FriedChicken/Pods-FriedChicken-acknowledgements.plist', 'FriedChicken/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+end
