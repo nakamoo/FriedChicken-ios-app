@@ -4,6 +4,9 @@
 use_frameworks!
 
 target 'FriedChicken' do
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
   pod 'BrightFutures' # 非同期処理のFuture
   pod 'MRProgress' # プログレスダイアログ
   pod 'SCLAlertView' # AlertView
