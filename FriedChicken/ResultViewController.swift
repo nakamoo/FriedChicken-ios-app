@@ -11,6 +11,13 @@ import Social
 import SCLAlertView
 
 class ResultViewController: UIViewController {
+    let MAX_NUMEBR_OF_DIGITS = 6
+    let DIGIT_ORDER_ONES_PLACE = 0
+    let DIGIT_ORDER_TENS_PLACE = 1
+    let DIGIT_ORDER_HUNDREDS_PLACE = 2
+    let DIGIT_ORDER_THOUSANDS_PLACE = 3
+    let DIGIT_ORDER_TENTHOUSANDS_PLACE = 4
+    let DIGIT_ORDER_ONEHUNDREDTHOUSANDS_PLACE = 5
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
@@ -27,6 +34,9 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var tenImg: UIImageView!
     @IBOutlet weak var oneImg: UIImageView!
 
+    var numberImgArray: Array<UIImageView> = []
+    var scoreDigitArray: Array<Int> = []
+    var scoreNumberOfDigits: Int = 0
 
     var result :ChickenAnalysisResult = ChickenAnalysisResult()
 
@@ -39,6 +49,8 @@ class ResultViewController: UIViewController {
         commentText.textContainerInset = UIEdgeInsetsMake(10, 10, 0, 0)
         commentText.sizeToFit()
 
+        setImagesArray()
+        setScoreDigitArray()
         setResult()
     }
 
@@ -53,17 +65,88 @@ class ResultViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func setImagesArray() {
+        numberImgArray.append(oneImg)
+        numberImgArray.append(tenImg)
+        numberImgArray.append(hundredImg)
+        numberImgArray.append(thousandImg)
+        numberImgArray.append(tenThousandImg)
+        numberImgArray.append(oneHundredThousandImg)
+    }
+
     func setResult() {
         karaageImage.image = fitToResultImageView(result.img())
 
-        setScoreImages()
+        animateNumbers()
+        showScoreImage(0)
+    }
 
+    func animateNumbers() {
+        let imageListArray: Array<UIImage> = [1,2,3,4,5,6,7,8,9,0].map { UIImage(named: String($0))! }
+
+        numberImgArray.forEach { (view: UIImageView!) -> Void in
+            view.animationImages = imageListArray.shuffled()
+            view.animationDuration = 0.1
+            view.startAnimating()
+        }
+    }
+
+    /**
+     再帰的に下の桁から順にスコアをセット
+     digitOrder: 下から何桁目か
+     */
+    func showScoreImage(digitOrder: Int) {
+        let delay = 0.75 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            let imgView = self.numberImgArray[digitOrder]
+            imgView.stopAnimating()
+
+            imgView.image = self.generateScoreImage(self.scoreDigitArray[digitOrder],
+                isZeroAllowed: self.isZeroAllowed(digitOrder))
+
+            if digitOrder < self.scoreNumberOfDigits - 1 && digitOrder < self.MAX_NUMEBR_OF_DIGITS - 1 {
+                self.showScoreImage(digitOrder + 1)
+            } else {
+                self.hideNonNeedDigits(digitOrder + 1)
+                self.showCommentMessage()
+            }
+        })
+    }
+
+    func hideNonNeedDigits(digitOrder: Int) {
+        var i = digitOrder
+        while (i < self.MAX_NUMEBR_OF_DIGITS) {
+            numberImgArray[i].stopAnimating()
+            numberImgArray[i].image = UIImage()
+            i++
+        }
+    }
+
+    func showCommentMessage() {
         commentText.text = "この写真の唐揚力は\n"
             + String(result.score) + "点です\n" + result.msg
     }
 
-    // スコア画像を設定する
-    func setScoreImages() {
+    /**
+     現在のスコアで，digitOrderの位が0を表示していいかを返す
+     */
+    func isZeroAllowed(digitOrder: Int) -> Bool {
+        switch digitOrder {
+        case DIGIT_ORDER_ONES_PLACE:
+            return true
+        case DIGIT_ORDER_ONEHUNDREDTHOUSANDS_PLACE:
+            return false
+        default:
+            return scoreDigitArray[digitOrder - 1] != 0
+        }
+    }
+
+    /**
+     スコアを1桁ごとにArrayに格納
+     桁数を返却
+     */
+    func setScoreDigitArray() {
         let score = result.score
         let onesPlace = score % 10
         let tensPlace = score % 100 / 10
@@ -71,13 +154,8 @@ class ResultViewController: UIViewController {
         let thousandsPlace = score % 10000 / 1000
         let tenThousandsPlace = score % 100000 / 10000
         let oneHundredThousandsPlace = score % 1000000 / 100000
-
-        oneHundredThousandImg.image = generateScoreImage(oneHundredThousandsPlace, isZeroAllowed: false)
-        tenThousandImg.image = generateScoreImage(tenThousandsPlace, isZeroAllowed: oneHundredThousandsPlace != 0)
-        thousandImg.image = generateScoreImage(thousandsPlace, isZeroAllowed: tenThousandsPlace != 0)
-        hundredImg.image = generateScoreImage(hundredsPlace, isZeroAllowed: thousandsPlace != 0)
-        tenImg.image = generateScoreImage(tensPlace, isZeroAllowed: hundredsPlace != 0)
-        oneImg.image = generateScoreImage(onesPlace, isZeroAllowed: true)
+        scoreDigitArray = [onesPlace, tensPlace, hundredsPlace, thousandsPlace, tenThousandsPlace, oneHundredThousandsPlace]
+        scoreNumberOfDigits = String(score).characters.count
     }
 
     // スコア用数字のUIImageを生成
