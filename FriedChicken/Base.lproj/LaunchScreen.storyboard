@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,14 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="titile" translatesAutoresizingMaskIntoConstraints="NO" id="5PR-xv-ly6">
-                                <rect key="frame" x="213.5" y="250" width="173" height="100"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="titile" translatesAutoresizingMaskIntoConstraints="NO" id="5PR-xv-ly6">
+                                <rect key="frame" x="40" y="218" width="520" height="300"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5PR-xv-ly6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="F7S-dm-UHw"/>
                             <constraint firstItem="5PR-xv-ly6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="TyG-Ys-tcB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5PR-xv-ly6" secondAttribute="trailing" constant="10" id="uOo-yf-Bry"/>
+                            <constraint firstItem="5PR-xv-ly6" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="10" id="xp5-sG-Iy5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="titile" width="173" height="100"/>
+        <image name="titile" width="300" height="163"/>
     </resources>
 </document>
