@@ -17,8 +17,8 @@
 		B324362D1C2AC2B50016B40D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B324362B1C2AC2B50016B40D /* Main.storyboard */; };
 		B324362F1C2AC2B50016B40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B324362E1C2AC2B50016B40D /* Assets.xcassets */; };
 		B32436321C2AC2B50016B40D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32436301C2AC2B50016B40D /* LaunchScreen.storyboard */; };
-		B36849951C54A46F00D93C84 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B36849941C54A46F00D93C84 /* Settings.bundle */; };
 		B34B1BB31C54BD0700A98A31 /* ChickenUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B1BB21C54BD0700A98A31 /* ChickenUtil.swift */; };
+		B36849951C54A46F00D93C84 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B36849941C54A46F00D93C84 /* Settings.bundle */; };
 		B37532A31C526646008C5E39 /* AnalysisHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37532A21C526646008C5E39 /* AnalysisHistoryViewController.swift */; };
 		B37532A61C52722D008C5E39 /* AnalysisResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37532A51C52722D008C5E39 /* AnalysisResultTableViewCell.swift */; };
 		B37532A91C527829008C5E39 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37532A81C527829008C5E39 /* ImageUtil.swift */; };
@@ -41,8 +41,8 @@
 		B324362E1C2AC2B50016B40D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32436311C2AC2B50016B40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32436331C2AC2B50016B40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B36849941C54A46F00D93C84 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B34B1BB21C54BD0700A98A31 /* ChickenUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChickenUtil.swift; sourceTree = "<group>"; };
+		B36849941C54A46F00D93C84 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B37532A21C526646008C5E39 /* AnalysisHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisHistoryViewController.swift; sourceTree = "<group>"; };
 		B37532A51C52722D008C5E39 /* AnalysisResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisResultTableViewCell.swift; sourceTree = "<group>"; };
 		B37532A81C527829008C5E39 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
@@ -425,7 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.karaage.fried-chicken";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5d5d98c2-e2e9-4b57-b55f-b9e80959397d";
+				PROVISIONING_PROFILE = "1faa2352-db9d-499f-88fa-ef7347b4335a";
 			};
 			name = Debug;
 		};
@@ -441,7 +441,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.karaage.fried-chicken";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6f80e91a-bae5-462b-bb52-04adfb7348f7";
+				PROVISIONING_PROFILE = "912f2431-7faf-428a-82fe-4204e4fc83f7";
 			};
 			name = Release;
 		};
