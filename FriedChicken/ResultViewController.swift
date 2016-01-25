@@ -192,13 +192,14 @@ class ResultViewController: UIViewController {
     @IBAction func shareWithFB(sender: AnyObject) {
         let text = "この唐揚力は" + String(result.score) + "点! "
             + result.msg + "by日本唐揚協会「唐揚力診断」"
-        shareWithSocial(SLServiceTypeFacebook, initialText: text)
+        // FBの場合はスクショをシェア
+        shareWithSocial(SLServiceTypeFacebook, initialText: text, img: contentView.captureImage())
     }
 
     @IBAction func shareWithTwitter(sender: AnyObject) {
         let text = "この唐揚力は" + String(result.score) + "点! "
             + result.msg + "#日本唐揚協会 #唐揚力診断"
-        shareWithSocial(SLServiceTypeTwitter, initialText: text)
+        shareWithSocial(SLServiceTypeTwitter, initialText: text, img: result.img())
     }
 
     @IBAction func shareWithLINE(sender: AnyObject) {
@@ -217,10 +218,14 @@ class ResultViewController: UIViewController {
         UIApplication.sharedApplication().openURL(url)
     }
 
-    func shareWithSocial(serviceType :String, initialText :String) {
+    /**
+     FB, Twitterへポストする．
+     FBでimgは付与できなくなった．（FBのポリシー変更による
+     */
+    func shareWithSocial(serviceType :String, initialText :String, img :UIImage) {
         let composeViewController :SLComposeViewController = SLComposeViewController(forServiceType: serviceType)!
         composeViewController.setInitialText(initialText)
-        composeViewController.addImage(result.img())
+        composeViewController.addImage(img)
 
         self.presentViewController(composeViewController, animated: true, completion: nil)
     }

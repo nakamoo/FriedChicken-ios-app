@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension Array {
     /// Shuffle the elements of `self` in-place.
@@ -24,6 +25,30 @@ extension Array {
         var list = self
         list.shuffle()
         return list
+    }
+}
+
+extension UIView {
+
+    func captureImage() -> UIImage{
+
+        // キャプチャする範囲を取得.
+        let rect = self.bounds
+
+        // ビットマップ画像のcontextを作成.
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        let context: CGContextRef! = UIGraphicsGetCurrentContext()
+
+        // 対象のview内の描画をcontextに複写する.
+        self.layer.renderInContext(context)
+
+        // 現在のcontextのビットマップをUIImageとして取得.
+        let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
+
+        // contextを閉じる.
+        UIGraphicsEndImageContext()
+
+        return capturedImage
     }
 }
 
