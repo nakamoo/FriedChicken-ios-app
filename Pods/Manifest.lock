@@ -1,21 +1,9 @@
 PODS:
-  - Bolts (1.6.0):
-    - Bolts/AppLinks (= 1.6.0)
-    - Bolts/Tasks (= 1.6.0)
-  - Bolts/AppLinks (1.6.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.6.0)
   - BrightFutures (3.2.2):
     - Result (~> 1.0)
   - Crashlytics (3.6.0):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.4)
-  - FBSDKCoreKit (4.9.1):
-    - Bolts (~> 1.5)
-  - FBSDKLoginKit (4.9.1):
-    - FBSDKCoreKit
-  - FBSDKShareKit (4.9.1):
-    - FBSDKCoreKit
   - MRProgress (0.8.3):
     - MRProgress/ActivityIndicator (= 0.8.3)
     - MRProgress/Blur (= 0.8.3)
@@ -56,21 +44,14 @@ DEPENDENCIES:
   - BrightFutures
   - Crashlytics
   - Fabric
-  - FBSDKCoreKit
-  - FBSDKLoginKit
-  - FBSDKShareKit
   - MRProgress
   - RealmSwift
   - SCLAlertView
 
 SPEC CHECKSUMS:
-  Bolts: f52a250053bb517ca874523c3913776359ab3def
   BrightFutures: 1722a83fa8415aef78d66319a6c6add6685a7a87
   Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
   Fabric: ed41fd62173c6bdea24ab02c9d7707161eabb750
-  FBSDKCoreKit: aee20b6d9855f15b618d4fddd1a5ad45f5a4a59d
-  FBSDKLoginKit: ec22dc49bd372b064e93d6773df4ffefb3a552a2
-  FBSDKShareKit: b8c8ef0ed173f9fc1b3c8df384a0202ce53008d4
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
   Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
   RealmSwift: d014810dec75c9a3f1a33926d2dabfed855c582c

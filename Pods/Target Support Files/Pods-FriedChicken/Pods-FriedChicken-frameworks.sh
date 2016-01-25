@@ -84,11 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-FriedChicken/Bolts.framework"
   install_framework "Pods-FriedChicken/BrightFutures.framework"
-  install_framework "Pods-FriedChicken/FBSDKCoreKit.framework"
-  install_framework "Pods-FriedChicken/FBSDKLoginKit.framework"
-  install_framework "Pods-FriedChicken/FBSDKShareKit.framework"
   install_framework "Pods-FriedChicken/MRProgress.framework"
   install_framework "Pods-FriedChicken/Realm.framework"
   install_framework "Pods-FriedChicken/RealmSwift.framework"
@@ -96,11 +92,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FriedChicken/SCLAlertView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-FriedChicken/Bolts.framework"
   install_framework "Pods-FriedChicken/BrightFutures.framework"
-  install_framework "Pods-FriedChicken/FBSDKCoreKit.framework"
-  install_framework "Pods-FriedChicken/FBSDKLoginKit.framework"
-  install_framework "Pods-FriedChicken/FBSDKShareKit.framework"
   install_framework "Pods-FriedChicken/MRProgress.framework"
   install_framework "Pods-FriedChicken/Realm.framework"
   install_framework "Pods-FriedChicken/RealmSwift.framework"
