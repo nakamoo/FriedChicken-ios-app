@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0FB0920AADE0C841C7658DF8 /* Pods_FriedChicken.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CE58BC1B316F6C77582902 /* Pods_FriedChicken.framework */; };
-		7FE544931C422CCB003A4E6A /* ib.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FE5448F1C422CCB003A4E6A /* ib.csv */; };
-		7FE544941C422CCB003A4E6A /* iw.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FE544901C422CCB003A4E6A /* iw.csv */; };
-		7FE544951C422CCB003A4E6A /* ob.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FE544911C422CCB003A4E6A /* ob.csv */; };
-		7FE544961C422CCB003A4E6A /* ow.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FE544921C422CCB003A4E6A /* ow.csv */; };
+		7F0A2C0E1C58CA86001B0C02 /* weight.zip in Resources */ = {isa = PBXBuildFile; fileRef = 7F0A2C091C58CA86001B0C02 /* weight.zip */; };
 		B32436281C2AC2B50016B40D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32436271C2AC2B50016B40D /* AppDelegate.swift */; };
 		B324362A1C2AC2B50016B40D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32436291C2AC2B50016B40D /* HomeViewController.swift */; };
 		B324362D1C2AC2B50016B40D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B324362B1C2AC2B50016B40D /* Main.storyboard */; };
@@ -29,10 +26,7 @@
 
 /* Begin PBXFileReference section */
 		15CE58BC1B316F6C77582902 /* Pods_FriedChicken.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FriedChicken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FE5448F1C422CCB003A4E6A /* ib.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ib.csv; sourceTree = "<group>"; };
-		7FE544901C422CCB003A4E6A /* iw.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iw.csv; sourceTree = "<group>"; };
-		7FE544911C422CCB003A4E6A /* ob.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ob.csv; sourceTree = "<group>"; };
-		7FE544921C422CCB003A4E6A /* ow.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ow.csv; sourceTree = "<group>"; };
+		7F0A2C091C58CA86001B0C02 /* weight.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = weight.zip; sourceTree = "<group>"; };
 		8EC07D8051DA7AE067EBD4D5 /* Pods-FriedChicken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriedChicken.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriedChicken/Pods-FriedChicken.release.xcconfig"; sourceTree = "<group>"; };
 		B32436241C2AC2B50016B40D /* FriedChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriedChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32436271C2AC2B50016B40D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,10 +61,7 @@
 		7FE5448E1C422CCB003A4E6A /* param */ = {
 			isa = PBXGroup;
 			children = (
-				7FE5448F1C422CCB003A4E6A /* ib.csv */,
-				7FE544901C422CCB003A4E6A /* iw.csv */,
-				7FE544911C422CCB003A4E6A /* ob.csv */,
-				7FE544921C422CCB003A4E6A /* ow.csv */,
+				7F0A2C091C58CA86001B0C02 /* weight.zip */,
 			);
 			path = param;
 			sourceTree = "<group>";
@@ -220,13 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36849951C54A46F00D93C84 /* Settings.bundle in Resources */,
-				7FE544941C422CCB003A4E6A /* iw.csv in Resources */,
 				B32436321C2AC2B50016B40D /* LaunchScreen.storyboard in Resources */,
 				B324362F1C2AC2B50016B40D /* Assets.xcassets in Resources */,
-				7FE544961C422CCB003A4E6A /* ow.csv in Resources */,
 				B324362D1C2AC2B50016B40D /* Main.storyboard in Resources */,
-				7FE544931C422CCB003A4E6A /* ib.csv in Resources */,
-				7FE544951C422CCB003A4E6A /* ob.csv in Resources */,
+				7F0A2C0E1C58CA86001B0C02 /* weight.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

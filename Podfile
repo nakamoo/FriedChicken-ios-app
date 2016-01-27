@@ -10,6 +10,7 @@ target 'FriedChicken' do
   pod 'Fabric' # Twitter Fabric
   pod 'Crashlytics' # Crash収集サービス
   pod 'RealmSwift' # Modileデータベース
+  pod 'SSZipArchive' # Zip解凍ライブラリ
 end
 
 

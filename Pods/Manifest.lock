@@ -38,7 +38,8 @@ PODS:
   - RealmSwift (0.97.0):
     - Realm (= 0.97.0)
   - Result (1.0.1)
-  - SCLAlertView (0.4.3)
+  - SCLAlertView (0.5)
+  - SSZipArchive (1.0.1)
 
 DEPENDENCIES:
   - BrightFutures
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - MRProgress
   - RealmSwift
   - SCLAlertView
+  - SSZipArchive
 
 SPEC CHECKSUMS:
   BrightFutures: 1722a83fa8415aef78d66319a6c6add6685a7a87
@@ -56,6 +58,7 @@ SPEC CHECKSUMS:
   Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
   RealmSwift: d014810dec75c9a3f1a33926d2dabfed855c582c
   Result: caef80340451e1f07492fa1e89117f83613bce24
-  SCLAlertView: a5c726a80a938fd3127edd7dbc19da33fb936ca3
+  SCLAlertView: 51a328f3985e13e6bfe8dc77123543480fa615f9
+  SSZipArchive: 5f30a0af2cb3d48c0ff83b1e18029f7041ac3c38
 
 COCOAPODS: 0.39.0

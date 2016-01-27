@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FriedChicken/RealmSwift.framework"
   install_framework "Pods-FriedChicken/Result.framework"
   install_framework "Pods-FriedChicken/SCLAlertView.framework"
+  install_framework "Pods-FriedChicken/SSZipArchive.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FriedChicken/BrightFutures.framework"
@@ -98,4 +99,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FriedChicken/RealmSwift.framework"
   install_framework "Pods-FriedChicken/Result.framework"
   install_framework "Pods-FriedChicken/SCLAlertView.framework"
+  install_framework "Pods-FriedChicken/SSZipArchive.framework"
 fi

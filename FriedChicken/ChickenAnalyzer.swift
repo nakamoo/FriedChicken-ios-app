@@ -11,6 +11,12 @@ import UIKit
 import BrightFutures
 import RealmSwift
 
+#if UseCarthage
+    import ZipArchive
+#else
+    import SSZipArchive
+#endif
+
 class ChickenAnalyzer {
     let loadCsvPromise: Promise<Void, ChickenAnalyzeError>
 
@@ -18,6 +24,7 @@ class ChickenAnalyzer {
     var inputWeight: [[Double]]?
     var outputBias: [[Double]]?
     var outputWeight: [[Double]]?
+    var unzipPath: String?
 
     init() {
         loadCsvPromise = Promise<Void, ChickenAnalyzeError>()
@@ -56,10 +63,18 @@ class ChickenAnalyzer {
      csvファイルに書かれた重みとバイアスを読み込む
      */
     func loadCsvs() -> Void {
-        inputBias = readCsv("ib")
-        inputWeight = readCsv("iw")
-        outputBias = readCsv("ob")
-        outputWeight = readCsv("ow")
+        let zippath = NSBundle.mainBundle().pathForResource("weight", ofType: "zip")
+        SSZipArchive.unzipFileAtPath(zippath, toDestination: tempUnzipPath())
+        var items: [String]
+        do {
+            items = try NSFileManager.defaultManager().contentsOfDirectoryAtPath(self.unzipPath!)
+        } catch {
+            return
+        }
+        inputBias = readCsv(items[0])
+        inputWeight = readCsv(items[1])
+        outputBias = readCsv(items[2])
+        outputWeight = readCsv(items[3])
     }
 
     /**
@@ -153,21 +168,21 @@ class ChickenAnalyzer {
      */
     func readCsv(name:String) -> [[Double]] {
         var result: [[Double]] = []
-        if let csvPath = NSBundle.mainBundle().pathForResource(name, ofType: "csv") {
-            var csvString = ""
-            do {
-                csvString = try String(contentsOfFile: csvPath, encoding: NSUTF8StringEncoding) as String
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-            csvString.enumerateLines { (line, stop) -> () in
-                var arr:[Double] = []
-                for num in line.componentsSeparatedByString(",") {
-                    arr.append(atof(num))
-                }
-                result.append(arr)
-            }
+        var csvString = ""
+        do {
+            csvString = try String(contentsOfFile: self.unzipPath!+"/"+name, encoding: NSUTF8StringEncoding) as String
+            
+        } catch let error as NSError {
+            print(error.localizedDescription)
         }
+        csvString.enumerateLines { (line, stop) -> () in
+            var arr:[Double] = []
+            for num in line.componentsSeparatedByString(",") {
+                arr.append(atof(num))
+            }
+            result.append(arr)
+        }
+        
         return result
     }
     
@@ -228,6 +243,25 @@ class ChickenAnalyzer {
 
     }
     
+    func tempUnzipPath() -> String? {
+        var path = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)[0]
+        path += "/\(NSUUID().UUIDString)"
+        let url = NSURL(fileURLWithPath: path)
+        
+        do {
+            try NSFileManager.defaultManager().createDirectoryAtURL(url, withIntermediateDirectories: true, attributes: nil)
+        } catch {
+            return nil
+        }
+        
+        if let path = url.path {
+            self.unzipPath = path
+            return path
+        }
+        
+        return nil
+    }
+
     enum ChickenAnalyzeError: ErrorType {
         case UnknownError(String)
         
@@ -238,4 +272,5 @@ class ChickenAnalyzer {
             }
         }
     }
+    
 }
