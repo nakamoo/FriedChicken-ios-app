@@ -58,17 +58,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7F0A2C0F1C58EB79001B0C02 /* weight */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = weight;
-			sourceTree = "<group>";
-		};
 		7FE5448E1C422CCB003A4E6A /* param */ = {
 			isa = PBXGroup;
 			children = (
-				7F0A2C0F1C58EB79001B0C02 /* weight */,
 				7F0A2C091C58CA86001B0C02 /* weight.zip */,
 			);
 			path = param;
