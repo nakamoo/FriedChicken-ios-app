@@ -19,7 +19,6 @@ class ChickenAnalyzer {
     var inputWeight: [[Double]]?
     var outputBias: [[Double]]?
     var outputWeight: [[Double]]?
-    var unzipPath: String?
 
     init() {
         loadCsvPromise = Promise<Void, ChickenAnalyzeError>()
@@ -59,17 +58,18 @@ class ChickenAnalyzer {
      */
     func loadCsvs() -> Void {
         let zippath = NSBundle.mainBundle().pathForResource("weight", ofType: "zip")
-        SSZipArchive.unzipFileAtPath(zippath, toDestination: tempUnzipPath())
-        var items: [String]
-        do {
-            items = try NSFileManager.defaultManager().contentsOfDirectoryAtPath(self.unzipPath!)
-        } catch {
-            return
+        
+        let fileManager = NSFileManager.defaultManager()
+        let isFile = fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ib.csv")
+        
+        if !isFile {
+            SSZipArchive.unzipFileAtPath(zippath, toDestination: NSTemporaryDirectory())
         }
-        inputBias = readCsv(items[0])
-        inputWeight = readCsv(items[1])
-        outputBias = readCsv(items[2])
-        outputWeight = readCsv(items[3])
+        
+        inputBias = readCsv("ib")
+        inputWeight = readCsv("iw")
+        outputBias = readCsv("ob")
+        outputWeight = readCsv("ow")
     }
 
     /**
@@ -165,7 +165,7 @@ class ChickenAnalyzer {
         var result: [[Double]] = []
         var csvString = ""
         do {
-            csvString = try String(contentsOfFile: self.unzipPath!+"/"+name, encoding: NSUTF8StringEncoding) as String
+            csvString = try String(contentsOfFile: NSTemporaryDirectory()+"/"+name+".csv", encoding: NSUTF8StringEncoding) as String
             
         } catch let error as NSError {
             print(error.localizedDescription)
@@ -237,26 +237,7 @@ class ChickenAnalyzer {
         }
 
     }
-    
-    func tempUnzipPath() -> String? {
-        var path = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)[0]
-        path += "/\(NSUUID().UUIDString)"
-        let url = NSURL(fileURLWithPath: path)
-        
-        do {
-            try NSFileManager.defaultManager().createDirectoryAtURL(url, withIntermediateDirectories: true, attributes: nil)
-        } catch {
-            return nil
-        }
-        
-        if let path = url.path {
-            self.unzipPath = path
-            return path
-        }
-        
-        return nil
-    }
-
+   
     enum ChickenAnalyzeError: ErrorType {
         case UnknownError(String)
         
