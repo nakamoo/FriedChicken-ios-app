@@ -10,12 +10,7 @@ import Foundation
 import UIKit
 import BrightFutures
 import RealmSwift
-
-#if UseCarthage
-    import ZipArchive
-#else
-    import SSZipArchive
-#endif
+import SSZipArchive
 
 class ChickenAnalyzer {
     let loadCsvPromise: Promise<Void, ChickenAnalyzeError>
