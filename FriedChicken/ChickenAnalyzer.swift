@@ -60,7 +60,7 @@ class ChickenAnalyzer {
         let zippath = NSBundle.mainBundle().pathForResource("weight", ofType: "zip")
         
         let fileManager = NSFileManager.defaultManager()
-        let isFile = fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ib.csv")
+        let isFile = fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ib.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/iw.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ob.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ow.csv")
         
         if !isFile {
             SSZipArchive.unzipFileAtPath(zippath, toDestination: NSTemporaryDirectory())
