@@ -126,17 +126,17 @@ class ChickenAnalyzer {
         
         if score < 1000 {msg = "ほ、ほんとにこれは唐揚げなのかな？"}
         else if score < 2000 {msg = "もっと油の声に耳を傾けてみましょう。"}
-        else if score < 3000 {msg = "いまいち唐揚げだなー。。。"}
+        else if score < 3000 {msg = "あんまり美味しくなさそうだなぁ．．．"}
         else if score < 4000 {msg = "まぁまぁの唐揚げですね！"}
         else if score < 5000 {msg = "いい揚げっぷりですね！"}
-        else if score < 6000 {msg = "よ、よだれが止まらない。。。"}
-        else if score < 7000 {msg = "美味しそうだなあ。。。"}
+        else if score < 6000 {msg = "よ、よだれが止まらない．．．"}
+        else if score < 7000 {msg = "美味しそうだなあ．．．"}
         else if score < 8000 {
             msg = "こんな美味しそうな唐揚げは見たこと無い！"
             score = score * 10 + 6
         }
         else {
-            msg = "至極の逸品。。。"
+            msg = "至極の逸品．．．"
             score = score * 100 + 97
         }
 
