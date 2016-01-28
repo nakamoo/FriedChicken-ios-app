@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import BrightFutures
 import RealmSwift
+import SSZipArchive
 
 class ChickenAnalyzer {
     let loadCsvPromise: Promise<Void, ChickenAnalyzeError>
@@ -56,6 +57,15 @@ class ChickenAnalyzer {
      csvファイルに書かれた重みとバイアスを読み込む
      */
     func loadCsvs() -> Void {
+        let zippath = NSBundle.mainBundle().pathForResource("weight", ofType: "zip")
+        
+        let fileManager = NSFileManager.defaultManager()
+        let isFile = fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ib.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/iw.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ob.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ow.csv")
+        
+        if !isFile {
+            SSZipArchive.unzipFileAtPath(zippath, toDestination: NSTemporaryDirectory())
+        }
+        
         inputBias = readCsv("ib")
         inputWeight = readCsv("iw")
         outputBias = readCsv("ob")
@@ -153,21 +163,21 @@ class ChickenAnalyzer {
      */
     func readCsv(name:String) -> [[Double]] {
         var result: [[Double]] = []
-        if let csvPath = NSBundle.mainBundle().pathForResource(name, ofType: "csv") {
-            var csvString = ""
-            do {
-                csvString = try String(contentsOfFile: csvPath, encoding: NSUTF8StringEncoding) as String
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-            csvString.enumerateLines { (line, stop) -> () in
-                var arr:[Double] = []
-                for num in line.componentsSeparatedByString(",") {
-                    arr.append(atof(num))
-                }
-                result.append(arr)
-            }
+        var csvString = ""
+        do {
+            csvString = try String(contentsOfFile: NSTemporaryDirectory()+"/"+name+".csv", encoding: NSUTF8StringEncoding) as String
+            
+        } catch let error as NSError {
+            print(error.localizedDescription)
         }
+        csvString.enumerateLines { (line, stop) -> () in
+            var arr:[Double] = []
+            for num in line.componentsSeparatedByString(",") {
+                arr.append(atof(num))
+            }
+            result.append(arr)
+        }
+        
         return result
     }
     
@@ -227,7 +237,7 @@ class ChickenAnalyzer {
         }
 
     }
-    
+   
     enum ChickenAnalyzeError: ErrorType {
         case UnknownError(String)
         
@@ -238,4 +248,5 @@ class ChickenAnalyzer {
             }
         }
     }
+    
 }
