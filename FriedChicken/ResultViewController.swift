@@ -204,10 +204,10 @@ class ResultViewController: UIViewController {
 
     @IBAction func shareWithLINE(sender: AnyObject) {
         let text = "唐揚力" + String(result.score) + "点! "
-            + "写真の唐揚力を測れるアプリがオススメ！"
+            + "写真の唐揚力を測れるアプリがオススメ！ #日本唐揚協会 #唐揚力診断 http://karaage.ne.jp/"
 
-        let urlScheme = "line://msg//text/"
-            + text.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!
+        let urlScheme = "line://msg/text/"
+            + text.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         let url = NSURL(string: urlScheme)!
 
         if !UIApplication.sharedApplication().canOpenURL(url) {
