@@ -413,7 +413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.karaage.fried-chicken";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "34ee5e20-4374-4a31-8644-cd1bb18c4712";
+				PROVISIONING_PROFILE = "edb1656b-86a1-4daa-8383-3402be2f62e4";
 			};
 			name = Debug;
 		};
@@ -429,7 +429,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.karaage.fried-chicken";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "06f2b4d1-aef8-4f57-82d2-6e61a5bdd84b";
+				PROVISIONING_PROFILE = "8127b578-9d60-474e-8692-f1d2183d44bc";
 			};
 			name = Release;
 		};
