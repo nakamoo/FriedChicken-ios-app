@@ -63,7 +63,9 @@ class ChickenAnalyzer {
         let isFile = fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ib.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/iw.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ob.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ow.csv")
         
         if !isFile {
-            SSZipArchive.unzipFileAtPath(zippath, toDestination: NSTemporaryDirectory())
+            if !SSZipArchive.unzipFileAtPath(zippath, toDestination: NSTemporaryDirectory()) {
+                exit(0)
+            }
         }
         
         inputBias = readCsv("ib")
