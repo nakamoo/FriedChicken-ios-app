@@ -198,13 +198,13 @@ class ResultViewController: UIViewController {
 
     @IBAction func shareWithTwitter(sender: AnyObject) {
         let text = "この唐揚力は" + String(result.score) + "点! "
-            + result.msg + "#日本唐揚協会 #唐揚力診断"
+            + result.msg + "#日本唐揚協会 #唐揚力診断 http://apple.co/1RcLG4K"
         shareWithSocial(SLServiceTypeTwitter, initialText: text, img: result.img())
     }
 
     @IBAction func shareWithLINE(sender: AnyObject) {
         let text = "唐揚力" + String(result.score) + "点! "
-            + "写真の唐揚力を測れるアプリがオススメ！ #日本唐揚協会 #唐揚力診断 http://karaage.ne.jp/"
+            + "写真の唐揚力を測れるアプリがオススメ！ #日本唐揚協会 #唐揚力診断 http://apple.co/1RcLG4K"
 
         let urlScheme = "line://msg/text/"
             + text.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
