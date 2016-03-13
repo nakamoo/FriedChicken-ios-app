@@ -26,7 +26,7 @@ class ChickenAnalyzer {
             if self.loadCsvs() {
                 self.loadCsvPromise.success()
             } else {
-                self.loadCsvPromise.failure(ChickenAnalyzeError.UnknownError("空き容量語りません。空き容量を確保してから再度アプリを実行して下さい"))
+                self.loadCsvPromise.failure(ChickenAnalyzeError.UnknownError("空き容量が足りません。空き容量を確保してから再度アプリを実行して下さい"))
             }
         }
     }
