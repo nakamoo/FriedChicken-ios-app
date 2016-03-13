@@ -26,7 +26,7 @@ class ChickenAnalyzer {
             if self.loadCsvs() {
                 self.loadCsvPromise.success()
             } else {
-                self.loadCsvPromise.failure(ChickenAnalyzeError.UnknownError("failed in loadin csv."))
+                self.loadCsvPromise.failure(ChickenAnalyzeError.UnknownError("failed in loading csv."))
             }
         }
     }
