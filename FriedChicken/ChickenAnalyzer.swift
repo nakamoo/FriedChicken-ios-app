@@ -23,8 +23,11 @@ class ChickenAnalyzer {
     init() {
         loadCsvPromise = Promise<Void, ChickenAnalyzeError>()
         Queue.global.async { () -> Void in
-            self.loadCsvs()
-            self.loadCsvPromise.success()
+            if self.loadCsvs() {
+                self.loadCsvPromise.success()
+            } else {
+                self.loadCsvPromise.failure(ChickenAnalyzeError.UnknownError("failed in loadin csv."))
+            }
         }
     }
     
@@ -56,7 +59,7 @@ class ChickenAnalyzer {
     /**
      csvファイルに書かれた重みとバイアスを読み込む
      */
-    func loadCsvs() -> Void {
+    func loadCsvs() -> Bool {
         let zippath = NSBundle.mainBundle().pathForResource("weight", ofType: "zip")
         
         let fileManager = NSFileManager.defaultManager()
@@ -64,7 +67,7 @@ class ChickenAnalyzer {
         
         if !isFile {
             if !SSZipArchive.unzipFileAtPath(zippath, toDestination: NSTemporaryDirectory()) {
-                exit(0)
+                return false
             }
         }
         
@@ -72,6 +75,8 @@ class ChickenAnalyzer {
         inputWeight = readCsv("iw")
         outputBias = readCsv("ob")
         outputWeight = readCsv("ow")
+        
+        return true
     }
 
     /**
