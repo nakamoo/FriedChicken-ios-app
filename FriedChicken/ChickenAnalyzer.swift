@@ -23,11 +23,14 @@ class ChickenAnalyzer {
     init() {
         loadCsvPromise = Promise<Void, ChickenAnalyzeError>()
         Queue.global.async { () -> Void in
-            self.loadCsvs()
-            self.loadCsvPromise.success()
+            if self.loadCsvs() {
+                self.loadCsvPromise.success()
+            } else {
+                self.loadCsvPromise.failure(ChickenAnalyzeError.UnknownError("空き容量が足りません。空き容量を確保してから再度アプリを実行して下さい"))
+            }
         }
     }
-    
+
     /**
      非同期に解析するメソッド．Futureを返却する
      Realmオブジェクトはスレッド間の受け渡しが出来ないため，objectIdを返す
@@ -49,6 +52,9 @@ class ChickenAnalyzer {
                 }
             }
         }
+        .onFailure { error in
+            promise.failure(error)
+        }
 
         return promise.future
     }
@@ -56,20 +62,24 @@ class ChickenAnalyzer {
     /**
      csvファイルに書かれた重みとバイアスを読み込む
      */
-    func loadCsvs() -> Void {
+    func loadCsvs() -> Bool {
         let zippath = NSBundle.mainBundle().pathForResource("weight", ofType: "zip")
-        
+
         let fileManager = NSFileManager.defaultManager()
         let isFile = fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ib.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/iw.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ob.csv") && fileManager.fileExistsAtPath(NSTemporaryDirectory()+"/ow.csv")
-        
+
         if !isFile {
-            SSZipArchive.unzipFileAtPath(zippath, toDestination: NSTemporaryDirectory())
+            if !SSZipArchive.unzipFileAtPath(zippath, toDestination: NSTemporaryDirectory()) {
+                return false
+            }
         }
-        
+
         inputBias = readCsv("ib")
         inputWeight = readCsv("iw")
         outputBias = readCsv("ob")
         outputWeight = readCsv("ow")
+
+        return true
     }
 
     /**
@@ -84,12 +94,12 @@ class ChickenAnalyzer {
         UIGraphicsBeginImageContext(size)
         sq_img!.drawInRect(CGRectMake(0, 0, size.width, size.height))
         let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
-        
+
         // 画像を配列に変換
         let imageRef = resizeImage.CGImage!
         let imageData = getByteArrayFromImage(imageRef)
         UIGraphicsEndImageContext()
-        
+
         // ニューラルネットワークの各層を定義
         var input:[Double] = []
         var middle:[Double] = []
@@ -100,12 +110,12 @@ class ChickenAnalyzer {
             let b:Int = numericCast(imageData[4*i])
             let g:Int = numericCast(imageData[4*i+1])
             let r:Int = numericCast(imageData[4*i+2])
-            
+
             input.append(Double(b))
             input.append(Double(g))
             input.append(Double(r))
         }
-        
+
         //　中間層を計算
         for (var i = 0; i < inputWeight!.count; i++) {
             var m = calInnerProduct(input, b:inputWeight![i])
@@ -113,17 +123,17 @@ class ChickenAnalyzer {
             m =  1 / (1 + pow(M_E, m))
             middle.append(m)
         }
-        
+
         // 出力層を計算
         output = calInnerProduct(middle, b: outputWeight![0]) + outputBias![0][0]
         output = 1 / (1 + pow(M_E, output))
-        
-        
+
+
         var score = Int(output * 10000)
-        
-        
+
+
         var msg = "いい揚げっぷりですね！"
-        
+
         if score < 1000 {msg = "ほ、ほんとにこれは唐揚げなのかな？"}
         else if score < 2000 {msg = "もっと油の声に耳を傾けてみましょう。"}
         else if score < 3000 {msg = "あんまり美味しくなさそうだなぁ．．．"}
@@ -142,10 +152,10 @@ class ChickenAnalyzer {
 
         let result = ChickenAnalysisResult(img: show_img!, score: score, msg: msg)
         saveResult(result)
-        
+
         return result
     }
-    
+
     /**
      画像を配列に変換するメソッド
      */
@@ -154,10 +164,10 @@ class ChickenAnalyzer {
         let length = CFDataGetLength(data)
         var rawData = [UInt8](count: length, repeatedValue: 0)
         CFDataGetBytes(data, CFRange(location: 0, length: length), &rawData)
-        
+
         return rawData
     }
-    
+
     /**
      csvを読み込み二次元配列に格納するメソッド
      */
@@ -166,7 +176,7 @@ class ChickenAnalyzer {
         var csvString = ""
         do {
             csvString = try String(contentsOfFile: NSTemporaryDirectory()+"/"+name+".csv", encoding: NSUTF8StringEncoding) as String
-            
+
         } catch let error as NSError {
             print(error.localizedDescription)
         }
@@ -177,10 +187,10 @@ class ChickenAnalyzer {
             }
             result.append(arr)
         }
-        
+
         return result
     }
-    
+
     /**
      内積を計算するメソッド
      */
@@ -191,7 +201,7 @@ class ChickenAnalyzer {
         }
         return answer
     }
-    
+
     /**
      画像を正方形にクロップするメソッド
      */
@@ -199,16 +209,16 @@ class ChickenAnalyzer {
         if image.size.width > image.size.height {
             // 横長
             let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(image.size.width/2 - image.size.height/2, 0, image.size.height, image.size.height))
-            
+
             return UIImage(CGImage: cropCGImageRef!)
         } else {
             // 縦長
             let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0,image.size.height/2 - image.size.width/2, image.size.width, image.size.width))
-            
+
             return UIImage(CGImage: cropCGImageRef!)
         }
     }
-    
+
     func cropImageBG(image: UIImage) -> UIImage? {
         let margin = image.size.height/6
         let cropCGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(margin, margin, image.size.height - margin * 2, image.size.width - margin * 2))
@@ -237,10 +247,10 @@ class ChickenAnalyzer {
         }
 
     }
-   
+
     enum ChickenAnalyzeError: ErrorType {
         case UnknownError(String)
-        
+
         func getErrorMsg() -> String {
             switch self {
             case.UnknownError(let msg):
@@ -248,5 +258,5 @@ class ChickenAnalyzer {
             }
         }
     }
-    
+
 }
